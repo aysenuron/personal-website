@@ -1,9 +1,13 @@
+import Link from 'next/link'
 import Image from "next/image";
+import Hero from "./Hero";
+import Projects from "./projects/page";
 
 export default function Home() {
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <Hero />
         <Image
           className="dark:invert"
           src="/next.svg"
@@ -41,21 +45,19 @@ export default function Home() {
             />
             Deploy now
           </a>
-          <a
+          <Link
             className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
+            href="/projects"
             rel="noopener noreferrer"
           >
-            Read our docs
-          </a>
+            See projects →
+          </Link>
         </div>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
           rel="noopener noreferrer"
         >
           <Image
@@ -82,9 +84,9 @@ export default function Home() {
           />
           Examples
         </a>
-        <a
+        <Link
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="/projects"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -95,8 +97,8 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Go to nextjs.org →
-        </a>
+          Go to projects →
+        </Link>
       </footer>
     </div>
   );
