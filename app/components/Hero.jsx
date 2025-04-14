@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section>
-      <div className="container py-10 lg:py-40 h-5/6 mx-auto">
+      <div className="container py-10 px-4 lg:px-0 lg:pt-28 2xl:py-60 h-5/6 mx-auto">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-start-2 lg:col-end-4">
             <h1 className="degular text-4xl lg:text-7xl mb-4">
@@ -29,15 +29,15 @@ export default function Hero() {
             <span>👉🏻</span>
             <div>
               <a href="">
-                <img src="" alt="" />
+                <img src="#" alt="" />
               </a>
               <a href="">
-                <img src="" alt="" />
+                <img src="#" alt="" />
               </a>
             </div>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 gap-4 mt-10 lg:mt-60">
+        <div className="grid lg:grid-cols-3 gap-4 mt-10 lg:mt-52 2xl:mt-100">
           <div className="lg:col-start-2 lg:col-end-3">
             <p>
               This website is open source. Designed in Figma, built with Next.js
