@@ -26,7 +26,7 @@ export default function Header() {
         key={link}
         className={`forma hover:text-orange-500 duration-200 ease-in-out transition ${
           index === linkNames.length - 1 &&
-          "bg-gray-900 px-4 py-2 text-white rounded-2xl drop-shadow-xl font-medium hover:bg-gray-100 hover:drop-shadow-none"
+          "bg-gradient-to-t from-gray-700 to-gray-900 shadow-inner hover:border-none shadow-gray-400 w-fit px-4 py-2 text-white rounded-2xl drop-shadow-xl hover:from-gray-50 hover:to-gray-100 hover:drop-shadow-none"
         }`}
         href={`${
           index === linkNames.length - 1
@@ -59,7 +59,7 @@ export default function Header() {
       <div
         className={`lg:hidden flex flex-col gap-6 ${
           !menuOpen && "hidden"
-        } bg-white z-10 absolute top-20 w-full h-[80vh]`}
+        } bg-white z-10 absolute top-20 w-full h-[100vh]`}
       >
         <Links />
       </div>

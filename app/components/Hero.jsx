@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
         <div className="grid lg:grid-cols-3 gap-4 mt-10 lg:mt-52 2xl:mt-100">
           <div className="lg:col-start-2 lg:col-end-3">
-            <p>
+            <p className="text-sm lg:text-md">
               This website is open source. Designed in Figma, built with Next.js
               and Tailwind CSS, deployed with Netlify.
             </p>
