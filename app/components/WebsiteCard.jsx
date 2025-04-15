@@ -15,7 +15,7 @@ export default function WebsiteCard({ websiteInfo }) {
         <h3 className="degular font-medium text-xl lg:text-2xl">
           {websiteInfo.title}
         </h3>
-        <p className="text-gray-400">{websiteInfo.description}</p>
+        <p className="text-gray-400 text-md">{websiteInfo.description}</p>
         <ChipsContainer selectedTools={websiteTools} />
       </div>
     </div>
