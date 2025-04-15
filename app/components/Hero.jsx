@@ -1,7 +1,7 @@
 export default function Hero() {
   return (
     <section>
-      <div className="container py-10 px-4 lg:px-0 lg:pt-28 2xl:py-60 h-5/6 mx-auto">
+      <div className="container py-10 px-4 lg:px-0 lg:pt-24 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-start-2 lg:col-end-4">
             <h1 className="degular text-4xl lg:text-7xl mb-4">
@@ -13,26 +13,37 @@ export default function Hero() {
             </p>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 lg:grid-rows-1 gap-4 text-md lg:text-lg font-medium">
+        <div className="grid lg:grid-cols-3 lg:grid-rows-1 gap-6 text-md lg:text-lg font-medium">
           <div className="lg:col-start-2 lg:col-end-4 lg:row-start-1 flex gap-2">
             <p>Contact me</p>
             <span>👉🏻</span>
             <a
-              className="underline underline-offset-2 cursor-pointer"
+              className="underline underline-offset-2 cursor-pointer hover:text-orange-500 transition duration-200 ease-in-out"
               href="mailto:contact@aysenuronaran.com"
             >
               contact@aysenuronaran.com
             </a>
           </div>
-          <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 flex gap-2 text-[#999999]">
+          <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 items-center flex gap-3 text-[#999999]">
             <p>Follow me</p>
             <span>👉🏻</span>
-            <div>
-              <a href="">
-                <img src="#" alt="" />
+            <div className="flex gap-3">
+              <a
+                href="https://www.linkedin.com/in/onaranaysenur/"
+                target="_blank"
+              >
+                <img
+                  className="w-5 h-auto"
+                  src="/logos/linkedin.png"
+                  alt="linkedin"
+                />
               </a>
-              <a href="">
-                <img src="#" alt="" />
+              <a href="https://github.com/aysenuron" target="_blank">
+                <img
+                  className="w-5 h-auto"
+                  src="/logos/github.png"
+                  alt="github"
+                />
               </a>
             </div>
           </div>
@@ -41,7 +52,7 @@ export default function Hero() {
           <div className="lg:col-start-2 lg:col-end-3">
             <p>
               This website is open source. Designed in Figma, built with Next.js
-              and Tailwind CSS, deployed with Vercel.
+              and Tailwind CSS, deployed with Netlify.
             </p>
           </div>
         </div>

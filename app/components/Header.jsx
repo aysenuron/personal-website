@@ -13,7 +13,7 @@ export default function Header() {
 
   const linkNames = [
     "About",
-    "Selected Works",
+    "Works",
     "Playground",
     "Testimonials",
     "Download Resume",
@@ -21,8 +21,19 @@ export default function Header() {
   ];
 
   function Links() {
-    return linkNames.map((link) => (
-      <Link key={link} className="forma hover:text-gray-500" href="/projects">
+    return linkNames.map((link, index) => (
+      <Link
+        key={link}
+        className={`forma hover:text-orange-500 duration-200 ease-in-out transition ${
+          index === linkNames.length - 1 &&
+          "bg-gray-900 px-4 py-2 text-white rounded-2xl drop-shadow-xl font-medium hover:bg-gray-100 hover:drop-shadow-none"
+        }`}
+        href={`${
+          index === linkNames.length - 1
+            ? "mailto:contact@aysenuronaran.com"
+            : "/" + link
+        }`}
+      >
         {link}
       </Link>
     ));
@@ -32,10 +43,12 @@ export default function Header() {
     <header className="container relative mx-auto px-4 lg:px-0 py-4 lg:py-9 flex justify-between items-center">
       <div>
         <a href="/">
-          <span className="degular text-xl lg:text-3xl">Ayşenur Onaran</span>
+          <span className="degular text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">
+            Ayşenur Onaran
+          </span>
         </a>
       </div>
-      <div className="hidden lg:flex lg:gap-8">
+      <div className="hidden lg:flex lg:items-center lg:gap-8">
         <Links />
       </div>
       <div className="lg:hidden">
