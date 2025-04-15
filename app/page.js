@@ -10,6 +10,7 @@ export default function Home() {
     <>
       <Head>
         <meta name="description" content="My awesome Next.js app" />
+        <link rel="stylesheet" href="https://use.typekit.net/qkm8iol.css" />
       </Head>
       <Header />
       <main>
