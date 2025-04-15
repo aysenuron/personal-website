@@ -43,8 +43,8 @@ export default function Header() {
     <header className="container relative mx-auto px-4 lg:px-0 py-4 lg:py-9 flex justify-between items-center">
       <div>
         <a href="/">
-          <span className="degular text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">
-            Ayşenur Onaran
+          <span className="degular font-medium text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">
+            Ay<span className="text-[18px] lg:text-[27px]">ş</span>enur Onaran
           </span>
         </a>
       </div>
