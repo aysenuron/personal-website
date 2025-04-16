@@ -1,7 +1,10 @@
+import ProjectCard from "./ProjectCard";
+import apps from "../apps";
+
 export default function Playground() {
   return (
-    <div className="container mx-auto px-4 pt-20 lg:px-0">
-      <div className="grid lg:grid-cols-6">
+    <div className="container mx-auto px-4 pt-20 lg:pt-40 lg:px-0">
+      <div className="mb-5 lg:mb-10 grid lg:grid-cols-6">
         <h2 className="degular lg:col-span-2 text-2xl lg:text-4xl font-medium mb-5 lg:mb-10">
           Playground 👩🏻‍💻
         </h2>
@@ -20,6 +23,17 @@ export default function Playground() {
             contact@aysenuronaran.com
           </a>
         </p>
+      </div>
+      <div className="gap-4 lg:gap-10 grid lg:grid-cols-12">
+        {apps.map((app) => (
+          <ProjectCard
+            key={app.id}
+            data={app}
+            className={
+              app.id === 1 || app.id === 4 ? "lg:col-span-7" : "lg:col-span-5"
+            }
+          />
+        ))}
       </div>
     </div>
   );

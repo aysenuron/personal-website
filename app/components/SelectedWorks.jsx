@@ -1,4 +1,4 @@
-import WebsiteCard from "./WebsiteCard";
+import ProjectCard from "./ProjectCard";
 import websites from "../websites";
 
 export default function SelectedWorks() {
@@ -9,7 +9,7 @@ export default function SelectedWorks() {
       </h2>
       <div className="flex flex-col gap-4 lg:gap-10">
         {websites.map((website) => (
-          <WebsiteCard key={website.id} websiteInfo={website} />
+          <ProjectCard key={website.id} data={website} />
         ))}
       </div>
     </div>
