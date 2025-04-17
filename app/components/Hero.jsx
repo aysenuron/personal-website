@@ -1,13 +1,22 @@
 export default function Hero() {
   return (
     <section>
-      <div className="container py-10 px-4 lg:px-0 lg:pt-24 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">
+      <div className="container py-7 px-4 lg:px-0 lg:pt-24 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-start-2 lg:col-end-4">
-            <h1 className="degular font-medium text-4xl lg:text-7xl mb-4">
-              Hi, I'm Ay<span className="text-[33px] lg:text-[64px]">ş</span>
-              enur <span className="degular text-2xl lg:text-5xl">👋🏻</span>
-            </h1>
+            <div className="flex items-end gap-6 lg:gap-4">
+              <h1 className="degular font-medium text-4xl lg:text-7xl mb-4">
+                Hi, I'm Ay<span className="text-[33px] lg:text-[64px]">ş</span>
+                enur
+              </h1>
+              <div className="w-20 lg:w-28 rounded-full overflow-hidden ">
+                <img
+                  className="w-fit"
+                  src="/profile.png"
+                  alt="Profile picture"
+                />
+              </div>
+            </div>
             <p className="degular mb-8 text-[#999999] font-medium text-2xl md:text-4xl lg:text-5xl">
               Web Developer & Designer
             </p>
