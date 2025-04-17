@@ -43,6 +43,16 @@ const tools = [
         name: "Netlify",
         img: "/logos/netlify.png"
     },
+    {
+        name: "Claude AI",
+        img: "/logos/claude.png"
+    },
+    {
+        name: "REST APIs",
+    },
+    {
+        name: "Browser APIs (Local Storage)",
+    },
 ];
 
 export default tools;
