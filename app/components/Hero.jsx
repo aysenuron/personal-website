@@ -1,3 +1,5 @@
+import BouncingProfileImage from "./BouncingProfileImage";
+
 export default function Hero() {
   return (
     <section>
@@ -9,13 +11,11 @@ export default function Hero() {
                 Hi, I'm Ay<span className="text-[33px] lg:text-[64px]">ş</span>
                 enur
               </h1>
-              <div className="w-20 lg:w-28 rounded-full overflow-hidden ">
-                <img
-                  className="w-fit"
-                  src="/profile.png"
-                  alt="Profile picture"
-                />
-              </div>
+              <BouncingProfileImage
+                className={"w-20 lg:w-28 rounded-full overflow-hidden"}
+                src={"/profile.png"}
+                alt={"Profile picture"}
+              />
             </div>
             <p className="degular mb-8 text-[#999999] font-medium text-2xl md:text-4xl lg:text-5xl">
               Web Developer & Designer
@@ -34,8 +34,8 @@ export default function Hero() {
             </a>
           </div>
           <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 items-center flex gap-3 text-[#999999]">
-            <p>Follow me</p>
-            <span>👉🏻</span>
+            <p className="hidden lg:block">Follow me</p>
+            <span className="hidden lg:block">👉🏻</span>
             <div className="flex gap-3">
               <a
                 href="https://www.linkedin.com/in/onaranaysenur/"
