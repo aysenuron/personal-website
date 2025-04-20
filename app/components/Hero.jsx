@@ -1,4 +1,9 @@
+"use client";
+import { motion } from "framer-motion";
 import BouncingProfileImage from "./BouncingProfileImage";
+
+const initial = { opacity: 0, y: 50 };
+const animate = { opacity: 1, y: 0 };
 
 export default function Hero() {
   return (
@@ -7,23 +12,50 @@ export default function Hero() {
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-start-2 lg:col-end-4">
             <div className="flex items-end gap-6 lg:gap-4">
-              <h1 className="degular font-medium text-4xl lg:text-7xl mb-4">
+              <motion.h1
+                initial={initial}
+                animate={animate}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.5,
+                  ease: "easeInOut",
+                }}
+                className="degular font-medium text-4xl lg:text-7xl mb-4"
+              >
                 Hi, I'm Ay<span className="text-[33px] lg:text-[64px]">ş</span>
                 enur
-              </h1>
+              </motion.h1>
               <BouncingProfileImage
                 className={"w-20 lg:w-28 rounded-full overflow-hidden"}
                 src={"/profile.png"}
                 alt={"Profile picture"}
               />
             </div>
-            <p className="degular mb-8 text-[#999999] font-medium text-2xl md:text-4xl lg:text-5xl">
+            <motion.p
+              initial={initial}
+              animate={animate}
+              transition={{
+                delay: 0.6,
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              className="degular mb-8 text-[#999999] font-medium text-2xl md:text-4xl lg:text-5xl"
+            >
               Web Developer & Designer
-            </p>
+            </motion.p>
           </div>
         </div>
         <div className="grid lg:grid-cols-3 lg:grid-rows-1 gap-6 text-md lg:text-lg font-medium">
-          <div className="lg:col-start-2 lg:col-end-4 lg:row-start-1 flex gap-2">
+          <motion.div
+            initial={initial}
+            animate={animate}
+            transition={{
+              delay: 1,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            className="lg:col-start-2 lg:col-end-4 lg:row-start-1 flex gap-2"
+          >
             <p>Contact me</p>
             <span>👉🏻</span>
             <a
@@ -32,8 +64,17 @@ export default function Hero() {
             >
               contact@aysenuronaran.com
             </a>
-          </div>
-          <div className="lg:col-start-1 lg:col-end-2 lg:row-start-1 items-center flex gap-3 text-[#999999]">
+          </motion.div>
+          <motion.div
+            initial={initial}
+            animate={animate}
+            transition={{
+              delay: 2.5,
+              duration: 0.5,
+              ease: "easeInOut",
+            }}
+            className="lg:col-start-1 lg:col-end-2 lg:row-start-1 items-center flex gap-3 text-[#999999]"
+          >
             <p className="hidden lg:block">Follow me</p>
             <span className="hidden lg:block">👉🏻</span>
             <div className="flex gap-3">
@@ -55,14 +96,23 @@ export default function Hero() {
                 />
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
         <div className="grid lg:grid-cols-3 gap-4 mt-10 lg:mt-52 2xl:mt-100">
           <div className="lg:col-start-2 lg:col-end-3">
-            <p className="text-sm lg:text-md">
+            <motion.p
+              initial={initial}
+              animate={animate}
+              transition={{
+                delay: 3,
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
+              className="text-sm lg:text-md"
+            >
               This website is open source. Designed in Figma, built with Next.js
-              and Tailwind CSS, deployed with Netlify.
-            </p>
+              and Tailwind CSS, deployed with Vercel.
+            </motion.p>
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import ChipsContainer from "./ChipsContainer";
 import tools from "../tools";
 
@@ -9,40 +9,35 @@ export default function ProjectCard({ data, index }) {
     data.toolNames.includes(tool.name)
   );
 
-  // Smooth upward animation similar to Cubtale
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 40, // Start from below
-      scale: 1, // No scaling effect, just like Cubtale
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      scale: 1,
-      transition: {
-        duration: 0.7, // Slightly longer for smoother feel
-        ease: "easeInOut", // Custom cubic-bezier that mimics Cubtale's smooth motion
-        delay: index * 0.08, // Short delay between cards
-      },
-    },
-  };
-
   return (
-    <motion.div
-      className="lg:grid relative lg:grid-cols-5 px-6 py-3 p-2.5 flex flex-col gap-5 justify-center hover:border-orange-500 hover:bg-white hover:drop-shadow-xl hover:cursor-pointer duration-200 ease-in-out transition border-gray-300 border-[0.5px] rounded-3xl"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={cardVariants}
-    >
-      <div className="lg:col-span-2">
+    <div className="lg:grid relative lg:grid-cols-5 px-6 py-3 p-2.5 flex flex-col gap-5 justify-center hover:border-orange-500 hover:bg-white hover:drop-shadow-xl hover:cursor-pointer duration-200 ease-in-out transition border-gray-300 border-[0.5px] rounded-3xl">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{
+          delay: index * 0.5,
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        className="lg:col-span-2"
+      >
         <img src={data.img} alt={data.title} />
-      </div>
+      </motion.div>
       <div className="lg:col-span-3 flex flex-col gap-5 justify-center">
-        <h3 className="degular font-medium text-xl lg:text-2xl text-gray-700">
+        <motion.h3
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            delay: index * 1,
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+          className="degular font-medium text-xl lg:text-2xl text-gray-700"
+        >
           {data.title}
-        </h3>
+        </motion.h3>
         <div className="lg:absolute top-4 right-4 flex gap-4 text-sm items-center">
           {data.githubLink ? (
             <a href={data.githubLink} target="_blank">
@@ -59,9 +54,21 @@ export default function ProjectCard({ data, index }) {
             </a>
           ) : null}
         </div>
-        <p className="text-gray-400 text-md">{data.description}</p>
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{
+            delay: index * 1.5,
+            duration: 0.5,
+            ease: "easeOut",
+          }}
+          className="text-gray-400 text-md"
+        >
+          {data.description}
+        </motion.p>
         <ChipsContainer selectedTools={websiteTools} />
       </div>
-    </motion.div>
+    </div>
   );
 }

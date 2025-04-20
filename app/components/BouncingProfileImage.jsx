@@ -1,44 +1,38 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 
 const DropProfileImage = ({ src, alt, className }) => {
-  const controls = useAnimation();
-
-  useEffect(() => {
-    const startAnimation = async () => {
-      // Set initial state - above viewport and transparent
-      await controls.set({
-        y: -300,
-        opacity: 0,
-      });
-
-      // Animate drop with spring and fade in
-      await controls.start({
-        y: 0,
-        opacity: 1,
-        transition: {
-          y: {
-            type: "spring",
-            stiffness: 100, // Lower for more bounce
-            damping: 10, // Lower for more oscillation
-            mass: 1, // Mass affects momentum
-            velocity: 100, // Initial velocity for more natural drop
-          },
-          opacity: {
-            duration: 0.4, // Fade in duration
-            ease: "easeOut", // Smooth fade in
-          },
+  const dropVariants = {
+    hidden: {
+      y: -500,
+      opacity: 0,
+    },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        delay: 1.5,
+        duration: 1.2,
+        y: {
+          delay: 1.5,
+          type: "spring",
+          stiffness: 100,
+          damping: 5,
+          mass: 1,
         },
-      });
-    };
-
-    startAnimation();
-  }, [controls]);
+      },
+    },
+  };
 
   return (
-    <motion.div animate={controls} className={className}>
+    <motion.div
+      className={className}
+      initial="hidden"
+      animate="visible"
+      variants={dropVariants}
+    >
       <img
         src={src}
         alt={alt}
