@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import BouncingProfileImage from "./BouncingProfileImage";
+import DropProfileImage from "./DropProfileImage";
 
 const initial = { opacity: 0, y: 50 };
 const animate = { opacity: 1, y: 0 };
@@ -8,7 +8,7 @@ const animate = { opacity: 1, y: 0 };
 export default function Hero() {
   return (
     <section>
-      <div className="container py-7 px-4 lg:px-0 lg:pt-24 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">
+      <div className="container py-24 px-4 lg:px-0 lg:py-6 lg:pt-20 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-start-2 lg:col-end-4">
             <div className="flex items-end gap-6 lg:gap-4">
@@ -25,7 +25,7 @@ export default function Hero() {
                 Hi, I'm Ay<span className="text-[33px] lg:text-[64px]">ş</span>
                 enur
               </motion.h1>
-              <BouncingProfileImage
+              <DropProfileImage
                 className={"w-20 lg:w-28 rounded-full overflow-hidden"}
                 src={"/profile.png"}
                 alt={"Profile picture"}

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from "./components/Hero";
 import SelectedWorks from './components/SelectedWorks';
 import Playground from './components/Playground';
+import AboutMe from './components/AboutMe';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <SelectedWorks />
         <Playground />
+        <AboutMe />
       </main>
     </>
   );

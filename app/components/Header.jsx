@@ -11,14 +11,7 @@ export default function Header() {
     document.body.classList.toggle("overflow-hidden");
   }
 
-  const linkNames = [
-    "About",
-    "Works",
-    "Playground",
-    "Testimonials",
-    "Download Resume",
-    "Send me an email",
-  ];
+  const linkNames = ["Download Resume", "Send me an email"];
 
   function Links() {
     return linkNames.map((link, index) => (

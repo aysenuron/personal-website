@@ -8,7 +8,7 @@ const animate = { opacity: 1, y: 0 };
 
 export default function SelectedWorks() {
   return (
-    <div className="container mx-auto px-4 lg:px-0">
+    <section className="container mx-auto px-4 lg:px-0">
       <motion.h2
         initial={initial}
         animate={animate}
@@ -26,6 +26,6 @@ export default function SelectedWorks() {
           <ProjectCard key={website.id} data={website} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
