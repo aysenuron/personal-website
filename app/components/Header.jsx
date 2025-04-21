@@ -24,8 +24,9 @@ export default function Header() {
         href={`${
           index === linkNames.length - 1
             ? "mailto:contact@aysenuronaran.com"
-            : "/" + link
+            : "/aysenurOnaran-CV.pdf"
         }`}
+        target="_blank"
       >
         {link}
       </Link>

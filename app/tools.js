@@ -1,9 +1,5 @@
 const tools = [
     {
-        name: "Webflow",
-        img: "/logos/webflow.png"
-    },
-    {
         name: "React",
         img: "/logos/react.png"
     },
@@ -16,6 +12,14 @@ const tools = [
         img: "/logos/framermotion.png"
     },
     {
+        name: "Git",
+        img: "/logos/git.png"
+    },
+    {
+        name: "GitHub",
+        img: "/logos/github-logo.png"
+    },
+    {
         name: "HTML",
         img: "/logos/html.png"
     },
@@ -26,6 +30,22 @@ const tools = [
     {
         name: "JavaScript",
         img: "/logos/javascript.png"
+    },
+    {
+        name: "TypeScript",
+        img: "/logos/typescript.png"
+    },
+    {
+        name: "Webflow",
+        img: "/logos/webflow.png"
+    },
+    {
+        name: "Figma",
+        img: "/logos/figma.png"
+    },
+    {
+        name: "Adobe CC",
+        img: "/logos/adobe.png"
     },
     {
         name: "HubSpot",
