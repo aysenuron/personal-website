@@ -13,7 +13,7 @@ export default function SelectedWorks() {
         initial={initial}
         animate={animate}
         transition={{
-          delay: 3.5,
+          delay: 3,
           duration: 0.5,
           ease: "easeInOut",
         }}

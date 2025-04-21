@@ -63,11 +63,11 @@ export default function ProjectCard({ data, index }) {
             duration: 0.5,
             ease: "easeOut",
           }}
-          className="text-gray-400 text-md"
+          className="text-gray-500 text-md"
         >
           {data.description}
         </motion.p>
-        <ChipsContainer selectedTools={websiteTools} />
+        <ChipsContainer selectedTools={websiteTools} color={"[#F5F5F5]"} />
       </div>
     </div>
   );

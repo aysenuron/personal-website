@@ -5,7 +5,7 @@ import AppCard from "./AppCard";
 
 export default function Playground() {
   return (
-    <section className="container mx-auto px-4 space-y-8 lg:space-y-12 pt-20 lg:pt-40 lg:px-0 lg:py-20">
+    <section className="container mx-auto px-4 space-y-8 lg:space-y-12 pt-20  lg:px-0 py-20">
       <div className="grid gap-6 lg:grid-cols-6">
         <div className="flex items-center h-full lg:col-span-2">
           <motion.h2

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import ChipsContainer from "./ChipsContainer";
 import tools from "../tools";
+import Button from "./Button";
 
 const animations = {
   paragraph: {
@@ -58,8 +59,8 @@ export default function AboutMe() {
           I have both bachelor's and master's degrees in architecture, but I
           found my true calling in the digital world. For three years, I worked
           at Elevate Health Technologies as a{" "}
-          <span className="text-gray-900">
-            digital designer and Web developer.
+          <span className="text-gray-900 font-medium">
+            digital designer and web developer.
           </span>
         </>
       ),
@@ -71,8 +72,24 @@ export default function AboutMe() {
           Along the way, I've taught myself frontend development and started
           taking on freelance projects building websites for clients. I see
           myself as a generalist.
-          <span className="text-gray-900"> My background in architecture </span>
+          <span className="text-gray-900 font-medium">
+            {" "}
+            My background in architecture{" "}
+          </span>
           gives me a different way to look at digital problems.
+        </>
+      ),
+      delay: 0.6,
+    },
+    {
+      content: (
+        <>
+          At Elevate, I designed and developed the company website using Webflow
+          while integrating custom JavaScript for enhanced functionality. I
+          connected the site with HubSpot for lead generation and implemented
+          GA4 and Google Tag Manager to gather actionable insights. My work
+          extended to conducting A/B testing to optimize user engagement and
+          creating marketing assets that effectively communicate product value.
         </>
       ),
       delay: 0.6,
@@ -83,76 +100,79 @@ export default function AboutMe() {
           When I face a challenge, my philosophy is simple: "I'll figure it
           out." And so far, I always have. I don't believe in putting myself in
           one box.{" "}
-          <span className="text-gray-900">
+          <span className="text-gray-900 font-medium">
             I learn quickly and adapt to new situations.
           </span>{" "}
           Each project teaches me something new that I can use in the next one.
         </>
       ),
-      delay: 0.7,
+      delay: 0.6,
     },
     {
       content:
         "Outside of work, I enjoy biking through city streets, trying new recipes in the kitchen, hiking whenever I can get out of town, and taking photos of pelicans (yes, specifically pelicans). Simple joys that fuel good work.",
-      delay: 0.8,
-    },
-    {
-      content:
-        "Let's work together to create something that looks good and works.",
-      delay: 0.9,
+      delay: 0.6,
     },
   ];
 
   return (
-    <section className="container mx-auto py-12 lg:py-4 px-4 lg:px-0">
-      <div className="relative grid lg:grid-cols-3 gap-5 lg:gap-10">
-        <motion.div
-          {...animations.image}
-          className="hidden lg:sticky lg:top-0 lg:h-full xl:h-2/3 lg:flex justify-end items-center"
-        >
-          <img
-            className="h-full lg:pt-16"
-            src="/about-me.png"
-            alt="Ayşenur Onaran picture"
-          />
-        </motion.div>
-        <div className="lg:col-span-2">
-          <div>
-            <motion.h2
-              {...animations.paragraph}
-              className="degular text-2xl lg:text-4xl font-medium mb-2 lg:mb-5"
-            >
-              About me <span className="text-lg lg:text-2xl">🤙🏻</span>
-            </motion.h2>
-            <p className="text-gray-400 text-md">
-              {paragraphs.map((paragraph, index) => (
-                <React.Fragment key={index}>
-                  {index > 0 && (
-                    <>
-                      <br />
-                      <br />{" "}
-                    </>
-                  )}
-                  <AnimatedParagraph
-                    delay={paragraph.delay}
-                    className={paragraph.className}
-                  >
-                    {paragraph.content}
-                  </AnimatedParagraph>
-                </React.Fragment>
-              ))}
-            </p>
-          </div>
-          <div>
-            <motion.h3
-              {...animations.paragraph}
-              className="degular text-xl mt-9 lg:text-2xl font-medium mb-2 lg:mb-5"
-            >
-              Skills <span className="text-lg lg:text-2xl">🚲</span>
-            </motion.h3>
-            <motion.div {...animations.paragraph}>
-              <ChipsContainer selectedTools={tools} />
-            </motion.div>
+    <section className="bg-orange-50  py-20 px-4 lg:px-0">
+      <div className="mx-auto container">
+        <div className="relative grid lg:grid-cols-3 gap-4 lg:gap-10">
+          <motion.div
+            {...animations.image}
+            className="hidden lg:sticky lg:top-8 lg:h-100 lg:flex justify-end items-center"
+          >
+            <img
+              className="h-full w-auto"
+              src="/about-me.png"
+              alt="Ayşenur Onaran picture"
+            />
+          </motion.div>
+          <div className="lg:col-span-2">
+            <div>
+              <motion.h2
+                {...animations.paragraph}
+                className="degular text-2xl lg:text-4xl font-medium mb-2 lg:mb-5"
+              >
+                About me
+              </motion.h2>
+              <p className="text-gray-700 text-md/relaxed">
+                {paragraphs.map((paragraph, index) => (
+                  <React.Fragment key={index}>
+                    {index > 0 && (
+                      <>
+                        <br />
+                        <br />{" "}
+                      </>
+                    )}
+                    <AnimatedParagraph
+                      delay={paragraph.delay}
+                      className={paragraph.className}
+                    >
+                      {paragraph.content}
+                    </AnimatedParagraph>
+                  </React.Fragment>
+                ))}
+              </p>
+            </div>
+            <div className="my-12">
+              <Button handleClick={"/aysenurOnaran-CV.pdf"}>
+                Download Resume
+              </Button>
+            </div>
+
+            <div>
+              <motion.h3
+                {...animations.paragraph}
+                className="degular text-xl lg:text-2xl font-medium mb-6"
+              >
+                Skills <span className="text-xl lg:text-2xl">🚲</span>
+              </motion.h3>
+              <motion.div {...animations.paragraph}>
+                <ChipsContainer selectedTools={tools} color={"white"} />
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>

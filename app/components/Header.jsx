@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Button from "./Button";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,30 +12,26 @@ export default function Header() {
     document.body.classList.toggle("overflow-hidden");
   }
 
-  const linkNames = ["Download Resume", "Send me an email"];
-
   function Links() {
-    return linkNames.map((link, index) => (
-      <Link
-        key={link}
-        className={`forma hover:text-orange-500 duration-200 ease-in-out transition ${
-          index === linkNames.length - 1 &&
-          "bg-gradient-to-t from-gray-700 to-gray-900 shadow-inner hover:border-none shadow-gray-400 w-fit px-4 py-2 text-white rounded-2xl drop-shadow-xl hover:from-gray-50 hover:to-gray-100 hover:drop-shadow-none"
-        }`}
-        href={`${
-          index === linkNames.length - 1
-            ? "mailto:contact@aysenuronaran.com"
-            : "/aysenurOnaran-CV.pdf"
-        }`}
-        target="_blank"
-      >
-        {link}
-      </Link>
-    ));
+    return (
+      <>
+        <Link
+          className={`forma hover:text-orange-500 duration-200 ease-in-out transition `}
+          href="/aysenurOnaran-CV.pdf"
+          target="_blank"
+        >
+          Download Resume
+        </Link>
+
+        <Button handleClick={"mailto:contact@aysenuronaran.com"}>
+          Send me an email
+        </Button>
+      </>
+    );
   }
 
   return (
-    <header className="container relative mx-auto px-4 lg:px-0 py-4 lg:py-9 flex justify-between items-center">
+    <header className="bg-white container mx-auto px-4 lg:px-0 py-4 flex justify-between items-center">
       <div>
         <a href="/">
           <span className="degular font-medium text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">

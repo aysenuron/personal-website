@@ -69,7 +69,7 @@ export default function Hero() {
             initial={initial}
             animate={animate}
             transition={{
-              delay: 2.5,
+              delay: 2,
               duration: 0.5,
               ease: "easeInOut",
             }}
@@ -104,14 +104,18 @@ export default function Hero() {
               initial={initial}
               animate={animate}
               transition={{
-                delay: 3,
+                delay: 2.5,
                 duration: 0.5,
                 ease: "easeInOut",
               }}
               className="text-sm lg:text-md"
             >
-              This website is open source. Designed in Figma, built with Next.js
-              and Tailwind CSS, deployed with Vercel.
+              This website is{" "}
+              <a href="https://github.com/aysenuron/personal-website">
+                <span className="underline-offset-2">open source.</span>
+              </a>{" "}
+              Designed in Figma, built with Next.js and Tailwind CSS, deployed
+              with Vercel.
             </motion.p>
           </div>
         </div>
