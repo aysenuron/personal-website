@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import DropProfileImage from "./DropProfileImage";
+import WavyText from "./WavyText";
 
 const initial = { opacity: 0, y: 50 };
 const animate = { opacity: 1, y: 0 };
@@ -56,7 +57,9 @@ export default function Hero() {
             }}
             className="lg:col-start-2 lg:col-end-4 lg:row-start-1 flex gap-2"
           >
-            <p>Contact me</p>
+            <p>
+              <WavyText>Contact me</WavyText>
+            </p>
             <span>👉🏻</span>
             <a
               className="underline underline-offset-2 cursor-pointer hover:text-orange-500 transition duration-200 ease-in-out"
