@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import WavyText from "./WavyText";
 
 const animations = {
   initial: { opacity: 0, y: 30 },
@@ -22,15 +23,15 @@ export default function CallToAction() {
               {...animations}
               className="degular text-2xl lg:text-4xl font-medium"
             >
-              Get in touch <span className="text-lg lg:text-2xl">🫧</span>
+              <WavyText>Get in touch</WavyText>
             </motion.h2>
             <p>I repsond the quickest to mails.</p>
             <motion.div
               {...animations}
-              className="flex gap-2 font-medium lg:text-lg"
+              className="flex flex-col md:flex-row gap-2 font-medium lg:text-lg"
             >
-              <p>Send me an email</p>
-              <span>👉🏻</span>
+              <p className="hidden md:block">Send me an email</p>
+              <span className="hidden md:block">👉🏻</span>
               <a
                 className="underline underline-offset-2 cursor-pointer hover:text-orange-500 transition duration-200 ease-in-out"
                 href="mailto:contact@aysenuronaran.com"

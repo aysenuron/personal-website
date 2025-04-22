@@ -67,7 +67,7 @@ export default function ProjectCard({ data, index }) {
         >
           {data.description}
         </motion.p>
-        <ChipsContainer selectedTools={websiteTools} color={"[#F5F5F5]"} />
+        <ChipsContainer selectedTools={websiteTools} color={"gray-50"} />
       </div>
     </div>
   );
