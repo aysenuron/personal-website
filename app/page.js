@@ -20,8 +20,8 @@ export default function Home() {
         <SelectedWorks />
         <Playground />
         <AboutMe />
-        <CallToAction />
       </main>
+      <CallToAction />
     </>
   );
 }

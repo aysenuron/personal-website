@@ -116,7 +116,7 @@ export default function AboutMe() {
   ];
 
   return (
-    <section className="bg-orange-50  py-20 px-4 lg:px-0">
+    <section className="bg-orange-50  py-20 lg:py-40 px-4 lg:px-0">
       <div className="mx-auto container">
         <div className="relative grid lg:grid-cols-3 gap-4 lg:gap-10">
           <motion.div

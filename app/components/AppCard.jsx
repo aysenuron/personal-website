@@ -9,7 +9,7 @@ export default function AppCard({ data }) {
   );
 
   return (
-    <div className="hover:border-orange-500 hover:bg-white hover:shadow-inner duration-300 ease-in-out transition border-gray-400 border-[0.1px] rounded-3xl">
+    <div className="hover:border-orange-500 bg-white hover:shadow-inner duration-300 ease-in-out transition border-gray-200 border-[0.1px] rounded-3xl">
       <div className="px-6 py-3 flex justify-between items-center">
         <span className="text-xl">{data.emoji}</span>
         <div className="flex gap-4 text-sm items-center">
