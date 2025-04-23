@@ -48,7 +48,7 @@ export default function SelectedWorks() {
         </motion.h2>
       </div>
       <div
-        className={`bg-white lg:p-8 space-y-8 lg:space-y-12 transition-all duration-800 ${
+        className={`bg-white lg:p-8 space-y-8 lg:space-y-12 transition-all duration-2000 ${
           isCompact
             ? "lg:mx-16 2xl:mx-128 p-4 rounded-4xl mt-0"
             : "mx-0 2xl:mt-24 mt-32"

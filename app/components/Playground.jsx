@@ -18,7 +18,7 @@ export default function Playground() {
 
     ScrollTrigger.create({
       trigger: appContainer,
-      start: "top-=80 top",
+      start: "top top+=40",
       end: "bottom top",
       onEnter: () => setIsCompact(true),
       onLeaveBack: () => setIsCompact(false),
@@ -79,7 +79,7 @@ export default function Playground() {
         </div>
       </div>
       <div
-        className={`bg-white p-4 lg:p-8 space-y-8 lg:space-y-12 transition-all duration-800 ${
+        className={`bg-white p-4 lg:p-8 space-y-8 lg:space-y-12 transition-all duration-2000 ${
           isCompact
             ? "lg:mx-16 2xl:mx-128 rounded-4xl mt-0"
             : "mx-0 2xl:mt-24 mt-12 lg:mt-20"
