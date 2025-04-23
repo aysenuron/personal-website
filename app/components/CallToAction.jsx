@@ -16,7 +16,7 @@ const animations = {
 export default function CallToAction() {
   return (
     <section>
-      <div className="container bg-white mx-auto px-4 lg:px-0 py-20 lg:py-60">
+      <div className="container mx-auto px-4 lg:px-0 py-20 lg:py-40">
         <div className="grid lg:grid-cols-3 gap-4 lg:gap-10">
           <div className="lg:col-start-2 lg:col-end-4 flex flex-col gap-12">
             <motion.h2 {...animations} className="degular text-8xl font-medium">

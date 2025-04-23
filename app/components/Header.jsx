@@ -31,28 +31,30 @@ export default function Header() {
   }
 
   return (
-    <header className="bg-white container mx-auto px-4 lg:px-0 py-4 flex justify-between items-center">
-      <div>
-        <a href="/">
-          <span className="degular font-medium text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">
-            Ay<span className="text-[18px] lg:text-[27px]">ş</span>enur Onaran
-          </span>
-        </a>
-      </div>
-      <div className="hidden lg:flex lg:items-center lg:gap-8">
-        <Links />
-      </div>
-      <div className="lg:hidden">
-        <button onClick={toggleMenu} className="forma text-md underline">
-          {menuOpen ? "Close" : "Menu"}
-        </button>
-      </div>
-      <div
-        className={`lg:hidden flex flex-col gap-6 ${
-          !menuOpen && "hidden"
-        } bg-white z-10 absolute top-20 w-full h-[100vh]`}
-      >
-        <Links />
+    <header>
+      <div className="bg-white container h-fit mx-auto py-4 px-8 mt-4 -mb-8 rounded-3xl flex justify-between items-center">
+        <div>
+          <a href="/">
+            <span className="degular font-medium text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">
+              Ay<span className="text-[18px] lg:text-[27px]">ş</span>enur Onaran
+            </span>
+          </a>
+        </div>
+        <div className="hidden lg:flex lg:items-center lg:gap-8">
+          <Links />
+        </div>
+        <div className="lg:hidden">
+          <button onClick={toggleMenu} className="forma text-md underline">
+            {menuOpen ? "Close" : "Menu"}
+          </button>
+        </div>
+        <div
+          className={`lg:hidden flex flex-col gap-6 ${
+            !menuOpen && "hidden"
+          } bg-white z-10 absolute top-20 w-full h-[100vh]`}
+        >
+          <Links />
+        </div>
       </div>
     </header>
   );

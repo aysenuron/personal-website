@@ -1,13 +1,46 @@
 "use client";
 import { motion } from "framer-motion";
 import DropProfileImage from "./DropProfileImage";
+import React from "react";
+
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const initial = { opacity: 0, y: 50 };
 const animate = { opacity: 1, y: 0 };
 
 export default function Hero() {
+  const heroRef = useRef(null);
+  const [isCompact, setIsCompact] = useState(false);
+
+  useEffect(() => {
+    const heroElement = heroRef.current;
+
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: "top top",
+      end: "bottom top",
+      onEnter: () => setIsCompact(true),
+      onLeaveBack: () => setIsCompact(false),
+    });
+
+    return () => {
+      trigger.kill();
+    };
+  }, []);
+
   return (
-    <section>
+    <section
+      ref={heroRef}
+      className={`bg-white transition-all duration-800 ${
+        isCompact
+          ? "mx-20 mt-56 mb-20 px-10 py-6 rounded-4xl"
+          : "m-0 rounded-none"
+      }`}
+    >
       <div className="container py-24 px-4 lg:px-0 lg:py-6 lg:pt-20 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">
         <div className="grid lg:grid-cols-3 gap-4">
           <div className="lg:col-start-2 lg:col-end-4">
@@ -22,7 +55,8 @@ export default function Hero() {
                 }}
                 className="degular font-medium text-4xl lg:text-7xl mb-4"
               >
-                Hi, I'm Ay<span className="text-[33px] lg:text-[64px]">ş</span>
+                Hi, I'm Ay
+                <span className="text-[33px] lg:text-[64px]">ş</span>
                 enur
               </motion.h1>
               <DropProfileImage

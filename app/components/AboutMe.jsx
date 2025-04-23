@@ -5,6 +5,11 @@ import ChipsContainer from "./ChipsContainer";
 import tools from "../tools";
 import Button from "./Button";
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const animations = {
   paragraph: {
     initial: { opacity: 0, y: 30 },
@@ -46,6 +51,25 @@ function AnimatedParagraph({ children, delay = 0.2, className = "" }) {
 }
 
 export default function AboutMe() {
+  const aboutRef = React.useRef(null);
+  const [isCompact, setIsCompact] = React.useState(false);
+
+  React.useEffect(() => {
+    const aboutMe = aboutRef.current;
+
+    ScrollTrigger.create({
+      trigger: aboutMe,
+      start: "top-=100 top",
+      end: "bottom top",
+      onEnter: () => setIsCompact(true),
+      onLeaveBack: () => setIsCompact(false),
+    });
+
+    return () => {
+      trigger.kill();
+    };
+  }, []);
+
   const paragraphs = [
     {
       content:
@@ -116,62 +140,71 @@ export default function AboutMe() {
   ];
 
   return (
-    <section className="bg-orange-50  py-20 lg:py-40 px-4 lg:px-0">
-      <div className="mx-auto container">
-        <div className="relative grid lg:grid-cols-3 gap-4 lg:gap-10">
-          <motion.div
-            {...animations.image}
-            className="hidden lg:sticky lg:top-8 lg:h-100 lg:flex justify-end items-center"
-          >
-            <img
-              className="h-full w-auto"
-              src="/about-me.png"
-              alt="Ayşenur Onaran picture"
-            />
-          </motion.div>
-          <div className="lg:col-span-2">
-            <div>
-              <motion.h2
-                {...animations.paragraph}
-                className="degular text-2xl lg:text-4xl font-medium mb-2 lg:mb-5"
-              >
-                About me
-              </motion.h2>
-              <p className="text-gray-700 text-md/relaxed">
-                {paragraphs.map((paragraph, index) => (
-                  <React.Fragment key={index}>
-                    {index > 0 && (
-                      <>
-                        <br />
-                        <br />{" "}
-                      </>
-                    )}
-                    <AnimatedParagraph
-                      delay={paragraph.delay}
-                      className={paragraph.className}
-                    >
-                      {paragraph.content}
-                    </AnimatedParagraph>
-                  </React.Fragment>
-                ))}
-              </p>
-            </div>
-            <div className="my-12">
-              <Button handleClick={"/aysenurOnaran-CV.pdf"}>
-                Download Resume
-              </Button>
-            </div>
+    <section>
+      <div
+        ref={aboutRef}
+        className={`bg-orange-50 px-4 transition-all duration-800 ${
+          isCompact
+            ? "p-20 mx-20 mt-0 rounded-4xl"
+            : "lg:py-40 mx-0 mt-12 rounded-none"
+        }`}
+      >
+        <div className="mx-auto container">
+          <div className="relative grid lg:grid-cols-3 gap-4 lg:gap-10">
+            <motion.div
+              {...animations.image}
+              className="hidden lg:sticky lg:top-8 lg:h-100 lg:flex justify-end items-center"
+            >
+              <img
+                className="h-full w-auto"
+                src="/about-me.png"
+                alt="Ayşenur Onaran picture"
+              />
+            </motion.div>
+            <div className="lg:col-span-2">
+              <div>
+                <motion.h2
+                  {...animations.paragraph}
+                  className="degular text-2xl lg:text-4xl font-medium mb-2 lg:mb-5"
+                >
+                  About me
+                </motion.h2>
+                <p className="text-gray-700 text-md/relaxed">
+                  {paragraphs.map((paragraph, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && (
+                        <>
+                          <br />
+                          <br />{" "}
+                        </>
+                      )}
+                      <AnimatedParagraph
+                        delay={paragraph.delay}
+                        className={paragraph.className}
+                      >
+                        {paragraph.content}
+                      </AnimatedParagraph>
+                    </React.Fragment>
+                  ))}
+                </p>
+              </div>
+              <div className="my-12">
+                <Button handleClick={"/aysenurOnaran-CV.pdf"}>
+                  Download Resume
+                </Button>
+              </div>
 
-            <div>
-              <motion.h3
-                {...animations.paragraph}
-                className="degular text-xl lg:text-2xl font-medium mb-6"
-              >
-                Skills <span className="text-xl lg:text-2xl">🚲</span>
-              </motion.h3>
-              <motion.div {...animations.paragraph}>
-                <ChipsContainer selectedTools={tools} color={"white"} />
-              </motion.div>
+              <div>
+                <motion.h3
+                  {...animations.paragraph}
+                  className="degular text-xl lg:text-2xl font-medium mb-6"
+                >
+                  Skills <span className="text-xl lg:text-2xl">🚲</span>
+                </motion.h3>
+                <motion.div {...animations.paragraph}>
+                  <ChipsContainer selectedTools={tools} color={"white"} />
+                </motion.div>
+              </div>
             </div>
           </div>
         </div>

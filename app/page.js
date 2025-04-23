@@ -1,5 +1,3 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import Header from './components/Header';
 import Hero from "./components/Hero";
 import SelectedWorks from './components/SelectedWorks';
@@ -10,12 +8,8 @@ import CallToAction from './components/CallToAction';
 export default function Home() {
   return (
     <>
-      <Head>
-        <meta name="description" content="My awesome Next.js app" />
-        <link rel="stylesheet" href="https://use.typekit.net/qkm8iol.css" />
-      </Head>
       <Header />
-      <main>
+      <main className="bg-gray-100">
         <Hero />
         <SelectedWorks />
         <Playground />
