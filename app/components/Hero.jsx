@@ -37,8 +37,8 @@ export default function Hero() {
       ref={heroRef}
       className={`bg-white transition-all duration-800 ${
         isCompact
-          ? "mx-20 mt-56 mb-20 px-10 py-6 rounded-4xl"
-          : "m-0 rounded-none"
+          ? "lg:mx-20 2xl:mx-80 mx-4 lg:mt-56 mt-20 lg:mb-20 mb-8 lg:px-10 p-2 lg:py-6 rounded-4xl"
+          : "mx-0 mb-8 rounded-none "
       }`}
     >
       <div className="container py-24 px-4 lg:px-0 lg:py-6 lg:pt-20 2xl:pt-60 2xl:pb-30 h-5/6 mx-auto">

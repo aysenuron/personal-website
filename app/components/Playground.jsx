@@ -80,10 +80,12 @@ export default function Playground() {
       </div>
       <div
         className={`bg-white p-4 lg:p-8 space-y-8 lg:space-y-12 transition-all duration-800 ${
-          isCompact ? "lg:mx-20 rounded-4xl mt-0" : "mx-0 mt-12"
+          isCompact
+            ? "lg:mx-16 2xl:mx-128 rounded-4xl mt-0"
+            : "mx-0 2xl:mt-24 mt-12 lg:mt-20"
         }`}
       >
-        <div className="gap-4 lg:gap-10 grid lg:grid-cols-2">
+        <div className="gap-4 container mx-auto lg:gap-10 grid lg:grid-cols-2">
           {apps.map((app) => (
             <AppCard key={app.id} data={app} />
           ))}

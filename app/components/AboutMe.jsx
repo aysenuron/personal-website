@@ -59,7 +59,7 @@ export default function AboutMe() {
 
     ScrollTrigger.create({
       trigger: aboutMe,
-      start: "top-=100 top",
+      start: "top top",
       end: "bottom top",
       onEnter: () => setIsCompact(true),
       onLeaveBack: () => setIsCompact(false),
@@ -143,10 +143,10 @@ export default function AboutMe() {
     <section>
       <div
         ref={aboutRef}
-        className={`bg-orange-50 px-4 transition-all duration-800 ${
+        className={`bg-[#E2DACC] p-4 transition-all duration-800 ${
           isCompact
-            ? "p-20 mx-20 mt-0 rounded-4xl"
-            : "lg:py-40 mx-0 mt-12 rounded-none"
+            ? "lg:p-16 2xl:p-8 p-4 lg:mx-12 2xl:mx-128 mx-4 mt-0 rounded-4xl"
+            : "lg:py-40 mx-0 lg:mt-12 rounded-none"
         }`}
       >
         <div className="mx-auto container">
