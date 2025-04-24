@@ -35,9 +35,9 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className={`bg-white transition-all duration-1000 ${
+      className={`bg-white transition-all duration-1500 ${
         isCompact
-          ? "lg:mx-20 2xl:mx-80 mx-4 lg:mt-72 mt-20 lg:mb-20 mb-8 lg:px-10 p-2 lg:py-6 rounded-4xl"
+          ? "lg:mx-20 2xl:mx-60 mx-4 lg:mt-56 mt-20 mb-8 lg:px-10 p-2 lg:py-6 rounded-4xl"
           : "mx-0 mb-8 rounded-none "
       }`}
     >

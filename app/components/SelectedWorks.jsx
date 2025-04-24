@@ -33,7 +33,7 @@ export default function SelectedWorks() {
 
   return (
     <section ref={selectedWorksRef} className="bg-gray-100">
-      <div className="container mx-auto mt-2 px-4 lg:px-0 mb-5 lg:mb-10">
+      <div className="container mx-auto mt-12 2xl:mt-20 px-4 lg:px-0 mb-5 lg:mb-10">
         <motion.h2
           initial={initial}
           animate={animate}

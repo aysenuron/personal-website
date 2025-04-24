@@ -32,7 +32,7 @@ export default function Header() {
 
   return (
     <header>
-      <div className="bg-white container h-fit mx-auto py-4 px-8 mt-4 -mb-8 rounded-3xl flex justify-between items-center">
+      <div className="bg-white container h-fit mx-auto py-4 px-8 my-4 rounded-3xl flex justify-between items-center">
         <div>
           <a href="/">
             <span className="degular font-medium text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">

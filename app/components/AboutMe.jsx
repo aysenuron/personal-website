@@ -145,7 +145,7 @@ export default function AboutMe() {
         ref={aboutRef}
         className={`bg-[#E2DACC] p-4 transition-all duration-2000 ${
           isCompact
-            ? "lg:p-16 2xl:p-8 p-4 lg:mx-12 2xl:mx-128 mx-4 mt-0 rounded-4xl"
+            ? "lg:p-16 2xl:p-8 p-4 lg:mx-12 2xl:mx-128 md:mx-4 mx-2 mt-0 rounded-4xl"
             : "lg:py-40 mx-0 lg:mt-12 rounded-none"
         }`}
       >
