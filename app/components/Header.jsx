@@ -31,7 +31,7 @@ export default function Header() {
   }
 
   return (
-    <header>
+    <header className="px-4 md:px-0">
       <div className="bg-white container h-fit mx-auto py-4 px-8 my-4 rounded-3xl flex justify-between items-center">
         <div>
           <a href="/">
@@ -40,18 +40,18 @@ export default function Header() {
             </span>
           </a>
         </div>
-        <div className="hidden lg:flex lg:items-center lg:gap-8">
+        <div className="hidden md:flex md:items-center md:gap-8">
           <Links />
         </div>
-        <div className="lg:hidden">
+        <div className="md:hidden">
           <button onClick={toggleMenu} className="forma text-md underline">
             {menuOpen ? "Close" : "Menu"}
           </button>
         </div>
         <div
-          className={`lg:hidden flex flex-col gap-6 ${
-            !menuOpen && "hidden"
-          } bg-white z-10 absolute top-20 w-full h-[100vh]`}
+          className={`md:hidden flex flex-col gap-6 ${
+            !menuOpen ? "hidden" : "fixed"
+          } bg-white z-10 left-0 right-0 p-8 top-24 w-full h-[100vh]`}
         >
           <Links />
         </div>

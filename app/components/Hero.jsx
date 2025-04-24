@@ -79,7 +79,7 @@ export default function Hero() {
             </motion.p>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 lg:grid-rows-1 gap-6 text-md lg:text-lg font-medium">
+        <div className="grid lg:grid-cols-3 lg:grid-rows-1 gap-4 lg:gap-6 text-md lg:text-lg font-medium">
           <motion.div
             initial={initial}
             animate={animate}
@@ -90,8 +90,8 @@ export default function Hero() {
             }}
             className="lg:col-start-2 lg:col-end-4 lg:row-start-1 flex gap-2"
           >
-            <p>Contact me</p>
-            <span>👉🏻</span>
+            <p className="hidden lg:block">Contact me</p>
+            <span className="hidden lg:block">👉🏻</span>
             <a
               className="underline underline-offset-2 cursor-pointer hover:text-orange-500 transition duration-200 ease-in-out"
               href="mailto:contact@aysenuronaran.com"
