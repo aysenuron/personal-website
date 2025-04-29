@@ -17,8 +17,6 @@ export default function Hero() {
   const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
-    const heroElement = heroRef.current;
-
     ScrollTrigger.create({
       trigger: document.body,
       start: "top top",
