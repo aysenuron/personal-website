@@ -16,7 +16,7 @@ export default function Header() {
     return (
       <>
         <Link
-          className={`forma hover:text-orange-500 duration-200 ease-in-out transition `}
+          className={`forma hover:text-blue-500 text-gray-500 duration-200 ease-in-out transition `}
           href="/aysenurOnaran-CV.pdf"
           target="_blank"
         >
@@ -32,15 +32,11 @@ export default function Header() {
 
   return (
     <header className="px-4 md:px-0">
-      <div className="bg-white container h-fit mx-auto py-4 px-8 my-4 rounded-3xl flex justify-between items-center">
-        <div>
-          <a href="/">
-            <span className="degular font-medium text-xl lg:text-3xl duration-200 ease-in-out transition hover:text-orange-500">
-              Ay<span className="text-[18px] lg:text-[27px]">ş</span>enur Onaran
-            </span>
-          </a>
+      <div className=" container h-fit mx-auto mt-6 flex justify-between items-center">
+        <div className="w-8 h-8 rounded-full bg-red-600 ">
+          <a href="/"></a>
         </div>
-        <div className="hidden md:flex md:items-center md:gap-8">
+        <div className="hidden md:flex md:items-center md:gap-6">
           <Links />
         </div>
         <div className="md:hidden">
@@ -51,7 +47,7 @@ export default function Header() {
         <div
           className={`md:hidden flex flex-col gap-6 ${
             !menuOpen ? "hidden" : "fixed"
-          } bg-white z-10 left-0 right-0 p-8 top-24 w-full h-[100vh]`}
+          } bg-white z-10 left-0 right-0 p-8 top-14 w-full h-[100vh]`}
         >
           <Links />
         </div>

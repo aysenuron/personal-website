@@ -1,5 +1,6 @@
 import { ReactLenis } from 'lenis/dist/lenis-react'
 import Header from './components/Header';
+import Test from './components/Test';
 import Hero from "./components/Hero";
 import SelectedWorks from './components/SelectedWorks';
 import Playground from './components/Playground';
@@ -9,17 +10,9 @@ import CallToAction from './components/CallToAction';
 export default function Home() {
   return (
     <>
-    <ReactLenis root options={{
-      lerp: 0.02,
-    }}>
-      <main className="bg-gray-100">
-        <Hero />
-        <SelectedWorks />
-        <Playground />
-        <AboutMe />
+      <main>
+        <Test />
       </main>
-      <CallToAction />
-    </ReactLenis>
     </>
   );
 }

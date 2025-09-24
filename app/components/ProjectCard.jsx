@@ -10,7 +10,7 @@ export default function ProjectCard({ data, index }) {
   );
 
   return (
-    <div className="lg:grid relative lg:grid-cols-5 px-6 py-3 p-2.5 flex flex-col gap-5 justify-center hover:border-orange-500 hover:bg-white hover:drop-shadow-xl duration-200 ease-in-out transition border-gray-300 border-[0.5px] rounded-3xl">
+    <div className="lg:grid relative lg:grid-cols-5 px-6 py-6 p-2.5 flex flex-col gap-5 justify-center hover:border-orange-500 bg-white hover:drop-shadow-xl duration-200 ease-in-out transition border-gray-300 border-[0.5px] rounded-3xl">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

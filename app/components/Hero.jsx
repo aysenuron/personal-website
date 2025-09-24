@@ -13,7 +13,7 @@ const initial = { opacity: 0, y: 50 };
 const animate = { opacity: 1, y: 0 };
 
 export default function Hero() {
-  const heroRef = useRef(null);
+  // const heroRef = useRef(null);
   const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {

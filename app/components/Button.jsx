@@ -4,7 +4,7 @@ export default function Button({ children, handleClick }) {
   return (
     <Link href={handleClick} target="_blank">
       {" "}
-      <button className="bg-gradient-to-t cursor-pointer from-gray-700 to-gray-900 shadow-inner hover:border-none forma hover:text-orange-500 duration-200 ease-in-out transition shadow-gray-400 w-fit px-4 py-2 text-white rounded-2xl drop-shadow-xl hover:from-gray-50 hover:to-gray-100 hover:drop-shadow-none">
+      <button className="cursor-pointer bg-blue-700 hover:bg-white hover:shadow-[inset_0_0_8px_rgba(0,0,0,0.1)] border-none forma hover:text-blue-700 duration-200 ease-in-out transition w-fit px-4 py-2 text-white rounded-full drop-shadow-xl hover:drop-shadow-none">
         {children}
       </button>
     </Link>
