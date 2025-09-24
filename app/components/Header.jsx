@@ -33,7 +33,7 @@ export default function Header() {
   return (
     <header className="px-4 md:px-0">
       <div className=" container h-fit mx-auto mt-6 flex justify-between items-center">
-        <div className="w-8 h-8 rounded-full bg-red-600 ">
+        <div className="w-8 h-8 rounded-full bg-red-600 hover:bg-blue-700 cursor-pointer">
           <a href="/"></a>
         </div>
         <div className="hidden md:flex md:items-center md:gap-6">
