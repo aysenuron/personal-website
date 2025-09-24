@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Inter_Tight } from 'next/font/google'
 import "./globals.css";
 import Header from "./components/Header";
 
@@ -12,6 +13,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const interTight = Inter_Tight({
+  subsets: ['latin'],
+  variable: '--font-inter-tight',
+  display: 'swap',
+})
+
 export const metadata = {
   title: "Ayşenur Onaran",
   description: "Web Developer & Designer",
@@ -19,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={interTight.variable}>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/qkm8iol.css" />
       </head>

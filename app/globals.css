@@ -1,18 +1,8 @@
 @import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
   margin: 0;
-  font-family: forma-djr-micro, sans-serif;
   font-style: normal;
-
   scroll-behavior: smooth;
-}
-
-.degular {
-  font-family: degular-display, sans-serif;
-}
-
-.forma {
-  font-family: forma-djr-micro, sans-serif;
-  font-style: normal;
 }

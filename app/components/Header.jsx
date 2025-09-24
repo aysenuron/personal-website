@@ -16,7 +16,7 @@ export default function Header() {
     return (
       <>
         <Link
-          className={`forma hover:text-blue-500 text-gray-500 duration-200 ease-in-out transition `}
+          className={`hover:text-[#192de4] text-gray-500 duration-200 ease-in-out transition `}
           href="/aysenurOnaran-CV.pdf"
           target="_blank"
         >
@@ -31,16 +31,21 @@ export default function Header() {
   }
 
   return (
-    <header className="px-4 md:px-0">
-      <div className=" container h-fit mx-auto mt-6 flex justify-between items-center">
-        <div className="w-8 h-8 rounded-full bg-red-600 hover:bg-blue-700 cursor-pointer">
+    <header className="px-4 md:px-0 sticky top-0 pt-6 bg-white z-10">
+      <div className=" container h-fit mx-auto flex justify-between items-center">
+        <div className="w-8 h-8 rounded-full bg-red-600 hover:bg-[#192de4] cursor-pointer transition-all duration-200">
           <a href="/"></a>
         </div>
         <div className="hidden md:flex md:items-center md:gap-6">
           <Links />
         </div>
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="forma text-md underline">
+          <button
+            onClick={toggleMenu}
+            className={`text-md underline ${
+              menuOpen ? "text-red-600" : "text-[#192de4]"
+            }`}
+          >
             {menuOpen ? "Close" : "Menu"}
           </button>
         </div>
