@@ -53,6 +53,42 @@ const websites = [
       "Deployed on Netlify for reliable hosting"
     ],
     challenges: "Creating an engaging design without overwhelming frameworks while ensuring cross-browser compatibility. I focused on semantic HTML, progressive enhancement, and thorough testing across different browsers and devices."
+  }, {
+    id: 4,
+    slug: "employment-leaders-website-2",
+    githubLink: "https://github.com/aysenuron/employment-leaders-website",
+    webLink: "https://employmentleaders.com/",
+    img: "/websites/employmentLeaders-screen.png",
+    title: "Employment Leaders - B2B Recruitment Company Website",
+    description: "A static website for a recruitment agency, built with vanilla HTML, CSS, and JavaScript. The design focuses on clear messaging and easy navigation, using structured sections and contrasting accents to highlight key services.",
+    longDescription: "Employment Leaders is a professional recruitment agency website built with vanilla web technologies. The project emphasizes clean, professional design that builds trust with both job seekers and employers. The site features clear service descriptions, easy navigation, and strategic calls-to-action.",
+    toolNames: ["HTML", "CSS", "JavaScript", "Netlify"],
+    features: [
+      "Clean, professional design that builds credibility",
+      "Structured content sections for easy scanning",
+      "Strategic use of contrasting colors for CTAs",
+      "Fast loading times with vanilla JavaScript",
+      "Deployed on Netlify for reliable hosting"
+    ],
+    challenges: "Creating an engaging design without overwhelming frameworks while ensuring cross-browser compatibility. I focused on semantic HTML, progressive enhancement, and thorough testing across different browsers and devices."
+  }, {
+    id: 5,
+    slug: "employment-leaders-website-3",
+    githubLink: "https://github.com/aysenuron/employment-leaders-website",
+    webLink: "https://employmentleaders.com/",
+    img: "/websites/employmentLeaders-screen.png",
+    title: "Employment Leaders - B2B Recruitment Company Website",
+    description: "A static website for a recruitment agency, built with vanilla HTML, CSS, and JavaScript. The design focuses on clear messaging and easy navigation, using structured sections and contrasting accents to highlight key services.",
+    longDescription: "Employment Leaders is a professional recruitment agency website built with vanilla web technologies. The project emphasizes clean, professional design that builds trust with both job seekers and employers. The site features clear service descriptions, easy navigation, and strategic calls-to-action.",
+    toolNames: ["HTML", "CSS", "JavaScript", "Netlify"],
+    features: [
+      "Clean, professional design that builds credibility",
+      "Structured content sections for easy scanning",
+      "Strategic use of contrasting colors for CTAs",
+      "Fast loading times with vanilla JavaScript",
+      "Deployed on Netlify for reliable hosting"
+    ],
+    challenges: "Creating an engaging design without overwhelming frameworks while ensuring cross-browser compatibility. I focused on semantic HTML, progressive enhancement, and thorough testing across different browsers and devices."
   }
 ];
 

@@ -37,25 +37,25 @@ export default function ProjectPage({ params }) {
   return (
     <>
     <Header backBtn={true} />
-    <div className="container mx-auto py-8">
+    <div className="container mx-auto py-8 px-4 md:px-0">
       <div className="mx-auto">
 
         {/* Breadcrumbs */}
-        <div className="text-sm text-gray-400 flex gap-2 items-center mb-8">
+        <div className="text-sm text-gray-700 flex gap-2 items-center mb-8">
           <Link href="/" className="hover:text-red-600"><p>Home</p></Link>
           <p>/</p>
           <Link href="/" className="hover:text-red-600"><p>Projects</p></Link>
           <p>/</p>
-          <p>{project.title}</p>
+          <p className="text-gray-400">{project.title}</p>
         </div>
 
 
-        <div className="lg:grid grid-cols-12 gap-20 flex flex-col-reverse">
+        <div className="lg:grid grid-cols-12 gap-10 lg:gap-20 flex flex-col-reverse">
           <div className="col-span-8">
             {/* Project header */}
             <div className="mb-12">
-              <h1 className="text-4xl text-gray-800 font-semibold mb-4">{project.title}</h1>
-              <p className="text-lg text-gray-400 mb-6">{project.description}</p>
+              <h1 className="lg:text-4xl text-2xl text-gray-800 font-semibold mb-4">{project.title}</h1>
+              <p className="text-md text-gray-400 mb-6">{project.description}</p>
 
               {/* Project image */}
               <div className="mb-8">
@@ -123,7 +123,9 @@ export default function ProjectPage({ params }) {
               <p>{project.challenges || "Challenge details coming soon..."}</p>
             </div>
           </div>
-          <div className="col-span-4 text-gray-400 flex flex-col gap-4 pl-4 py-2 border-red-600 border-l-2 sticky top-60 self-start">
+
+          {/* Quick Facts */}
+          <div className="col-span-4 text-gray-400 flex flex-col gap-4 pl-4 py-2 border-red-600 border-l-2 lg:sticky top-60 self-start">
             <p><span className="text-gray-700 font-bold">Role: </span>{project.role ? project.role : "Web Designer / Developer"}</p>
             <p><span className="text-gray-700 font-bold">Time: </span>{project.time ? project.time : "May 2023 - June 2023"}</p>
             <p><span className="text-gray-700 font-bold">Role: </span>{project.role}</p>

@@ -6,3 +6,8 @@ body {
   font-style: normal;
   scroll-behavior: smooth;
 }
+
+.split-char {
+  will-change: transform, opacity;
+  display: inline-block;
+}

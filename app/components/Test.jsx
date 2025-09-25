@@ -20,8 +20,12 @@ export default function Test() {
           <div className="grid lg:grid-cols-12 gap:12 lg:gap-18 2xl:gap-24">
             <div className="lg:col-span-3 flex flex-col gap-6 lg:z-20 lg:gap-12 lg:-mt-16 lg:sticky self-start lg:top-8 box-border">
               <div>
-                <div className="w-40 rounded-full overflow-hidden">
-                  <img src="/profile.png" alt="Aysenur Onaran profile img" />
+                <div className="w-40 h-40 rounded-full overflow-hidden">
+                  <img
+                    src="/profile.png"
+                    alt="Aysenur Onaran profile img"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div className="mt-4 flex flex-col gap-3">
                   <h1 className="font-semibold text-4xl">Ayşenur Onaran</h1>
@@ -48,18 +52,18 @@ export default function Test() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-9 flex flex-col gap-20 lg:gap-40 pt-12 -pb-40">
+            <div className="lg:col-span-9 flex flex-col gap-16 lg:gap-40 pt-12 -pb-40">
               <div id="projects" className="flex flex-col gap-8 lg:gap-20">
-                <h2 className="text-2xl -mb-12 lg:hidden">Projects</h2>
+                <h2 className="text-2xl -mb-6 lg:hidden">Projects</h2>
                 {websites.map((website) => (
                   <P_Card key={website.id} data={website} />
                 ))}
               </div>
-              <div id="experience" className="flex flex-col gap-20 pr-24">
+              <div id="experience" className="flex flex-col gap-16 lg:pr-24">
                 <h2 className="text-2xl -mb-12 lg:hidden">Experience</h2>
                 <Experience />
               </div>
-              <div id="about" className="flex flex-col gap-20 pr-24">
+              <div id="about" className="flex flex-col gap-16 lg:pr-24">
                 <h2 className="text-2xl -mb-12 lg:hidden">About</h2>
                 <p className="text-gray-700 text-md/relaxed">
                   {paragraphs.map((paragraph, index) => (
@@ -77,7 +81,7 @@ export default function Test() {
                   ))}
                 </p>
               </div>
-              <div className="-mt-24">
+              <div className="lg:-mt-24">
                 <Link href={"mailto:contact@aysenuronaran.com"} target="_blank">
                   <WavyText className="text-6xl transition-all duration-300 hover:text-[#192de4]">
                     Let's talk
