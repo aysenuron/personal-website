@@ -53,7 +53,7 @@ export default function Test() {
               </div>
             </div>
             <div className="lg:col-span-9 flex flex-col gap-16 lg:gap-40 pt-12 -pb-40">
-              <div id="projects" className="flex flex-col gap-8 lg:gap-20">
+              <div id="projects" className="flex flex-col gap-8 lg:gap-12">
                 <h2 className="text-2xl -mb-6 lg:hidden">Projects</h2>
                 {websites.map((website) => (
                   <P_Card key={website.id} data={website} />

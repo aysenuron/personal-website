@@ -11,7 +11,7 @@ export const paragraphs = [
           I have both bachelor's and master's degrees in architecture, but I
           found my true calling in the digital world. For three years, I worked
           at Elevate Health Technologies as a{" "}
-          <span className="text-red-600">
+          <span className="text-gray-800 font-semibold">
             digital designer and web developer.
           </span>
         </>
@@ -24,7 +24,7 @@ export const paragraphs = [
           Along the way, I've taught myself frontend development and started
           taking on freelance projects building websites for clients. I see
           myself as a generalist.
-          <span className="text-red-600">
+          <span className="text-gray-800 font-semibold">
             {" "}
             My background in architecture{" "}
           </span>
@@ -52,7 +52,7 @@ export const paragraphs = [
           When I face a challenge, my philosophy is simple: "I'll figure it
           out." And so far, I always have. I don't believe in putting myself in
           one box.{" "}
-          <span className="text-red-600">
+          <span className="text-gray-800 font-semibold">
             I learn quickly and adapt to new situations.
           </span>{" "}
           Each project teaches me something new that I can use in the next one.
