@@ -25,7 +25,7 @@ export default function P_Card({ data, index }) {
         >
           <img src={data.img} alt={data.title} />
         </motion.div>
-        <div className="lg:col-span-5 flex flex-col gap-2 justify-center">
+        <div className="lg:col-span-5 flex flex-col gap-1 justify-center">
           <motion.h3
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function P_Card({ data, index }) {
               ease: "easeOut",
             }}
             className="
-           font-medium text-xl lg:text-lg text-gray-800 group-hover:text-blue-700"
+           text-xl lg:text-lg text-gray-800 group-hover:text-blue-700"
           >
             {data.title}
           </motion.h3>
@@ -50,7 +50,7 @@ export default function P_Card({ data, index }) {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="text-md text-gray-400 pb-2"
+            className="text-[15px] 2xl:text-md text-gray-400 pb-3"
           >
             {data.description}
           </motion.p>

@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
 
-export default function Header() {
+export default function Header({ backBtn = true }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function toggleMenu() {
@@ -31,11 +31,23 @@ export default function Header() {
   }
 
   return (
-    <header className="px-4 md:px-0 sticky top-0 pt-6 bg-white z-10">
-      <div className=" container h-fit mx-auto flex justify-between items-center">
-        <div className="w-8 h-8 rounded-full bg-red-600 hover:bg-[#192de4] cursor-pointer transition-all duration-200">
-          <a href="/"></a>
+    <header className="px-4 md:px-0 sticky top-0 py-4 lg:py-6 bg-white z-10">
+      <div
+        className={`container h-fit mx-auto flex items-center ${
+          backBtn ? "justify-between" : "justify-end"
+        }`}
+      >
+        {/* Back button */}
+        <div className={`${backBtn ? "block" : "hidden"}`}>
+          <Link
+            href="/"
+            className="text-[#192de4] hover:text-red-600 flex items-center gap-2"
+          >
+            <i className="fas fa-arrow-left"></i>
+            Back to Projects
+          </Link>
         </div>
+
         <div className="hidden md:flex md:items-center md:gap-6">
           <Links />
         </div>
@@ -52,7 +64,7 @@ export default function Header() {
         <div
           className={`md:hidden flex flex-col gap-6 ${
             !menuOpen ? "hidden" : "fixed"
-          } bg-white z-10 left-0 right-0 p-8 top-14 w-full h-[100vh]`}
+          } bg-white z-10 left-0 right-0 p-8 top-12 w-full h-[100vh]`}
         >
           <Links />
         </div>

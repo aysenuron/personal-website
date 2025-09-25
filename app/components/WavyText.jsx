@@ -6,60 +6,52 @@ import { useEffect, useRef } from "react";
 export default function WavyText({
   children,
   className = "",
-  startDelay = 1500,
+  startDelay = 500,
 }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
-    // First, ensure fonts are loaded
-    document.fonts.ready.then(() => {
-      // Then add your custom delay before starting the animation
-      const timer = setTimeout(() => {
-        if (!containerRef.current) return;
-        const { chars } = splitText(
-          containerRef.current.querySelector(".wavy-content")
-        );
+    const timer = setTimeout(() => {
+      const el = containerRef.current;
+      if (!el) return;
 
-        containerRef.current.style.visibility = "visible";
-        const staggerDelay = 0.15;
-        animate(
-          chars,
-          { y: [-10, 10] },
-          {
-            repeat: Infinity,
-            repeatType: "mirror",
-            ease: "easeInOut",
-            duration: 2,
-            delay: stagger(staggerDelay, {
-              startDelay: -staggerDelay * chars.length,
-            }),
-          }
-        );
-      }, startDelay);
+      // Don’t split twice
+      if (el.querySelector(".split-char")) {
+        console.warn("Already split, skipping splitText");
+        el.style.visibility = "visible";
+        return;
+      }
 
-      // Clean up the timer if component unmounts
-      return () => clearTimeout(timer);
-    });
+      const { chars } = splitText(el);
+      el.style.visibility = "visible";
+
+      if (!chars || chars.length === 0) return;
+
+      animate(
+        chars,
+        { y: [-10, 10] },
+        {
+          repeat: Infinity,
+          repeatType: "mirror",
+          ease: "easeInOut",
+          duration: 2,
+          delay: stagger(0.15, {
+            startDelay: -0.15 * chars.length,
+          }),
+        }
+      );
+    }, startDelay);
+
+    return () => clearTimeout(timer);
   }, [startDelay]);
 
   return (
-    <span className={`wavy-container ${className}`} ref={containerRef}>
-      <span className="wavy-content">{children}</span>
-      <Stylesheet />
+    <span
+      ref={containerRef}
+      className={`wavy-container ${className}`}
+      style={{ visibility: "hidden", display: "inline-block" }}
+    >
+      {children}
     </span>
-  );
-}
-
-function Stylesheet() {
-  return (
-    <style>{`
-      .wavy-container {
-        display: inline-block;
-        visibility: hidden;
-      }
-      .split-char {
-        will-change: transform, opacity;
-      }
-    `}</style>
   );
 }

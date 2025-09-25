@@ -12,7 +12,7 @@ export default function SideMenuItem({ name, sectionId }) {
         setIsActive(entry.isIntersecting);
       },
       {
-        threshold: 0.01, // fire at multiple steps
+        threshold: 0.5,
       }
     );
 
