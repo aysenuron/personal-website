@@ -1,11 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Button from "./Button";
 
 export default function Header({ backBtn = true }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
 
   function toggleMenu() {
     setMenuOpen((prevMenuOpen) => !prevMenuOpen);
@@ -39,13 +41,19 @@ export default function Header({ backBtn = true }) {
       >
         {/* Back button */}
         <div className={`${backBtn ? "block" : "hidden"}`}>
-          <Link
-            href="/"
-            className="text-[#192de4] hover:text-red-600 flex items-center gap-2"
+          <button
+            onClick={() => {
+              if (window.history.length > 1) {
+                router.back();
+              } else {
+                router.push("/projects");
+              }
+            }}
+            className="text-[#192de4] hover:text-red-600 flex items-center gap-2 cursor-pointer"
           >
             <i className="fas fa-arrow-left"></i>
-            Back to Projects
-          </Link>
+            Go Back
+          </button>
         </div>
 
         <div className="hidden md:flex md:items-center md:gap-6">

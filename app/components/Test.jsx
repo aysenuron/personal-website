@@ -17,7 +17,7 @@ export default function Test() {
       <Header backBtn={false} />
       <section>
         <div className="container px-4 md:px-0 mx-auto">
-          <div className="grid lg:grid-cols-12 gap:12 lg:gap-18 2xl:gap-24">
+          <div className="grid lg:grid-cols-12 gap:12 lg:gap-4 2xl:gap-24">
             <div className="lg:col-span-3 flex flex-col gap-6 lg:z-20 lg:gap-12 lg:-mt-16 lg:sticky self-start lg:top-8 box-border">
               <div>
                 <div className="w-40 h-40 rounded-full overflow-hidden">
@@ -29,7 +29,7 @@ export default function Test() {
                 </div>
                 <div className="mt-4 flex flex-col gap-3">
                   <h1 className="font-semibold text-4xl">Ayşenur Onaran</h1>
-                  <p className="text-[15px] 2xl:text-md text-gray-400 pr-4">
+                  <p className="text-[15px] 2xl:text-md text-gray-400">
                     <span className="text-[#192de4] font-medium">
                       Designer / Developer.
                     </span>{" "}
@@ -52,12 +52,15 @@ export default function Test() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-span-9 flex flex-col gap-16 lg:gap-40 pt-12 -pb-40">
+            <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-40 pt-12 -pb-40">
               <div id="projects" className="flex flex-col gap-8 lg:gap-12">
                 <h2 className="text-2xl -mb-6 lg:hidden">Projects</h2>
                 {websites.map((website) => (
-                  <P_Card key={website.id} data={website} />
+                  <P_Card key={website.id} data={website} chipsVisible={true} />
                 ))}
+                <Link href={`/projects`} passHref>
+                  See All Projects
+                </Link>
               </div>
               <div id="experience" className="flex flex-col gap-16 lg:pr-24">
                 <h2 className="text-2xl -mb-12 lg:hidden">Experience</h2>

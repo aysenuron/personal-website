@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import ChipsContainer from "./ChipsContainer";
 import tools from "../tools";
 
-export default function P_Card({ data, index }) {
+export default function P_Card({ data, index, chipsVisible = true }) {
   const websiteTools = tools.filter((tool) =>
     data.toolNames.includes(tool.name)
   );
@@ -15,7 +15,7 @@ export default function P_Card({ data, index }) {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: "-10px" }}
           transition={{
             delay: index * 0.5,
             duration: 0.5,
@@ -39,8 +39,10 @@ export default function P_Card({ data, index }) {
            text-xl lg:text-lg text-gray-800 group-hover:text-blue-700"
           >
             {data.title}
+            <span>
+              <i className="fa-solid fa-arrow-right text-sm pl-2 group-hover:pl-4 transition-all duration-300"></i>
+            </span>
           </motion.h3>
-
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,11 +52,17 @@ export default function P_Card({ data, index }) {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="text-[15px] 2xl:text-md text-gray-400 pb-3"
+            className="text-[15px] 2xl:text-md text-gray-400"
           >
             {data.description}
           </motion.p>
-          <ChipsContainer selectedTools={websiteTools} color={"gray-100"} />
+          {chipsVisible ? (
+            <ChipsContainer
+              selectedTools={websiteTools}
+              color={"gray-100"}
+              className={"pt-3"}
+            />
+          ) : null}
         </div>
       </div>
     </Link>

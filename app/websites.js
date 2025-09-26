@@ -8,7 +8,7 @@ const websites = [
     title: "Cubtale - Brand Partnership Landing Page",
     description: "I designed and developed this landing page in React and Tailwind CSS, using Framer Motion for subtle but engaging animations.",
     longDescription: "Cubtale is a modern brand partnership platform landing page that showcases clean design principles and smooth user interactions. Built with React and styled using Tailwind CSS, the project demonstrates proficiency in component-based architecture and responsive design patterns.",
-    toolNames: ["React", "Tailwind CSS", "Framer Motion"],
+    toolNames: ["React", "Tailwind CSS", "Framer Motion", "Netlify"],
     features: [
       "Responsive design that works seamlessly across all devices",
       "Smooth animations powered by Framer Motion",

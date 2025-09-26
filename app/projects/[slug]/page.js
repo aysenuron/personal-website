@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import websites from '@/app/websites';
 import Header from '@/app/components/Header';
+import ChipsContainer from '@/app/components/ChipsContainer';
+import tools from '@/app/tools';
 
 // This generates static paths for all your projects
 export async function generateStaticParams() {
@@ -29,6 +31,9 @@ export async function generateMetadata({ params }) {
 // THIS IS THE MAIN COMPONENT - make sure it's the default export
 export default function ProjectPage({ params }) {
   const project = websites.find((website) => website.slug === params.slug);
+  const websiteTools = tools.filter((tool) =>
+    project.toolNames.includes(tool.name)
+  );
 
   if (!project) {
     notFound();
@@ -41,17 +46,17 @@ export default function ProjectPage({ params }) {
       <div className="mx-auto">
 
         {/* Breadcrumbs */}
-        <div className="text-sm text-gray-700 flex gap-2 items-center mb-8">
+        <div className="text-sm text-gray-700 flex gap-2 items-center mb-10">
           <Link href="/" className="hover:text-red-600"><p>Home</p></Link>
           <p>/</p>
-          <Link href="/" className="hover:text-red-600"><p>Projects</p></Link>
+          <Link href="/projects" className="hover:text-red-600"><p>Projects</p></Link>
           <p>/</p>
           <p className="text-gray-400">{project.title}</p>
         </div>
 
 
-        <div className="lg:grid grid-cols-12 gap-10 lg:gap-20 flex flex-col-reverse">
-          <div className="col-span-8">
+        <div className="lg:grid grid-cols-12 gap-10 lg:gap-16 flex flex-col-reverse">
+          <div className="col-span-9">
             {/* Project header */}
             <div className="mb-12">
               <h1 className="lg:text-4xl text-2xl text-gray-800 font-semibold mb-4">{project.title}</h1>
@@ -81,29 +86,7 @@ export default function ProjectPage({ params }) {
                 </div>
               </div>
 
-              {/* Project links */}
-              <div className="flex gap-4">
-                {project.webLink && (
-                  <a 
-                    href={project.webLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
-                  >
-                    View Live Site
-                  </a>
-                )}
-                {project.githubLink && (
-                  <a 
-                    href={project.githubLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="border border-gray-300 px-6 py-2 rounded-lg hover:bg-gray-50"
-                  >
-                    View Code
-                  </a>
-                )}
-              </div>
+              
             </div>
 
             {/* Project details */}
@@ -124,11 +107,36 @@ export default function ProjectPage({ params }) {
             </div>
           </div>
 
-          {/* Quick Facts */}
-          <div className="col-span-4 text-gray-400 flex flex-col gap-4 pl-4 py-2 border-red-600 border-l-2 lg:sticky top-60 self-start">
-            <p><span className="text-gray-700 font-bold">Role: </span>{project.role ? project.role : "Web Designer / Developer"}</p>
-            <p><span className="text-gray-700 font-bold">Time: </span>{project.time ? project.time : "May 2023 - June 2023"}</p>
-            <p><span className="text-gray-700 font-bold">Role: </span>{project.role}</p>
+            {/* Quick Facts */}
+            <div className="col-span-3 text-gray-400 text-md flex flex-col gap-5 pl-3 py-2 border-gray-300 border-l-1 lg:sticky top-32 self-start">
+              <p><span className="text-gray-700 font-semibold">Role: </span>{project.role ? project.role : "Web Designer / Developer"}</p>
+              <p><span className="text-gray-700 font-semibold">Timeline: </span>{project.time ? project.time : "May 2023 - June 2023"}</p>
+              {/* Project links */}
+                {project.webLink && (
+                  <a 
+                    href={project.webLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-[#192de4] group"
+                  >
+                    <i className="fa-solid fa-link text-sm"></i> View Live Site {<i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>}
+                  </a>
+                )}
+                {project.githubLink && (
+                  <a 
+                    href={project.githubLink} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-gray-700 hover:text-[#192de4] group"
+                  >
+                    <i className="fa-brands fa-github text-sm"></i> View Code {<i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>}
+                  </a>
+                )}
+                <ChipsContainer
+              selectedTools={websiteTools}
+              color={"gray-100"}
+              className={"py-2"}
+              />
           </div>
         </div>
       </div>
