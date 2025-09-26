@@ -24,7 +24,7 @@ export default function Test() {
                   <img
                     src="/profile.png"
                     alt="Aysenur Onaran profile img"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[100%_100%] scale-125"
                   />
                 </div>
                 <div className="mt-4 flex flex-col gap-3">
@@ -40,7 +40,7 @@ export default function Test() {
                 </div>
               </div>
               <div className="hidden lg:flex lg:flex-col lg:gap-4">
-                <SideMenuItem name="Projects" sectionId="projects" />
+                <SideMenuItem name="Selected Projects" sectionId="projects" />
                 <SideMenuItem name="Experience" sectionId="experience" />
                 <SideMenuItem name="About" sectionId="about" />
               </div>
