@@ -36,11 +36,11 @@ export default function Header({ backBtn = true }) {
     <header className="px-4 md:px-0 sticky top-0 py-4 lg:py-6 bg-white z-10">
       <div
         className={`container h-fit mx-auto flex items-center ${
-          backBtn ? "justify-between" : "justify-end"
+          backBtn && !menuOpen ? "justify-between" : "justify-end"
         }`}
       >
         {/* Back button */}
-        <div className={`${backBtn ? "block" : "hidden"}`}>
+        <div className={`${backBtn && !menuOpen ? "block" : "hidden"}`}>
           <button
             onClick={() => {
               if (window.history.length > 1) {
