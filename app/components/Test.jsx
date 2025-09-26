@@ -58,8 +58,13 @@ export default function Test() {
                 {websites.map((website) => (
                   <P_Card key={website.id} data={website} chipsVisible={true} />
                 ))}
-                <Link href={`/projects`} passHref>
-                  See All Projects
+                <Link
+                  href={`/projects`}
+                  passHref
+                  className="group text-[#192de4] hover:text-red-600 underline underline-offset-6 text-sm font-bold transition-all duration-200"
+                >
+                  See All Projects{" "}
+                  <i className="fa-solid fa-arrow-right text-xs pl-1 group-hover:pl-2 transition-all duration-200"></i>
                 </Link>
               </div>
               <div id="experience" className="flex flex-col gap-16 lg:pr-24">
@@ -84,7 +89,7 @@ export default function Test() {
                   ))}
                 </p>
               </div>
-              <div className="lg:-mt-24">
+              <div className="lg:-mt-24 border-t-1 pt-18 border-gray-400">
                 <Link href={"mailto:contact@aysenuronaran.com"} target="_blank">
                   <WavyText className="text-6xl transition-all duration-300 hover:text-[#192de4]">
                     Let's talk

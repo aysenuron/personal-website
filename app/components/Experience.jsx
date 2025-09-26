@@ -5,9 +5,9 @@ export default function Experience() {
         <p>2022 - Present</p>
       </div>
       <div className="-mt-0.5">
-        <h3 className="text-xl lg:text-lg text-gray-800">
+        <h3 className="text-xl lg:text-lg text-gray-700 font-semibold">
           Web Developer / Digital Designer •{" "}
-          <span className="text-red-600">Elevate Health Technologies </span>
+          <span className="font-normal">Elevate Health Technologies </span>
         </h3>
         <div className="flex flex-col gap-4 mt-4">
           <p>

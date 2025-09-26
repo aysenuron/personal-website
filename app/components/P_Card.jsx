@@ -36,7 +36,7 @@ export default function P_Card({ data, index, chipsVisible = true }) {
               ease: "easeOut",
             }}
             className="
-           text-xl lg:text-lg text-gray-800 group-hover:text-blue-700"
+           text-xl lg:text-lg text-gray-800 group-hover:text-[#192de4]"
           >
             {data.title}
             <span>
