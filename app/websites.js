@@ -125,8 +125,10 @@ const websites = [
     features: [
       {
         heading: "Scalable Architecture",
-        img: "/images/architecture.png",
-        items: ["Microservices", "Cloud native", "Auto-scaling"],
+        items: [
+          "Employment Leaders is a professional recruitment agency website built with vanilla web technologies. The project emphasizes clean, professional design that builds trust with both job seekers and employers. The site features clear service descriptions, easy navigation, and strategic calls-to-action.",
+          "Employment Leaders is a professional recruitment agency website built with vanilla web technologies. The project emphasizes clean, professional design that builds trust with both job seekers and employers. The site features clear service descriptions, easy navigation, and strategic calls-to-action.",
+        ],
       },
       {
         heading: "User Experience",
