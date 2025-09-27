@@ -18,9 +18,7 @@ const websites = [
         items: ["Microservices", "Cloud native", "Auto-scaling"],
       },
       {
-        heading: "User Experience",
         img: "/websites/cubtale-screen.png",
-        items: ["Clean UI", "Accessibility", "Mobile first"],
       },
     ],
     goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
