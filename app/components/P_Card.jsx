@@ -10,8 +10,8 @@ export default function P_Card({ data, index, chipsVisible = true }) {
   );
 
   return (
-    <Link href={`/projects/${data.slug}`} passHref>
-      <div className="lg:grid relative lg:grid-cols-7 flex flex-col gap-8 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all">
+    <Link href={`/projects/${data.type}/${data.slug}`} passHref>
+      <div className="lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-8 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +36,7 @@ export default function P_Card({ data, index, chipsVisible = true }) {
               ease: "easeOut",
             }}
             className="
-           text-xl lg:text-lg text-gray-800 group-hover:text-[#192de4]"
+           text-xl lg:text-lg font-medium text-gray-900 group-hover:text-[#192de4]"
           >
             {data.title}
             <span>
@@ -52,7 +52,7 @@ export default function P_Card({ data, index, chipsVisible = true }) {
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="text-[15px] 2xl:text-md text-gray-400"
+            className="text-[15px] 2xl:text-md text-gray-500 font-normal"
           >
             {data.description}
           </motion.p>

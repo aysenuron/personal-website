@@ -5,11 +5,16 @@ import Link from "next/link";
 
 import Header from "./Header";
 import SideMenuItem from "./SideMenuItem";
-import websites from "../websites";
+import apps from "../projects_apps";
+import websites from "../projects_websites";
+import cc from "../projects_cc";
+import research from "../projects_research";
 import P_Card from "./P_Card";
 import { paragraphs } from "../about.js";
 import WavyText from "./WavyText";
 import Experience from "./Experience";
+
+import { formatType } from "../utils/formatType";
 
 export default function Test() {
   return (
@@ -29,7 +34,7 @@ export default function Test() {
                 </div>
                 <div className="mt-4 flex flex-col gap-3">
                   <h1 className="font-semibold text-4xl">Ayşenur Onaran</h1>
-                  <p className="text-[15px] 2xl:text-md text-gray-400">
+                  <p className="text-[15px] 2xl:text-md text-gray-500">
                     <span className="text-[#192de4] font-medium">
                       Designer / Developer.
                     </span>{" "}
@@ -40,7 +45,10 @@ export default function Test() {
                 </div>
               </div>
               <div className="hidden lg:flex lg:flex-col lg:gap-4">
-                <SideMenuItem name="Selected Projects" sectionId="projects" />
+                <SideMenuItem
+                  name="Selected Projects"
+                  sectionId="selected_projects"
+                />
                 <SideMenuItem name="Experience" sectionId="experience" />
                 <SideMenuItem name="About" sectionId="about" />
               </div>
@@ -53,11 +61,70 @@ export default function Test() {
               </div>
             </div>
             <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-40 pt-12 -pb-40">
-              <div id="projects" className="flex flex-col gap-8 lg:gap-12">
-                <h2 className="text-2xl -mb-6 lg:hidden">Projects</h2>
-                {websites.map((website) => (
-                  <P_Card key={website.id} data={website} chipsVisible={true} />
-                ))}
+              <div
+                id="selected_projects"
+                className="flex flex-col gap-8 lg:gap-12"
+              >
+                <div id="projects_webapps" className="flex flex-col gap-2">
+                  <Link
+                    href="/projects#web-apps"
+                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Web Apps{" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {apps
+                    .filter((app) => app.id == 1)
+                    .map((app) => (
+                      <P_Card key={app.id} data={app} chipsVisible={true} />
+                    ))}
+                </div>
+                <div id="projects_websites" className="flex flex-col gap-2">
+                  <Link
+                    href="/projects#websites"
+                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Websites{" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {websites
+                    .filter((website) => website.id == 1)
+                    .map((website) => (
+                      <P_Card
+                        key={website.id}
+                        data={website}
+                        chipsVisible={true}
+                      />
+                    ))}
+                </div>
+                <div id="projects_cc" className="flex flex-col gap-2">
+                  <Link
+                    href="/projects#creative-coding"
+                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Creative Coding{" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {cc
+                    .filter((c) => c.id == 1)
+                    .map((c) => (
+                      <P_Card key={c.id} data={c} chipsVisible={true} />
+                    ))}
+                </div>
+                <div id="projects_research" className="flex flex-col gap-2">
+                  <Link
+                    href="/projects#research"
+                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Research{" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {research
+                    .filter((r) => r.id == 1)
+                    .map((r) => (
+                      <P_Card key={r.id} data={r} chipsVisible={true} />
+                    ))}
+                </div>
                 <Link
                   href={`/projects`}
                   passHref

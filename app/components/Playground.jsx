@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import apps from "../apps";
+import apps from "../apps-old-version";
 import AppCard from "./AppCard";
 
 import { useEffect, useRef, useState } from "react";

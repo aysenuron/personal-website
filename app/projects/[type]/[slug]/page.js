@@ -1,21 +1,31 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import websites from "@/app/websites";
+
+import apps from "@/app/projects_apps";
+import websites from "@/app/projects_websites";
+import cc from "@/app/projects_cc";
+import research from "@/app/projects_research";
+
 import Header from "@/app/components/Header";
 import ChipsContainer from "@/app/components/ChipsContainer";
 import tools from "@/app/tools";
 import ProjectFeatures from "@/app/components/ProjectFeatures";
 
+import { formatType } from "@/app/utils/formatType";
+
+const allProjects = [...apps, ...websites, ...cc, ...research];
+
 // This generates static paths for all your projects
 export async function generateStaticParams() {
-  return websites.map((website) => ({
-    slug: website.slug,
+  return allProjects.map((project) => ({
+    type: project.type, // ✅ include type
+    slug: project.slug,
   }));
 }
 
 // This generates metadata for each project page
 export async function generateMetadata({ params }) {
-  const project = websites.find((website) => website.slug === params.slug);
+  const project = allProjects.find((p) => p.slug === params.slug);
 
   if (!project) {
     return {
@@ -31,14 +41,16 @@ export async function generateMetadata({ params }) {
 
 // THIS IS THE MAIN COMPONENT - make sure it's the default export
 export default function ProjectPage({ params }) {
-  const project = websites.find((website) => website.slug === params.slug);
-  const websiteTools = tools.filter((tool) =>
-    project.toolNames.includes(tool.name)
-  );
+  const { type, slug } = params;
+  const project = allProjects.find((p) => p.slug === slug && p.type === type);
 
   if (!project) {
     notFound();
   }
+
+  const projectTools = tools.filter((tool) =>
+    project.toolNames?.includes(tool.name)
+  );
 
   return (
     <>
@@ -55,10 +67,17 @@ export default function ProjectPage({ params }) {
               <p>Projects</p>
             </Link>
             <p>/</p>
+            <Link
+              href={`/projects#${project.type}`}
+              className="hover:text-red-600"
+            >
+              <p>{formatType(project.type)}</p>
+            </Link>
+            <p>/</p>
             <p className="text-gray-400">{project.title}</p>
           </div>
 
-          <div className="lg:grid grid-cols-12 gap-10 lg:gap-16 flex flex-col-reverse">
+          <div className="lg:grid lg:grid-cols-12 gap-12 2xl:gap-24 flex flex-col-reverse">
             <div className="col-span-9 space-y-12">
               {/* Project header */}
               <div>
@@ -134,7 +153,7 @@ export default function ProjectPage({ params }) {
                   }
                 </a>
               )}
-              <ChipsContainer selectedTools={websiteTools} color={"gray-100"} />
+              <ChipsContainer selectedTools={projectTools} color={"gray-100"} />
             </div>
           </div>
         </div>
