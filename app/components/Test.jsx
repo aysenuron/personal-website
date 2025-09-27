@@ -24,7 +24,7 @@ export default function Test() {
                   <img
                     src="/profile.png"
                     alt="Aysenur Onaran profile img"
-                    className="w-full h-full object-cover object-[100%_100%] scale-125"
+                    className="w-full h-full object-cover object-left-top scale-250 origin-[45%_55%]"
                   />
                 </div>
                 <div className="mt-4 flex flex-col gap-3">
