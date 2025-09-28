@@ -102,7 +102,7 @@ const apps = [
   },
   {
     id: 4,
-    slug: "swift",
+    slug: "swiftt",
     githubLink: "https://github.com/aysenuron/employment-leaders-website",
     webLink: "https://employmentleaders.com/",
     img: "/websites/employmentLeaders-screen.png",
