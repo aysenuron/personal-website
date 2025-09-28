@@ -1,4 +1,5 @@
 import ReactMarkdown from "react-markdown";
+import Image from "next/image";
 
 export default function ProjectFeatures({ features }) {
   return (
@@ -13,11 +14,13 @@ export default function ProjectFeatures({ features }) {
           }`}
         >
           {feature.img ? (
-            <div>
-              <img
+            <div className={`relative ${feature.imgClassName}`}>
+              <Image
                 src={feature.img}
                 alt={feature.heading}
-                className={`h-full object-cover ${feature.imgClassName}`}
+                fill
+                className={`h-full object-cover rounded-xl`}
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           ) : null}
