@@ -129,16 +129,20 @@ export default function ProjectPage({ params }) {
               {/* Project challenges */}
               <div className="space-y-2 max-w-none">
                 <h2 className="text-2xl">Challenges</h2>
-                <div className="text-gray-500 text-md">
-                  <ReactMarkdown>{project.challenges}</ReactMarkdown>
+                <div className="text-gray-500 text-md space-y-4">
+                  {project.challenges.map((paragraph, index) => (
+                    <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
+                  ))}
                 </div>
               </div>
               {/* Personal Notes */}
               {project.notes ? (
                 <div className="space-y-2 max-w-none">
                   <h2 className="text-2xl">👋🏻 Personal Notes</h2>
-                  <div className="text-gray-500 text-md">
-                    <ReactMarkdown>{project.notes}</ReactMarkdown>
+                  <div className="text-gray-500 text-md space-y-4">
+                    {project.notes.map((paragraph, index) => (
+                      <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
+                    ))}
                   </div>
                 </div>
               ) : null}

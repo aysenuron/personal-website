@@ -64,7 +64,7 @@ const tools = [
     img: "/logos/netlify.png",
   },
   {
-    name: "Claude AI",
+    name: "Anthropic API",
     img: "/logos/claude.png",
   },
   {
