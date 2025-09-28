@@ -29,7 +29,7 @@ const research = [
   {
     id: 2,
     slug: "burada-eskiden-sinema-vardi",
-    webLink: "https://www.elevateht.com/",
+    webLink: "",
     img: "/websites/elevateht-screen.png",
     title: "Burada Eskiden Sinema Vardı",
     description:
