@@ -38,7 +38,7 @@ const apps = [
     role: "Full-stack frontend with AI integration",
     time: "March - April 2025",
     description:
-      "I designed and developed a recipe suggestion app that uses AI to generate meal ideas from the ingredients you have.",
+      "I designed and developed a recipe suggestion app that uses Anthropic AI to generate meal ideas from the ingredients you have.",
     longDescription:
       "Yess, Chef! is a playful web app that takes a list of ingredients from the user and generates recipe ideas using Claude AI. I designed and developed it as a small but complete app — from **setting up the frontend in React to integrating with Anthropic API and deploying it on Netlify.** The goal wasn’t just to practice technical skills, but to create something delightful and genuinely useful in daily life. It’s a mix of creativity, functionality, and my love for food.",
     toolNames: ["React", "Netlify", "JavaScript", "Claude AI"],
