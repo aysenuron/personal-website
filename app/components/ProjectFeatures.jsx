@@ -14,13 +14,11 @@ export default function ProjectFeatures({ features }) {
           }`}
         >
           {feature.img ? (
-            <div className={`relative ${feature.imgClassName}`}>
-              <Image
+            <div>
+              <img
                 src={feature.img}
                 alt={feature.heading}
-                fill
-                className={`h-full object-cover rounded-xl`}
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className={`mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl h-auto ${feature.imgClassName}`}
               />
             </div>
           ) : null}

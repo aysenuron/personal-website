@@ -30,7 +30,7 @@ const websites = [
     id: 2,
     slug: "elevateht-saas-website",
     webLink: "https://www.elevateht.com/",
-    img: "/websites/elevateht-screen.png",
+    thumbnail: "/websites/elevateht-screen.png",
     title: "ElevateHT - B2B SaaS Website",
     description:
       "I designed and developed ElevateHT's website in Webflow, successfully transitioning it from WordPress.",

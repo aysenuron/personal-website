@@ -46,8 +46,7 @@ const apps = [
       {
         heading: "AI Integration",
         img: "/web-apps/yess-chef/1.png",
-        imgClassName:
-          "w-1/3 h-76 mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl",
+        imgClassName: "w-1/2 lg:w-1/3",
         items: [
           "Users can enter any combination of ingredients — from the everyday to the absurd — and get a recipe idea back in real time, formatted neatly in markdown for easy reading.",
         ],
@@ -55,8 +54,7 @@ const apps = [
       {
         heading: "User Flow",
         img: "/web-apps/yess-chef/3.png",
-        imgClassName:
-          "w-1/3 h-76 mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl",
+        imgClassName: "w-1/2 lg:w-1/3",
         items: [
           "1- Enter ingedients (min 2)",
           '2- Hit "Generate Recipe"',
@@ -66,8 +64,7 @@ const apps = [
       {
         heading: "Real-world deployment",
         img: "/web-apps/yess-chef/2.png",
-        imgClassName:
-          "w-1/3 h-76 mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl",
+        imgClassName: "w-1/2 lg:w-1/3",
         items: [
           `The app is live on Netlify, with environment variables securely handled in production. It’s **lightweight but fully functional,** showing how small projects can scale into polished portfolio pieces.`,
         ],

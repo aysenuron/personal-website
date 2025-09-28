@@ -57,11 +57,7 @@ export default function P_Card({ data, index, chipsVisible = true }) {
             {data.description}
           </motion.p>
           {chipsVisible ? (
-            <ChipsContainer
-              selectedTools={websiteTools}
-              color={"gray-100"}
-              className={"pt-3"}
-            />
+            <ChipsContainer selectedTools={websiteTools} className={"pt-3"} />
           ) : null}
         </div>
       </div>

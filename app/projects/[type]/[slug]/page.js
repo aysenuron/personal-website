@@ -99,10 +99,11 @@ export default function ProjectPage({ params }) {
                   ) : (
                     <video
                       src={project.video}
-                      controls
                       autoPlay
                       muted
                       loop
+                      playsInline
+                      controls={false}
                       className={`mx-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${project.className}`}
                     />
                   )}
