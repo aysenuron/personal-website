@@ -21,9 +21,9 @@ export default function P_Card({ data, index, chipsVisible = true }) {
             duration: 0.5,
             ease: "easeOut",
           }}
-          className="lg:col-span-2 flex items-center justify-center"
+          className="lg:col-span-2 flex items-center justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
         >
-          <img src={data.img} alt={data.title} />
+          <img src={data.thumbnail} alt={data.title} />
         </motion.div>
         <div className="lg:col-span-5 flex flex-col gap-1 justify-center">
           <motion.h3

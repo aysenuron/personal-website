@@ -29,29 +29,55 @@ const apps = [
   {
     id: 2,
     slug: "yess-chef",
-    webLink: "https://www.elevateht.com/",
-    img: "/websites/elevateht-screen.png",
+    webLink: "https://yess-chef.netlify.app/",
+    githubLink: "https://github.com/aysenuron/yes-chef",
+    thumbnail: "/web-apps/yess-chef/yess-chef-thumbnail.png",
+    video: "/web-apps/yess-chef/yess-chef-video.mp4",
+    className: "lg:w-1/4 w-1/2",
     title: "Yess, chef!",
+    role: "Full-stack frontend with AI integration",
+    time: "March - April 2025",
     description:
-      "I designed and developed ElevateHT's website in Webflow, successfully transitioning it from WordPress.",
+      "I designed and developed a recipe suggestion app that uses AI to generate meal ideas from the ingredients you have.",
     longDescription:
-      "ElevateHT is a comprehensive B2B SaaS platform website that required a complete migration from WordPress to Webflow. This project involved redesigning the user experience, implementing HubSpot integration for lead management, and creating a scalable content management system.",
-    toolNames: ["Webflow", "JavaScript", "HubSpot"],
+      "Yess, Chef! is a playful web app that takes a list of ingredients from the user and generates recipe ideas using Claude AI. I designed and developed it as a small but complete app — from **setting up the frontend in React to integrating with Anthropic API and deploying it on Netlify.** The goal wasn’t just to practice technical skills, but to create something delightful and genuinely useful in daily life. It’s a mix of creativity, functionality, and my love for food.",
+    toolNames: ["React", "Netlify", "JavaScript", "Claude AI"],
     features: [
       {
-        heading: "Scalable Architecture",
-        img: "/images/architecture.png",
-        items: ["Microservices", "Cloud native", "Auto-scaling"],
+        heading: "AI Integration",
+        img: "/web-apps/yess-chef/1.png",
+        imgClassName:
+          "w-1/3 mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl",
+        items: [
+          "Users can enter any combination of ingredients — from the everyday to the absurd — and get a recipe idea back in real time, formatted neatly in markdown for easy reading.",
+        ],
       },
       {
-        heading: "User Experience",
-        img: "/images/ux.png",
-        items: ["Clean UI", "Accessibility", "Mobile first"],
+        heading: "User Flow",
+        img: "/web-apps/yess-chef/3.png",
+        imgClassName:
+          "w-1/3 mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl",
+        items: [
+          "1- Enter ingedients (min 2)",
+          '2- Hit "Generate Recipe"',
+          "3- Your recipe will be ready in a short while. Enjoy!",
+        ],
+      },
+      {
+        heading: "Real-world deployment",
+        img: "/web-apps/yess-chef/2.png",
+        imgClassName:
+          "w-1/3 mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl",
+        items: [
+          `The app is live on Netlify, with environment variables securely handled in production. It’s **lightweight but fully functional,** showing how small projects can scale into polished portfolio pieces.`,
+        ],
       },
     ],
-    goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges:
-      "Migrating from WordPress while maintaining SEO rankings and implementing complex HubSpot integrations required careful planning. I solved this by creating a detailed migration strategy and custom JavaScript solutions for form handling and lead tracking.",
+    goal: "Create a responsive web app that generates recipes from user-provided ingredients using Claude AI, with a simple frontend and working serverless backend on Netlify. The focus was on making the app functional, reliable, and enjoyable to use.",
+    challenges: `Since I’m more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Claude AI, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging. \n\nAnother challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude’s formatted recipes. Each roadblock pushed me to explore concepts I hadn’t worked with before, and solving them gave me more confidence working beyond the frontend.`,
+
+    notes:
+      "I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.\n\nI’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
     type: "web-apps",
   },
   {

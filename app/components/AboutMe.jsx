@@ -74,7 +74,6 @@ export default function AboutMe() {
     {
       content:
         "Architect turned developer, crafting digital experiences with curiosity, care, and a systems mindset—always learning along the way.",
-      className: "text-gray-900 font-medium",
       delay: 0.4,
     },
     {
@@ -83,7 +82,7 @@ export default function AboutMe() {
           I have both bachelor's and master's degrees in architecture, but I
           found my true calling in the digital world. For three years, I worked
           at Elevate Health Technologies as a{" "}
-          <span className="text-gray-900 font-medium">
+          <span className="text-gray-500 font-medium">
             digital designer and web developer.
           </span>
         </>
@@ -96,7 +95,7 @@ export default function AboutMe() {
           Along the way, I've taught myself frontend development and started
           taking on freelance projects building websites for clients. I see
           myself as a generalist.
-          <span className="text-gray-900 font-medium">
+          <span className="text-gray-500 font-medium">
             {" "}
             My background in architecture{" "}
           </span>
@@ -124,7 +123,7 @@ export default function AboutMe() {
           When I face a challenge, my philosophy is simple: "I'll figure it
           out." And so far, I always have. I don't believe in putting myself in
           one box.{" "}
-          <span className="text-gray-900 font-medium">
+          <span className="text-gray-500 font-medium">
             I learn quickly and adapt to new situations.
           </span>{" "}
           Each project teaches me something new that I can use in the next one.
@@ -169,7 +168,7 @@ export default function AboutMe() {
                 >
                   About me
                 </motion.h2>
-                <p className="text-gray-700 text-md/relaxed">
+                <p className="text-gray-500 text-md/relaxed">
                   {paragraphs.map((paragraph, index) => (
                     <React.Fragment key={index}>
                       {index > 0 && (

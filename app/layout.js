@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/qkm8iol.css" />
       </head>
-      <body>
+      <body className="prose">
         {children}
         <Analytics />
         <SpeedInsights />

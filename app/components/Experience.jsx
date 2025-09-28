@@ -1,6 +1,6 @@
 export default function Experience() {
   return (
-    <div className="lg:flex space-y-4 gap-4 text-[15px] 2xl:text-md text-gray-400">
+    <div className="lg:flex space-y-4 gap-4 text-[15px] 2xl:text-md text-gray-500">
       <div className="shrink-0">
         <p>2022 - Present</p>
       </div>
@@ -11,7 +11,7 @@ export default function Experience() {
         </h3>
         <div className="flex flex-col gap-4 mt-4">
           <p>
-            <span className="text-gray-800 pr-1">
+            <span className="text-gray-800 font-medium pr-1">
               Website Design & Development:
             </span>
             Designed and developed the company website using Webflow,
@@ -19,13 +19,15 @@ export default function Experience() {
             functionality and visual effects.
           </p>
           <p>
-            <span className="text-gray-800 pr-1">Integration & Tracking:</span>
+            <span className="text-gray-800 font-medium pr-1">
+              Integration & Tracking:
+            </span>
             Connected the website with HubSpot for lead generation. Implemented
             Google Analytics 4 (GA4) and Google Tag Manager to track user
             behavior and gather actionable insights.
           </p>
           <p>
-            <span className="text-gray-800 pr-1">
+            <span className="text-gray-800 font-medium pr-1">
               A/B Testing & Optimization:
             </span>
             Conducted A/B testing to evaluate design and content effectiveness,
@@ -33,19 +35,23 @@ export default function Experience() {
             performance and user engagement.
           </p>
           <p>
-            <span className="text-gray-800 pr-1">Marketing Design:</span>
+            <span className="text-gray-800 font-medium pr-1">
+              Marketing Design:
+            </span>
             Created marketing assets, including landing pages, brochures, and
             digital campaigns, to effectively communicate product value.
           </p>
           <p>
-            <span className="text-gray-800 pr-1">Brand Identity Design:</span>
+            <span className="text-gray-800 font-medium pr-1">
+              Brand Identity Design:
+            </span>
             Developed a cohesive brand identity that reflects the company’s
             values and vision. This included crafting logo designs, color
             palettes, typography, and overall visual guidelines to ensure
             consistency across all platforms.
           </p>
           <p>
-            <span className="text-gray-800 pr-1">
+            <span className="text-gray-800 font-medium pr-1">
               Collaboration & Strategy:
             </span>
             Worked closely with cross-functional teams to align website and

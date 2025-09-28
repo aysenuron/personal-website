@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 import apps from "@/app/projects_apps";
 import websites from "@/app/projects_websites";
@@ -74,7 +75,7 @@ export default function ProjectPage({ params }) {
               <p>{formatType(project.type)}</p>
             </Link>
             <p>/</p>
-            <p className="text-gray-400">{project.title}</p>
+            <p className="text-gray-500">{project.title}</p>
           </div>
 
           <div className="lg:grid lg:grid-cols-12 gap-12 2xl:gap-24 flex flex-col-reverse">
@@ -84,32 +85,66 @@ export default function ProjectPage({ params }) {
                 <h1 className="lg:text-4xl text-2xl text-gray-800 font-semibold mb-4">
                   {project.title}
                 </h1>
-                <p className="text-md text-gray-400 mb-4">
-                  {project.description}
-                </p>
+                <div className="text-md text-gray-500 mb-4">
+                  <ReactMarkdown>{project.description}</ReactMarkdown>
+                </div>
                 {/* Project image */}
-                <div className="mb-8">
-                  <img
-                    src={project.img}
-                    alt={project.title}
-                    className="w-full rounded-lg shadow-lg"
-                  />
+                <div className="my-8">
+                  {project.img ? (
+                    <img
+                      src={project.img}
+                      alt={project.title}
+                      className="w-full rounded-lg shadow-lg"
+                    />
+                  ) : (
+                    <video
+                      src={project.video}
+                      controls
+                      autoPlay
+                      muted
+                      loop
+                      className={`mx-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${project.className}`}
+                    />
+                  )}
                 </div>
               </div>
 
               {/* Project overview */}
               <div className="space-y-2 max-w-none">
                 <h2 className="text-2xl">Project Overview</h2>
-                <p className="text-gray-400 text-md">
-                  {project.longDescription || project.description}
-                </p>
+                <div className="text-gray-500 text-md">
+                  <ReactMarkdown>{project.longDescription}</ReactMarkdown>
+                </div>
+              </div>
+              {/* Project goal */}
+              <div className="space-y-2 max-w-none">
+                <h2 className="text-2xl">Goals</h2>
+                <div className="text-gray-500 text-md">
+                  <ReactMarkdown>{project.goal}</ReactMarkdown>
+                </div>
               </div>
               {/* Add more detailed content here */}
               <ProjectFeatures features={project.features} />
+              {/* Project challenges */}
+              <div className="space-y-2 max-w-none">
+                <h2 className="text-2xl">Challenges</h2>
+                <div className="text-gray-500 text-md">
+                  <ReactMarkdown>{project.challenges}</ReactMarkdown>
+                </div>
+              </div>
+              {/* Personal Notes */}
+              {project.notes ? (
+                <div className="space-y-2 max-w-none">
+                  <h2 className="text-2xl">👋🏻 Personal Notes</h2>
+                  <div className="text-gray-500 text-md">
+                    <ReactMarkdown>{project.notes}</ReactMarkdown>
+                  </div>
+                </div>
+              ) : null}
             </div>
 
             {/* Quick Facts */}
-            <div className="col-span-3 text-gray-400 text-md flex flex-col gap-6 pl-3 py-2 border-gray-300 border-l-1 lg:sticky top-38 self-start">
+            <div className="col-span-3 text-gray-500 text-md flex flex-col gap-6 pl-3 py-2 border-gray-300 border-l-1 lg:sticky top-38 self-start">
               <p>
                 <span className="text-gray-700 font-semibold">Role: </span>
                 {project.role ? project.role : "Web Designer / Developer"}
@@ -117,14 +152,6 @@ export default function ProjectPage({ params }) {
               <p>
                 <span className="text-gray-700 font-semibold">Timeline: </span>
                 {project.time ? project.time : "May 2023 - June 2023"}
-              </p>
-              <p>
-                {project.goal ? (
-                  <>
-                    <span className="text-gray-700 font-semibold">Goal: </span>
-                    {project.goal}
-                  </>
-                ) : null}
               </p>
               {/* Project links */}
               {project.webLink && (

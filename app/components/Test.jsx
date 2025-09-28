@@ -65,20 +65,6 @@ export default function Test() {
                 id="selected_projects"
                 className="flex flex-col gap-8 lg:gap-12"
               >
-                <div id="projects_webapps" className="flex flex-col gap-2">
-                  <Link
-                    href="/projects#web-apps"
-                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
-                  >
-                    Web Apps{" "}
-                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
-                  </Link>
-                  {apps
-                    .filter((app) => app.id == 1)
-                    .map((app) => (
-                      <P_Card key={app.id} data={app} chipsVisible={true} />
-                    ))}
-                </div>
                 <div id="projects_websites" className="flex flex-col gap-2">
                   <Link
                     href="/projects#websites"
@@ -111,6 +97,20 @@ export default function Test() {
                       <P_Card key={c.id} data={c} chipsVisible={true} />
                     ))}
                 </div>
+                <div id="projects_webapps" className="flex flex-col gap-2">
+                  <Link
+                    href="/projects#web-apps"
+                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Web Apps{" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {apps
+                    .filter((app) => app.id == 2)
+                    .map((app) => (
+                      <P_Card key={app.id} data={app} chipsVisible={true} />
+                    ))}
+                </div>
                 <div id="projects_research" className="flex flex-col gap-2">
                   <Link
                     href="/projects#research"
@@ -140,7 +140,7 @@ export default function Test() {
               </div>
               <div id="about" className="flex flex-col gap-16 lg:pr-24">
                 <h2 className="text-2xl -mb-12 lg:hidden">About</h2>
-                <p className="text-gray-700 text-md/relaxed">
+                <p className="text-gray-500 text-md/relaxed">
                   {paragraphs.map((paragraph, index) => (
                     <React.Fragment key={index}>
                       {index > 0 && (
@@ -162,7 +162,7 @@ export default function Test() {
                     Let's talk
                   </WavyText>
                 </Link>
-                <p className="mt-20 pb-12 text-sm text-gray-400">
+                <p className="mt-20 pb-12 text-sm text-gray-500">
                   This website is built with Next.js and Tailwind CSS, deployed
                   with Vercel. By moi.
                 </p>

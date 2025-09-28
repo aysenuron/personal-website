@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+
 export default function ProjectFeatures({ features }) {
   return (
     <div className="lg:space-y-16 space-y-8">
@@ -15,16 +17,20 @@ export default function ProjectFeatures({ features }) {
               <img
                 src={feature.img}
                 alt={feature.heading}
-                className="w-full h-full object-cover"
+                className={`h-full object-cover ${feature.imgClassName}`}
               />
             </div>
           ) : null}
           {feature.heading && feature.items ? (
             <div className="space-y-2 flex flex-col justify-center">
               <h2 className="text-2xl">{feature.heading}</h2>
-              <ul className="text-gray-400 space-y-4">
+              <ul className="text-gray-500 space-y-2">
                 {feature.items?.length > 0
-                  ? feature.items.map((item, i) => <li key={i}>{item}</li>)
+                  ? feature.items.map((item, i) => (
+                      <li key={i}>
+                        <ReactMarkdown>{item}</ReactMarkdown>
+                      </li>
+                    ))
                   : null}
               </ul>
             </div>
