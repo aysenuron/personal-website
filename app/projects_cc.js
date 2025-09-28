@@ -22,8 +22,14 @@ const cc = [
       },
     ],
     goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges:
-      "The main challenge was creating engaging animations that enhanced rather than distracted from the content. I solved this by implementing subtle micro-interactions that guide users through the page while maintaining fast load times.",
+    challenges: [
+      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
+      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
+    ],
+    notes: [
+      `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
+      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
+    ],
     type: "creative-coding",
   },
   {
@@ -50,8 +56,14 @@ const cc = [
       },
     ],
     goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges:
-      "Migrating from WordPress while maintaining SEO rankings and implementing complex HubSpot integrations required careful planning. I solved this by creating a detailed migration strategy and custom JavaScript solutions for form handling and lead tracking.",
+    challenges: [
+      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
+      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
+    ],
+    notes: [
+      `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
+      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
+    ],
     type: "creative-coding",
   },
   {
@@ -79,8 +91,14 @@ const cc = [
       },
     ],
     goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges:
-      "Creating an engaging design without overwhelming frameworks while ensuring cross-browser compatibility. I focused on semantic HTML, progressive enhancement, and thorough testing across different browsers and devices.",
+    challenges: [
+      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
+      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
+    ],
+    notes: [
+      `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
+      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
+    ],
     type: "creative-coding",
   },
 ];
