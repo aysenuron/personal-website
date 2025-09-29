@@ -4,7 +4,7 @@ const apps = [
     slug: "roi-calculator",
     webLink: "",
     githubLink: "https://github.com/aysenuron/ROI-Calculator",
-    thumbnail: "/web-apps/yess-chef/yess-chef-thumbnail.png",
+    thumbnail: "/web-apps/roi/1.png",
     video: "/web-apps/roi/roi-video.mp4",
     className: "w-full",
     title: "Healthcare ROI Calculator",
@@ -138,10 +138,10 @@ const apps = [
     video: "/web-apps/yess-chef/yess-chef-video.mp4",
     className: "lg:w-1/4 w-1/2",
     title: "Yess, chef!",
-    role: "Full-stack frontend with AI integration",
+    role: "Front-end Developer / Designer",
     time: "March - April 2025",
     description:
-      "I designed and developed a recipe suggestion app that uses Anthropic AI to generate meal ideas from the ingredients you have.",
+      "An AI-powered recipe app that suggests meals based on ingredients you already have, built with Anthropic's Claude API.",
     longDescription:
       "Yess, Chef! is a playful web app that takes a list of ingredients from the user and generates recipe ideas using  Anthropic API. I designed and developed it as a small but complete app — from **setting up the frontend in React to integrating with Anthropic API and deploying it on Netlify.** The goal wasn’t just to practice technical skills, but to create something delightful and genuinely useful in daily life. It’s a mix of creativity, functionality, and my love for food.",
     toolNames: ["React", "Netlify", "JavaScript", "Anthropic API"],
@@ -149,7 +149,7 @@ const apps = [
       {
         heading: "Response Handling",
         img: "/web-apps/yess-chef/2.png",
-        imgClassName: "w-1/2 lg:w-1/3",
+        imgClassName: "w-1/2",
         items: [
           "Claude's responses are conversational, not structured data. I had to parse the text response and handle various formatting inconsistencies with React Markdown.",
         ],
@@ -157,7 +157,7 @@ const apps = [
       {
         heading: "Loading States",
         img: "/web-apps/yess-chef/1.png",
-        imgClassName: "w-1/2 lg:w-1/3",
+        imgClassName: "w-1/2",
         items: [
           'AI responses take 3-8 seconds, so I added a simple loading state to prevent the "is this working?" confusion.',
         ],
@@ -165,7 +165,7 @@ const apps = [
       {
         heading: "Real-world deployment",
         img: "/web-apps/yess-chef/3.png",
-        imgClassName: "w-1/2 lg:w-1/3",
+        imgClassName: "w-1/2",
         items: [
           `The app is live on Netlify, with environment variables securely handled in production. It’s **lightweight but fully functional,** showing how small projects can scale into polished portfolio pieces.`,
         ],

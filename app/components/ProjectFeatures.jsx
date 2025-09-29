@@ -15,13 +15,9 @@ export default function ProjectFeatures({ features }) {
         >
           {feature.img ? (
             <div
-              className={`${feature.imgClassName} overflow-hidden h-auto bg-white flex justify-center items-center drop-shadow-xl border-2 border-gray-200 rounded-xl`}
+              className={`${feature.imgClassName} mx-auto overflow-hidden h-auto bg-white flex justify-center items-center drop-shadow-xl border-2 border-gray-200 rounded-xl`}
             >
-              <img
-                src={feature.img}
-                alt={feature.heading}
-                className={`mx-auto`}
-              />
+              <img src={feature.img} alt={feature.heading} />
             </div>
           ) : null}
           {feature.heading && feature.items ? (
