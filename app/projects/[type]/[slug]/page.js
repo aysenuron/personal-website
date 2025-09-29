@@ -79,7 +79,7 @@ export default function ProjectPage({ params }) {
           </div>
 
           <div className="lg:grid lg:grid-cols-12 gap-12 2xl:gap-24 flex flex-col-reverse">
-            <div className="col-span-9 space-y-16">
+            <div className="col-span-9 space-y-20">
               {/* Project header */}
               <div>
                 <h1 className="lg:text-5xl text-3xl text-gray-800 font-bold mb-4">
@@ -120,25 +120,31 @@ export default function ProjectPage({ params }) {
                 </div>
               </div>
               {/* Project goal */}
-              <div className="space-y-4 max-w-none">
-                <h2 className="text-3xl text-gray-400 font-semibold">Goal</h2>
-                <div className="text-gray-700 text-md">
-                  <ReactMarkdown>{project.goal}</ReactMarkdown>
+              {project.goal ? (
+                <div className="space-y-4 max-w-none">
+                  <h2 className="text-3xl text-gray-400 font-semibold">Goal</h2>
+                  <div className="text-gray-700 text-md">
+                    <ReactMarkdown>{project.goal}</ReactMarkdown>
+                  </div>
                 </div>
-              </div>
+              ) : null}
+
               {/* Add more detailed content here */}
               <ProjectFeatures features={project.features} />
               {/* Project challenges */}
-              <div className="space-y-4 max-w-none">
-                <h2 className="text-3xl text-gray-400 font-semibold">
-                  Challenges
-                </h2>
-                <div className="text-gray-700 text-md space-y-4">
-                  {project.challenges.map((paragraph, index) => (
-                    <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
-                  ))}
+              {project.challenges ? (
+                <div className="space-y-4 max-w-none">
+                  <h2 className="text-3xl text-gray-400 font-semibold">
+                    Challenges
+                  </h2>
+                  <div className="text-gray-700 text-md space-y-4">
+                    {project.challenges.map((paragraph, index) => (
+                      <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              ) : null}
+
               {/* What I Learned */}
               {project.learned ? (
                 <div className="space-y-4 max-w-none">

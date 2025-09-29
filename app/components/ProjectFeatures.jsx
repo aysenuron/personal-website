@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ProjectFeatures({ features }) {
   return (
-    <div className="space-y-16">
+    <div className="space-y-20">
       {features.map((feature, idx) => (
         <div
           key={idx}
@@ -14,11 +14,13 @@ export default function ProjectFeatures({ features }) {
           }`}
         >
           {feature.img ? (
-            <div>
+            <div
+              className={`${feature.imgClassName} overflow-hidden h-auto bg-white flex justify-center items-center drop-shadow-xl border-2 border-gray-200 rounded-xl`}
+            >
               <img
                 src={feature.img}
                 alt={feature.heading}
-                className={`mx-auto drop-shadow-xl border-2 border-gray-200 rounded-xl h-auto ${feature.imgClassName}`}
+                className={`mx-auto`}
               />
             </div>
           ) : null}
