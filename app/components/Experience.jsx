@@ -7,7 +7,9 @@ export default function Experience() {
       <div className="-mt-0.5">
         <h3 className="text-xl lg:text-lg text-gray-700 font-semibold">
           Web Developer / Digital Designer •{" "}
-          <span className="font-normal">Elevate Health Technologies </span>
+          <span className="font-semibold text-gray-400">
+            Elevate Health Technologies{" "}
+          </span>
         </h3>
         <div className="flex flex-col gap-4 mt-4">
           <p>

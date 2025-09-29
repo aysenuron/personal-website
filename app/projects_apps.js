@@ -17,11 +17,19 @@ const apps = [
     toolNames: ["React", "Netlify", "JavaScript", "Anthropic API"],
     features: [
       {
-        heading: "AI Integration",
+        heading: "Response Handling",
+        img: "/web-apps/yess-chef/2.png",
+        imgClassName: "w-1/2 lg:w-1/3",
+        items: [
+          "Claude's responses are conversational, not structured data. I had to parse the text response and handle various formatting inconsistencies with React Markdown.",
+        ],
+      },
+      {
+        heading: "Loading States",
         img: "/web-apps/yess-chef/1.png",
         imgClassName: "w-1/2 lg:w-1/3",
         items: [
-          "Users can enter any combination of ingredients — from the everyday to the absurd — and get a recipe idea back in real time, formatted neatly in markdown for easy reading.",
+          'AI responses take 3-8 seconds, so I added a simple loading state to prevent the "is this working?" confusion.',
         ],
       },
       {
@@ -37,6 +45,17 @@ const apps = [
     challenges: [
       "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
       "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
+    ],
+    learned: [
+      "**AI Integration:** Working with AI APIs is more about handling unpredictability than complex prompt engineering. Most of the challenge is in parsing and displaying variable response formats.",
+      "**React State for Async Operations:** Managing loading, success, and error states for API calls. Used a simple pattern with useState rather than over-engineering with reducers.",
+      "**Practical vs. Perfect:** Initially tried to parse recipes into structured data (ingredients array, steps array, etc.) but Claude's conversational responses work better displayed as-is. Sometimes simple text rendering beats complex parsing.",
+    ],
+    limitations: [
+      '**•** No ingredient validation (you can type "random access memories")',
+      "**•** No recipe saving or history",
+      "**•** Single recipe per request (no alternatives)",
+      "**•** No dietary restrictions or preferences",
     ],
     notes: [
       `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,

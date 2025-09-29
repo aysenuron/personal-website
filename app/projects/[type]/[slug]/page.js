@@ -79,13 +79,13 @@ export default function ProjectPage({ params }) {
           </div>
 
           <div className="lg:grid lg:grid-cols-12 gap-12 2xl:gap-24 flex flex-col-reverse">
-            <div className="col-span-9 space-y-12">
+            <div className="col-span-9 space-y-16">
               {/* Project header */}
               <div>
-                <h1 className="lg:text-4xl text-2xl text-gray-800 font-semibold mb-4">
+                <h1 className="lg:text-5xl text-3xl text-gray-800 font-bold mb-4">
                   {project.title}
                 </h1>
-                <div className="text-md text-gray-500 mb-4">
+                <div className="text-md text-gray-700 mb-4">
                   <ReactMarkdown>{project.description}</ReactMarkdown>
                 </div>
                 {/* Project image */}
@@ -111,35 +111,68 @@ export default function ProjectPage({ params }) {
               </div>
 
               {/* Project overview */}
-              <div className="space-y-2 max-w-none">
-                <h2 className="text-2xl">Project Overview</h2>
-                <div className="text-gray-500 text-md">
+              <div className="space-y-4 max-w-none">
+                <h2 className="text-3xl text-gray-400 font-semibold">
+                  Overview
+                </h2>
+                <div className="text-gray-700 text-md">
                   <ReactMarkdown>{project.longDescription}</ReactMarkdown>
                 </div>
               </div>
               {/* Project goal */}
-              <div className="space-y-2 max-w-none">
-                <h2 className="text-2xl">Goals</h2>
-                <div className="text-gray-500 text-md">
+              <div className="space-y-4 max-w-none">
+                <h2 className="text-3xl text-gray-400 font-semibold">Goal</h2>
+                <div className="text-gray-700 text-md">
                   <ReactMarkdown>{project.goal}</ReactMarkdown>
                 </div>
               </div>
               {/* Add more detailed content here */}
               <ProjectFeatures features={project.features} />
               {/* Project challenges */}
-              <div className="space-y-2 max-w-none">
-                <h2 className="text-2xl">Challenges</h2>
-                <div className="text-gray-500 text-md space-y-4">
+              <div className="space-y-4 max-w-none">
+                <h2 className="text-3xl text-gray-400 font-semibold">
+                  Challenges
+                </h2>
+                <div className="text-gray-700 text-md space-y-4">
                   {project.challenges.map((paragraph, index) => (
                     <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
                   ))}
                 </div>
               </div>
+              {/* What I Learned */}
+              {project.learned ? (
+                <div className="space-y-4 max-w-none">
+                  <h2 className="text-3xl text-gray-400 font-semibold">
+                    What I Learned
+                  </h2>
+                  <div className="text-gray-700 text-md space-y-4">
+                    {project.learned.map((paragraph, index) => (
+                      <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+              {/* Current Limitations */}
+              {project.limitations ? (
+                <div className="space-y-4 max-w-none">
+                  <h2 className="text-3xl text-gray-400 font-semibold">
+                    Current Limitations
+                  </h2>
+                  <div className="text-gray-700 text-md space-y-4">
+                    {project.limitations.map((paragraph, index) => (
+                      <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
+
               {/* Personal Notes */}
               {project.notes ? (
                 <div className="space-y-2 max-w-none">
-                  <h2 className="text-2xl">👋🏻 Personal Notes</h2>
-                  <div className="text-gray-500 text-md space-y-4">
+                  <h2 className="text-3xl text-gray-400 font-semibold">
+                    👋🏻 Personal Notes
+                  </h2>
+                  <div className="text-gray-700 text-md space-y-4">
                     {project.notes.map((paragraph, index) => (
                       <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
                     ))}

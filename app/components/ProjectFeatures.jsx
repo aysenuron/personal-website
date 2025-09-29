@@ -3,13 +3,13 @@ import Image from "next/image";
 
 export default function ProjectFeatures({ features }) {
   return (
-    <div className="lg:space-y-16 space-y-8">
+    <div className="space-y-16">
       {features.map((feature, idx) => (
         <div
           key={idx}
           className={`${
             feature.img && feature.heading
-              ? "lg:grid lg:grid-cols-2 lg:gap-8 flex flex-col gap-4"
+              ? "lg:grid lg:grid-cols-2 flex flex-col gap-8"
               : ""
           }`}
         >
@@ -23,9 +23,11 @@ export default function ProjectFeatures({ features }) {
             </div>
           ) : null}
           {feature.heading && feature.items ? (
-            <div className="space-y-2 flex flex-col justify-center">
-              <h2 className="text-2xl">{feature.heading}</h2>
-              <ul className="text-gray-500 space-y-2">
+            <div className="space-y-4 flex flex-col justify-center">
+              <h2 className="text-3xl text-gray-400 font-semibold">
+                {feature.heading}
+              </h2>
+              <ul className="text-gray-700 space-y-2">
                 {feature.items?.length > 0
                   ? feature.items.map((item, i) => (
                       <li key={i}>
