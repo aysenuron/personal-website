@@ -1,19 +1,21 @@
 export const paragraphs = [
   {
     content:
-      "Architect turned developer, crafting digital experiences with curiosity, care, and a systems mindset—always learning along the way.",
+      "I'm a designer and developer based in İzmir, Turkey, working at the intersection of digital design, creative coding, and spatial thinking.",
     className: "text-[#192de4]",
     delay: 0.4,
   },
   {
     content: (
       <>
-        I have both bachelor's and master's degrees in architecture, but I found
-        my true calling in the digital world. For three years, I worked at
-        Elevate Health Technologies as a{" "}
-        <span className="text-gray-700 font-medium">
-          digital designer and web developer.
-        </span>
+        For the past five years, I've been at Elevate Health Technologies, a
+        health tech startup, where I've designed and built the company website,
+        created interactive marketing tools with JavaScript, integrated systems
+        like HubSpot, and handled everything from web design to analytics
+        implementation. I also take on freelance projects, building websites and
+        digital experiences for various clients. Working across both design and
+        development has given me a holistic approach—how things look, how they
+        work, and how people actually use them.
       </>
     ),
     delay: 0.5,
@@ -21,14 +23,11 @@ export const paragraphs = [
   {
     content: (
       <>
-        Along the way, I've taught myself frontend development and started
-        taking on freelance projects building websites for clients. I see myself
-        as a generalist.
-        <span className="text-gray-700 font-medium">
-          {" "}
-          My background in architecture{" "}
-        </span>
-        gives me a different way to look at digital problems.
+        I hold bachelor's and master's degrees in architecture, with research
+        focused on social space. That background shapes how I approach digital
+        work: I'm interested in how design mediates interaction, how spaces
+        (physical or digital) structure behavior, and how people experience and
+        move through systems.
       </>
     ),
     delay: 0.7,
@@ -36,12 +35,9 @@ export const paragraphs = [
   {
     content: (
       <>
-        At Elevate, I designed and developed the company website using Webflow
-        while integrating custom JavaScript for enhanced functionality. I
-        connected the site with HubSpot for lead generation and implemented GA4
-        and Google Tag Manager to gather actionable insights. My work extended
-        to conducting A/B testing to optimize user engagement and creating
-        marketing assets that effectively communicate product value.
+        I'm currently exploring creative coding through p5.js and Processing,
+        investigating how computational approaches can create more dynamic,
+        generative digital experiences that go beyond standard UI patterns.
       </>
     ),
     delay: 0.7,
@@ -49,19 +45,10 @@ export const paragraphs = [
   {
     content: (
       <>
-        When I face a challenge, my philosophy is simple: "I'll figure it out."
-        And so far, I always have. I don't believe in putting myself in one box.{" "}
-        <span className="text-gray-700 font-medium">
-          I learn quickly and adapt to new situations.
-        </span>{" "}
-        Each project teaches me something new that I can use in the next one.
+        Outside of work, you'll find me cycling around İzmir, experimenting in
+        the kitchen, hiking, or photographing pelicans.
       </>
     ),
-    delay: 0.7,
-  },
-  {
-    content:
-      "Outside of work, I enjoy cycling through city streets, trying new recipes in the kitchen, hiking whenever I can get out of town, and taking photos of pelicans (yes, specifically pelicans). Simple joys that fuel good work.",
     delay: 0.7,
   },
 ];

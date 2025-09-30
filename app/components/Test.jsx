@@ -38,9 +38,8 @@ export default function Test() {
                     <span className="text-[#192de4] font-medium">
                       Designer / Developer.
                     </span>{" "}
-                    Architect turned developer, crafting digital experiences
-                    with curiosity, care, and a systems mindset—always learning
-                    along the way.
+                    Creating digital experiences through design, code, and
+                    experimentation.
                   </p>
                 </div>
               </div>

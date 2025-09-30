@@ -16,48 +16,62 @@ export default function Experience() {
             <span className="text-gray-800 font-medium pr-1">
               Website Design & Development:
             </span>
-            Designed and developed the company website using Webflow,
-            integrating custom HTML, CSS, and JavaScript for tailored
-            functionality and visual effects.
+            Designed and built the company website in Webflow, writing custom
+            HTML, CSS, and JavaScript for interactive features and visual
+            effects.
           </p>
           <p>
             <span className="text-gray-800 font-medium pr-1">
-              Integration & Tracking:
+              Integration & Analytics:
             </span>
-            Connected the website with HubSpot for lead generation. Implemented
-            Google Analytics 4 (GA4) and Google Tag Manager to track user
-            behavior and gather actionable insights.
+            Integrated HubSpot for lead management and implemented Google
+            Analytics 4 and Google Tag Manager to track user behavior and inform
+            design decisions.
           </p>
           <p>
             <span className="text-gray-800 font-medium pr-1">
               A/B Testing & Optimization:
             </span>
             Conducted A/B testing to evaluate design and content effectiveness,
-            using data-driven decisions to continuously enhance website
-            performance and user engagement.
+            using data-driven insights to improve performance and user
+            engagement.
           </p>
           <p>
             <span className="text-gray-800 font-medium pr-1">
               Marketing Design:
             </span>
-            Created marketing assets, including landing pages, brochures, and
-            digital campaigns, to effectively communicate product value.
+            Created marketing assets including landing pages, brochures, email
+            campaigns, presentation decks, and digital materials using Adobe
+            Creative Cloud suite to communicate product value.
           </p>
           <p>
             <span className="text-gray-800 font-medium pr-1">
-              Brand Identity Design:
+              Video Production:
             </span>
-            Developed a cohesive brand identity that reflects the company’s
-            values and vision. This included crafting logo designs, color
-            palettes, typography, and overall visual guidelines to ensure
-            consistency across all platforms.
+            Produced corporate videos using Premiere Pro and Synthesia AI for
+            product demonstrations, tutorials, and marketing content.
           </p>
           <p>
             <span className="text-gray-800 font-medium pr-1">
-              Collaboration & Strategy:
+              Microsoft SharePoint Design:
             </span>
-            Worked closely with cross-functional teams to align website and
-            marketing efforts with overall business goals.
+            Designed and organized internal SharePoint sites to improve team
+            collaboration and information accessibility.
+          </p>
+          <p>
+            <span className="text-gray-800 font-medium pr-1">
+              Brand Identity:
+            </span>
+            Developed the company's complete brand identity—logo design, color
+            palette, typography, and visual guidelines—ensuring consistency
+            across all platforms.
+          </p>
+          <p>
+            <span className="text-gray-800 font-medium pr-1">
+              Cross-functional Collaboration:
+            </span>
+            Worked with teams across the organization to align web and marketing
+            initiatives with business objectives.
           </p>
         </div>
       </div>
