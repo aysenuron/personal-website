@@ -112,9 +112,7 @@ export default function ProjectPage({ params }) {
 
               {/* Project overview */}
               <div className="space-y-4 max-w-none">
-                <h2 className="text-3xl text-gray-400 font-semibold">
-                  Overview
-                </h2>
+                <h2 className="text-3xl text-gray-400 font-bold">Overview</h2>
                 <div className="text-gray-700 text-md">
                   <ReactMarkdown>{project.longDescription}</ReactMarkdown>
                 </div>
@@ -122,7 +120,7 @@ export default function ProjectPage({ params }) {
               {/* Project goal */}
               {project.goal ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-semibold">Goal</h2>
+                  <h2 className="text-3xl text-gray-400 font-bold">Goal</h2>
                   <div className="text-gray-700 text-md">
                     <ReactMarkdown>{project.goal}</ReactMarkdown>
                   </div>
@@ -134,7 +132,7 @@ export default function ProjectPage({ params }) {
               {/* Project challenges */}
               {project.challenges ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-semibold">
+                  <h2 className="text-3xl text-gray-400 font-bold">
                     Challenges
                   </h2>
                   <div className="text-gray-700 text-md space-y-4">
@@ -148,7 +146,7 @@ export default function ProjectPage({ params }) {
               {/* What I Learned */}
               {project.learned ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-semibold">
+                  <h2 className="text-3xl text-gray-400 font-bold">
                     What I Learned
                   </h2>
                   <div className="text-gray-700 text-md space-y-4">
@@ -161,7 +159,7 @@ export default function ProjectPage({ params }) {
               {/* Current Limitations */}
               {project.limitations ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-semibold">
+                  <h2 className="text-3xl text-gray-400 font-bold">
                     Current Limitations
                   </h2>
                   <div className="text-gray-700 text-md space-y-4">
@@ -175,7 +173,7 @@ export default function ProjectPage({ params }) {
               {/* Personal Notes */}
               {project.notes ? (
                 <div className="space-y-2 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-semibold">
+                  <h2 className="text-3xl text-gray-400 font-bold">
                     👋🏻 Personal Notes
                   </h2>
                   <div className="text-gray-700 text-md space-y-4">
