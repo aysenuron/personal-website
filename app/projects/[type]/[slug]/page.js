@@ -79,7 +79,7 @@ export default function ProjectPage({ params }) {
           </div>
 
           <div className="lg:grid lg:grid-cols-12 gap-12 2xl:gap-24 flex flex-col-reverse">
-            <div className="col-span-9 space-y-20">
+            <div className="col-span-9 space-y-16">
               {/* Project header */}
               <div>
                 <h1 className="lg:text-5xl text-3xl text-gray-800 font-bold mb-4">

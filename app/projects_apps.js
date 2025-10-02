@@ -193,6 +193,113 @@ const apps = [
     ],
     type: "web-apps",
   },
+  {
+    id: 3,
+    slug: "notes",
+    webLink: "https://notes-app-seven-psi.vercel.app/",
+    githubLink: "https://github.com/aysenuron/notes-app",
+    thumbnail: "/web-apps/notes/notes-thumbnail.png",
+    video: "/web-apps/notes/notes-video-desktop.mp4",
+    className: "w-full",
+    title: "Notes App",
+    role: "Developer & Designer",
+    time: "April - May 2025",
+    description:
+      "A notes application with real-time filtering, tag management, and persistent state—built to practice CRUD operations and modern React patterns.",
+    longDescription:
+      "A note-taking application featuring real-time search, multi-tag filtering, and persistent filter state across navigation. Built to practice full CRUD operations with API integration while solving a common UX challenge: maintaining user context when navigating between filtered lists and individual items.",
+    toolNames: ["React", "shadcn/ui", "Tailwind CSS", "React Router"],
+    features: [
+      {
+        heading: "Challenge",
+        img: "",
+        imgClassName: "w-1/2 lg:w-1/3",
+        items: [
+          "Following foundational work in frontend development, I sought to build an application demonstrating complete CRUD (Create, Read, Update, Delete) operations with external API integration. The core technical challenge centered on state management: preserving filter selections when users navigate from a filtered list view into individual note details and back.",
+          "Standard implementations typically reset filters on navigation, forcing users to reselect their criteria each time. This creates unnecessary friction in the user experience and breaks the mental model of maintaining working context.",
+          "**Technical objectives:**",
+          "**•** Implement full CRUD operations with asynchronous API calls",
+          "**•** Integrate a component library for production-ready UI elements",
+          "**•** Solve filter persistence across route changes",
+          "**•** Handle loading states, error conditions, and data validation",
+        ],
+      },
+      {
+        heading: "Design Approach",
+        img: "",
+        imgClassName: "w-1/2 lg:w-1/3",
+        items: [
+          "**Visual Design:** The interface draws from Bear Notes' minimalist aesthetic, prioritizing content legibility over decorative elements. A card-based grid layout presents note previews, while the editor view maintains focus on writing with minimal chrome. The color palette remains neutral, allowing user content to command attention. Typography choices emphasize readability across different note lengths and content types.",
+          "**Component Architecture:** Implementation utilized shadcn/ui, a component library providing accessible, customizable base elements.",
+          "**Theme System:** Light, dark, and system-preference theme modes were implemented using Tailwind CSS utilities, accommodating user environment preferences and visual accessibility needs.",
+        ],
+      },
+      {
+        heading: "Real-Time Search",
+        video: "/web-apps/notes/notes-search.mp4",
+        vidClassName: "w-full",
+        img: "",
+        imgClassName: "",
+        items: [
+          "Search filtering occurs on every keystroke without requiring form submission. As users type, the note list updates immediately to show matching results. The URL reflects the current search query (?search=query), enabling shareable search states and proper browser history integration.",
+          "This pattern reduces interaction friction by eliminating the commit required with traditional search forms. Users can refine queries incrementally and course-correct immediately upon seeing results.",
+        ],
+      },
+      {
+        heading: "Persistent Filter State",
+        video: "",
+        vidClassName: "",
+        img: "",
+        imgClassName: "",
+        items: [
+          "The most significant UX challenge addressed filter state management across navigation. When users:",
+          "1- Apply tag filters to the note list",
+          "2- Open a specific note",
+          "3- Return to the list view",
+          "...the previously selected filters remain active, preserving their working context.",
+          "This decision allows users maintain their mental model of working within a filtered subset rather than repeatedly reorienting to the full collection.",
+        ],
+      },
+      {
+        heading: "Tag Management",
+        video: "/web-apps/notes/notes-tags.mp4",
+        vidClassName: "w-full",
+        items: [
+          '**Autocomplete Prevention:** When adding tags, the input displays a filtered dropdown of existing tags as users type. This prevents tag proliferation through minor variations (e.g., "work" vs "Work" vs "work-related"), maintaining a clean taxonomy without requiring manual curation.',
+          "**Implicit Tag Lifecycle:** Rather than implementing a separate tag management interface, tags exist only while notes reference them. This reduces cognitive overhead—users manage notes, and tags manage themselves.",
+        ],
+      },
+      {
+        heading: "API Integration",
+        items: [
+          "MockAPI.io provides the backend endpoints for CRUD operations:",
+          "**•** GET /notes - Retrieve all notes",
+          "**•** POST /notes - Create new note",
+          "**•** PUT /notes/:id - Update existing note",
+          "**•** DELETE /notes/:id - Delete note",
+          "This setup enabled practice with real API patterns—asynchronous operations, error handling, loading states—without backend development overhead.",
+        ],
+      },
+      {
+        video: "/web-apps/notes/notes-video-mobile.mp4",
+        vidClassName: "w-1/2 lg:w-1/4",
+      },
+    ],
+    learned: [
+      "**Component Libraries in Production Development:** Working with shadcn/ui demonstrated how professional development leverages existing solutions. Rather than building every UI element from scratch, effective development involves selecting appropriate libraries, understanding their APIs, and customizing them for specific needs. This mirrors real-world development practices more accurately than building everything from first principles.",
+      "**URL as State Container:** Query parameters proved surprisingly capable for managing application state. For features like filtering, search, and view preferences, URL-based state often provides simpler implementation than state management libraries while offering additional benefits (shareability, browser history integration).",
+    ],
+    limitations: [
+      "**•** User authentication for private note collections",
+      "**•** Rich text editing capabilities",
+      "**•** Color theme customization beyond light/dark modes",
+      "**•** Note linking for connected thought documentation",
+    ],
+    notes: [
+      "This was one of the first apps I built entirely on my own (front end + logic + design). It taught me how to connect state, UI, and persistence in a coherent, maintainable way. It also reminded me that even simple apps require care in design and error handling.",
+    ],
+    type: "web-apps",
+  },
 ];
 
 export default apps;

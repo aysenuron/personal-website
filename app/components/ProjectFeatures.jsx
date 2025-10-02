@@ -8,7 +8,7 @@ export default function ProjectFeatures({ features }) {
         <div
           key={idx}
           className={`${
-            feature.img && feature.heading
+            (feature.img || feature.video) && feature.heading
               ? "lg:grid lg:grid-cols-2 flex flex-col gap-8"
               : ""
           }`}
@@ -20,12 +20,23 @@ export default function ProjectFeatures({ features }) {
               <img src={feature.img} alt={feature.heading} />
             </div>
           ) : null}
+          {feature.video ? (
+            <video
+              src={feature.video}
+              autoPlay
+              muted
+              loop
+              playsInline
+              controls={false}
+              className={`mx-auto my-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${feature.vidClassName}`}
+            />
+          ) : null}
           {feature.heading && feature.items ? (
             <div className="space-y-4 flex flex-col justify-center">
               <h2 className="text-3xl text-gray-400 font-semibold">
                 {feature.heading}
               </h2>
-              <ul className="text-gray-700 space-y-2">
+              <ul className="text-gray-700 space-y-4">
                 {feature.items?.length > 0
                   ? feature.items.map((item, i) => (
                       <li key={i}>

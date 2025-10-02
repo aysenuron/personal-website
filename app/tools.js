@@ -72,6 +72,18 @@ const tools = [
     img: "/logos/p5js.png",
   },
   {
+    name: "React Router",
+    img: "/logos/reactrouter.png",
+  },
+  {
+    name: "shadcn/ui",
+    img: "/logos/shadcn.png",
+  },
+  {
+    name: "Mock API",
+    img: "",
+  },
+  {
     name: "REST APIs",
   },
   {
