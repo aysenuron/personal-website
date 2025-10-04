@@ -4,14 +4,21 @@ import { motion } from "framer-motion";
 import ChipsContainer from "./ChipsContainer";
 import tools from "../tools";
 
-export default function P_Card({ data, index, chipsVisible = true }) {
+export default function P_Card({
+  data,
+  index,
+  chipsVisible = true,
+  className,
+}) {
   const websiteTools = tools.filter((tool) =>
     data.toolNames.includes(tool.name)
   );
 
   return (
     <Link href={`/projects/${data.type}/${data.slug}`} passHref>
-      <div className="lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-8 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all">
+      <div
+        className={`${className} lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-8 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all`}
+      >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

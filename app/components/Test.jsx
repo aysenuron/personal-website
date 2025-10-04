@@ -44,12 +44,12 @@ export default function Test() {
                 </div>
               </div>
               <div className="hidden lg:flex lg:flex-col lg:gap-4">
+                <SideMenuItem name="About" sectionId="about" />
                 <SideMenuItem
                   name="Selected Projects"
                   sectionId="selected_projects"
                 />
                 <SideMenuItem name="Experience" sectionId="experience" />
-                <SideMenuItem name="About" sectionId="about" />
               </div>
               <div>
                 <div className="flex gap-2 text-lg items-center text-gray-500 cursor-pointer lg:fixed bottom-12">
@@ -59,15 +59,52 @@ export default function Test() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-40 pt-12 -pb-40">
+            <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-20 pt-8 -pb-40">
+              <div id="about" className="flex flex-col gap-16 lg:pr-24">
+                <h2 className="text-2xl -mb-12 lg:hidden">About</h2>
+                <p className="text-gray-500 text-md/relaxed">
+                  {paragraphs.map((paragraph, index) => (
+                    <React.Fragment key={index}>
+                      {index > 0 && (
+                        <>
+                          <br />
+                          <br />
+                        </>
+                      )}
+                      <span className={paragraph.className}>
+                        {paragraph.content}
+                      </span>
+                    </React.Fragment>
+                  ))}
+                </p>
+              </div>
               <div
                 id="selected_projects"
                 className="flex flex-col gap-8 lg:gap-12"
               >
+                <div id="projects_webapps" className="flex flex-col gap-2">
+                  <Link
+                    href="/projects#web-apps"
+                    className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Web Apps{" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {apps
+                    .filter((app) => app.id == 1 || app.id == 3)
+                    .map((app) => (
+                      <P_Card
+                        key={app.id}
+                        data={app}
+                        chipsVisible={true}
+                        className={`${app.id == 1 ? "mb-4" : ""}`}
+                      />
+                    ))}
+                </div>
                 <div id="projects_websites" className="flex flex-col gap-2">
                   <Link
                     href="/projects#websites"
-                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group text-md font-bold text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
                     Websites{" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
@@ -85,7 +122,7 @@ export default function Test() {
                 <div id="projects_cc" className="flex flex-col gap-2">
                   <Link
                     href="/projects#creative-coding"
-                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
                     Creative Coding{" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
@@ -96,24 +133,11 @@ export default function Test() {
                       <P_Card key={c.id} data={c} chipsVisible={true} />
                     ))}
                 </div>
-                <div id="projects_webapps" className="flex flex-col gap-2">
-                  <Link
-                    href="/projects#web-apps"
-                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
-                  >
-                    Web Apps{" "}
-                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
-                  </Link>
-                  {apps
-                    .filter((app) => app.id == 2)
-                    .map((app) => (
-                      <P_Card key={app.id} data={app} chipsVisible={true} />
-                    ))}
-                </div>
+
                 <div id="projects_research" className="flex flex-col gap-2">
                   <Link
                     href="/projects#research"
-                    className="group text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
                     Research{" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
@@ -137,25 +161,8 @@ export default function Test() {
                 <h2 className="text-2xl -mb-12 lg:hidden">Experience</h2>
                 <Experience />
               </div>
-              <div id="about" className="flex flex-col gap-16 lg:pr-24">
-                <h2 className="text-2xl -mb-12 lg:hidden">About</h2>
-                <p className="text-gray-500 text-md/relaxed">
-                  {paragraphs.map((paragraph, index) => (
-                    <React.Fragment key={index}>
-                      {index > 0 && (
-                        <>
-                          <br />
-                          <br />
-                        </>
-                      )}
-                      <span className={paragraph.className}>
-                        {paragraph.content}
-                      </span>
-                    </React.Fragment>
-                  ))}
-                </p>
-              </div>
-              <div className="lg:-mt-24 border-t-1 pt-18 border-gray-400">
+
+              <div className="lg:-mt-12 border-t-1 pt-18 border-gray-400">
                 <Link href={"mailto:contact@aysenuronaran.com"} target="_blank">
                   <WavyText className="text-6xl transition-all duration-300 hover:text-[#192de4]">
                     Let's talk

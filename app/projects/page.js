@@ -29,12 +29,12 @@ export default function Projects() {
                 <h1 className="text-4xl font-semibold">All Projects</h1>
 
                 <div className="hidden lg:flex lg:flex-col lg:gap-4">
+                  <SideMenuItem name="Web Apps" sectionId="web-apps" />
                   <SideMenuItem name="Websites" sectionId="websites" />
                   <SideMenuItem
                     name="Creative Coding"
                     sectionId="creative-coding"
                   />
-                  <SideMenuItem name="Web Apps" sectionId="web-apps" />
                   <SideMenuItem name="Research" sectionId="research" />
                 </div>
               </div>
@@ -43,6 +43,14 @@ export default function Projects() {
                 id="selected_projects"
                 className="flex flex-col gap-12 lg:gap-20 col-span-9"
               >
+                <div id="web-apps" className="flex flex-col gap-8">
+                  <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
+                    Web Apps
+                  </h2>
+                  {apps.map((app) => (
+                    <P_Card key={app.id} data={app} chipsVisible={true} />
+                  ))}
+                </div>
                 <div id="websites" className="flex flex-col gap-8">
                   <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
                     Websites
@@ -61,14 +69,6 @@ export default function Projects() {
                   </h2>
                   {cc.map((c) => (
                     <P_Card key={c.id} data={c} chipsVisible={true} />
-                  ))}
-                </div>
-                <div id="web-apps" className="flex flex-col gap-8">
-                  <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
-                    Web Apps
-                  </h2>
-                  {apps.map((app) => (
-                    <P_Card key={app.id} data={app} chipsVisible={true} />
                   ))}
                 </div>
                 <div id="research" className="flex flex-col gap-8">
