@@ -59,7 +59,7 @@ export default function Test() {
                 </div>
               </div>
             </div>
-            <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-20 pt-8 -pb-40">
+            <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-28 2xl:gap-40 pt-4 -pb-40">
               <div id="about" className="flex flex-col gap-16 lg:pr-24">
                 <h2 className="text-2xl -mb-12 lg:hidden">About</h2>
                 <p className="text-gray-500 text-md/relaxed">
@@ -80,14 +80,14 @@ export default function Test() {
               </div>
               <div
                 id="selected_projects"
-                className="flex flex-col gap-8 lg:gap-12"
+                className="flex flex-col gap-8 lg:gap-14"
               >
                 <div id="projects_webapps" className="flex flex-col gap-2">
                   <Link
                     href="/projects#web-apps"
                     className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Web Apps{" "}
+                    Web Apps (4){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {apps
@@ -97,7 +97,7 @@ export default function Test() {
                         key={app.id}
                         data={app}
                         chipsVisible={true}
-                        className={`${app.id == 1 ? "mb-4" : ""}`}
+                        className={`${app.id == 1 ? "mb-6" : ""}`}
                       />
                     ))}
                 </div>
@@ -106,7 +106,7 @@ export default function Test() {
                     href="/projects#websites"
                     className="group text-md font-bold text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Websites{" "}
+                    Websites (3){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {websites
@@ -124,7 +124,7 @@ export default function Test() {
                     href="/projects#creative-coding"
                     className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Creative Coding{" "}
+                    Creative Coding (2){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {cc
@@ -139,7 +139,7 @@ export default function Test() {
                     href="/projects#research"
                     className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Research{" "}
+                    Research (3){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {research

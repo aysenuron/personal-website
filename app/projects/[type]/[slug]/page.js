@@ -209,6 +209,19 @@ export default function ProjectPage({ params }) {
                   }
                 </a>
               )}
+              {project.researchLink && (
+                <a
+                  href={project.researchLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-[#192de4] group"
+                >
+                  <i className="fa-solid fa-link text-sm"></i> View Research{" "}
+                  {
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  }
+                </a>
+              )}
               {project.githubLink && (
                 <a
                   href={project.githubLink}

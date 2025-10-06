@@ -1,68 +1,71 @@
 const research = [
   {
     id: 1,
-    slug: "mahalle-kulturpark",
-    githubLink: "https://github.com/aysenuron/cubtale",
-    webLink: "https://cubtale.netlify.app/",
-    img: "/websites/cubtale-screen.png",
-    title: "Mahalle Kültürpark",
+    slug: "master-thesis",
+    researchLink: "https://open.metu.edu.tr/handle/11511/98150",
+    thumbnail: "/research/master/thumbnail.jpg",
+    img: "/research/master/thumbnail.jpg",
+    className: "w-full",
+    title: "State-led Rural Transformation: The Case of Yukarıköy",
+    role: "Author",
+    time: "September 2019 - June 2022",
     description:
-      "I designed and developed this landing page in React and Tailwind CSS, using Framer Motion for subtle but engaging animations.",
-    longDescription:
-      "Cubtale is a modern brand partnership platform landing page that showcases clean design principles and smooth user interactions. Built with React and styled using Tailwind CSS, the project demonstrates proficiency in component-based architecture and responsive design patterns.",
-    toolNames: ["React", "Tailwind CSS", "Framer Motion", "Netlify"],
+      "Master of Architecture Thesis | Middle East Technical University | 2022",
+    longDescription: `How do people inhabit spaces designed for them by governing institutions? My thesis explored this question through ethnographic research in Yukarıköy, a Yörük village in Çanakkale, Turkey, where 166 houses were rebuilt by the state's Housing Development Administration (TOKİ) following destructive earthquakes in 2017. While TOKİ's urban transformation projects are widely documented, their rural interventions remain underexplored. Through fieldwork spanning multiple visits between 2020-2022, I examined how the state's vision of "modernizing" rural life intersected with villagers' actual practices—revealing how inhabitants both adapt to and reshape strategically planned environments through everyday tactics.`,
+    toolNames: [],
     features: [
       {
-        heading: "Scalable Architecture",
-        img: "/websites/cubtale-screen.png",
-        items: ["Microservices", "Cloud native", "Auto-scaling"],
+        heading: "Research Questions",
+        items: [
+          "**•** How is space in rural Turkey produced through the interplay of state strategies and inhabitants' everyday practices?",
+          "**•** In what ways do villagers appropriate TOKİ-designed houses according to their own needs while navigating state expectations?",
+          `**•** What happens when neoliberal housing policy—designed to create "customer-citizens"—meets the lived realities of rural communities?`,
+        ],
       },
       {
-        img: "/websites/cubtale-screen.png",
+        heading: "Methodology",
+        items: [
+          "This research employed qualitative ethnographic methods, combining:",
+          "**• Historical analysis** of state rural interventions from the Ottoman Empire through TOKİ (1850-present)",
+          "**• Spatial analysis** using Lefebvre's spatial triad (perceived, conceived, and lived space)",
+          "**• Field observation** across multiple visits (2020-2022) documenting how villagers modified and inhabited the new houses",
+          "**• Informal interviews** with residents about their experiences, challenges, and adaptations",
+          "The theoretical framework drew from Judith Butler's work on performativity, Michel de Certeau's concepts of strategies and tactics, and Michel Foucault's analysis of power relations—providing tools to understand how space both shapes and is shaped by everyday practices.",
+        ],
       },
-    ],
-    goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges: [
-      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
-      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
+      {
+        img: "/research/master/1.png",
+        imgClassName: "w-full",
+      },
+      {
+        heading: "Key Findings",
+        items: [
+          `**The Production of "Customer-Citizens":** Unlike TOKİ's profit-driven urban projects that displace residents, Yukarıköy's earthquake houses weren't built for financial gain. However, the neoliberal logic remained: villagers became long-term debtors paying installments to the state over 20 years, transforming inhabitants into customer-citizens even without displacement.`,
+          "**Spatial Tactics Within Strategic Design:** Residents immediately began adapting their new homes—building stone ovens for traditional bread-making, constructing outdoor toilets despite two indoor bathrooms, adding one-room houses for elderly parents, and converting porches into carpet-weaving workshops. These weren't acts of resistance but inventive tactics for continuing valued practices within new spatial constraints.",
+          `**Historical Continuity:** Comparing Yukarıköy to projects from Sample Villages (1920s-30s) through Village Institutes (1940s) revealed consistent patterns: the state repeatedly attempts to "modernize" rural citizens through architectural intervention, while inhabitants consistently find ways to make spaces work for them rather than adapting entirely to prescribed uses.`,
+        ],
+      },
+      {
+        img: "/research/master/2.png",
+        imgClassName: "w-full",
+      },
+      {
+        heading: "Connecting This Research to My Design Practice",
+        items: [
+          "**Users as Active Producers:** Yukarıköy demonstrates that people don't simply accept designed systems—they adapt, modify, and work around them. Digital designers face similar realities: users develop workarounds, repurpose features, and create use cases designers never imagined.",
+          "**Power and Equity in Design:** Who decides how systems should work? My research examined how institutional power shapes environments, but also how inhabitants push back. Understanding these dynamics is essential for creating more equitable digital systems.",
+          "**Context Over Standardization:** TOKİ applied standardized approaches used since Ottoman-era village projects, ignoring local practices. The result required costly adaptation by both state and citizens. In UX, understanding specific contexts and community needs must drive design decisions rather than one-size-fits-all solutions.",
+          "**Ethnography as Design Tool:** Observing how villagers transformed their spaces revealed needs that surveys would miss. Ethnographic methods—watching behavior in context, understanding workarounds, documenting adaptations—uncover actual user needs rather than assumed ones.",
+        ],
+      },
+      {
+        img: "/research/master/3.png",
+        imgClassName: "w-full",
+      },
     ],
     notes: [
-      `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
-      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
-    ],
-    type: "research",
-  },
-  {
-    id: 2,
-    slug: "burada-eskiden-sinema-vardi",
-    webLink: "",
-    img: "/websites/elevateht-screen.png",
-    title: "Burada Eskiden Sinema Vardı",
-    description:
-      "I designed and developed ElevateHT's website in Webflow, successfully transitioning it from WordPress.",
-    longDescription:
-      "ElevateHT is a comprehensive B2B SaaS platform website that required a complete migration from WordPress to Webflow. This project involved redesigning the user experience, implementing HubSpot integration for lead management, and creating a scalable content management system.",
-    toolNames: ["Webflow", "JavaScript", "HubSpot"],
-    features: [
-      {
-        heading: "Scalable Architecture",
-        img: "/images/architecture.png",
-        items: ["Microservices", "Cloud native", "Auto-scaling"],
-      },
-      {
-        heading: "User Experience",
-        img: "/images/ux.png",
-        items: ["Clean UI", "Accessibility", "Mobile first"],
-      },
-    ],
-    goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges: [
-      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
-      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
-    ],
-    notes: [
-      `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
-      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
+      "Architecture taught me that space is never neutral—every design decision shapes behavior without fully determining it. The same applies to digital systems. Both disciplines ask: How do we create systems that serve human needs while respecting human agency?",
+      "Yukarıköy taught me that good design isn't about controlling use—it's understanding the relationship between what's provided and what's practiced, between strategic design and tactical adaptation.",
     ],
     type: "research",
   },
