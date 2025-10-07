@@ -80,12 +80,12 @@ export default function Test() {
               </div>
               <div
                 id="selected_projects"
-                className="flex flex-col gap-8 lg:gap-14"
+                className="flex flex-col gap-8 lg:gap-16"
               >
-                <div id="projects_webapps" className="flex flex-col gap-2">
+                <div id="projects_webapps" className="flex flex-col gap-4">
                   <Link
                     href="/projects#web-apps"
-                    className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-sm hover:text-red-600 transition-all duration-200"
                   >
                     Web Apps (4){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
@@ -97,14 +97,14 @@ export default function Test() {
                         key={app.id}
                         data={app}
                         chipsVisible={true}
-                        className={`${app.id == 1 ? "mb-6" : ""}`}
+                        className={`${app.id == 1 ? "mb-4" : ""}`}
                       />
                     ))}
                 </div>
-                <div id="projects_websites" className="flex flex-col gap-2">
+                <div id="projects_websites" className="flex flex-col gap-4">
                   <Link
                     href="/projects#websites"
-                    className="group text-md font-bold text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group text-sm font-bold hover:text-red-600 transition-all duration-200"
                   >
                     Websites (3){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
@@ -119,10 +119,10 @@ export default function Test() {
                       />
                     ))}
                 </div>
-                <div id="projects_cc" className="flex flex-col gap-2">
+                <div id="projects_cc" className="flex flex-col gap-4">
                   <Link
                     href="/projects#creative-coding"
-                    className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-sm hover:text-red-600 transition-all duration-200"
                   >
                     Creative Coding (2){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
@@ -134,18 +134,23 @@ export default function Test() {
                     ))}
                 </div>
 
-                <div id="projects_research" className="flex flex-col gap-2">
+                <div id="projects_research" className="flex flex-col gap-4">
                   <Link
                     href="/projects#research"
-                    className="group font-bold text-md text-gray-500 hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-sm hover:text-red-600 transition-all duration-200"
                   >
                     Research (3){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {research
-                    .filter((r) => r.id == 1)
+                    .filter((r) => r.id == 1 || r.id == 2)
                     .map((r) => (
-                      <P_Card key={r.id} data={r} chipsVisible={true} />
+                      <P_Card
+                        key={r.id}
+                        data={r}
+                        chipsVisible={true}
+                        className={`${r.id == 1 ? "mb-4" : ""}`}
+                      />
                     ))}
                 </div>
                 <Link

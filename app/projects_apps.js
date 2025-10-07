@@ -16,9 +16,7 @@ const apps = [
       "At Elevate Health Technologies, the marketing team needed an interactive ROI calculator for healthcare providers. The goal was to let prospects enter their operational data across multiple steps and instantly see how much time and cost they could save using our solutions. This project was my first real step into coding. I started with no prior experience in JavaScript, but through trial, error, and lots of learning, I designed and built a fully functional, six-step ROI calculator that became a key part of our lead generation strategy.",
     toolNames: [
       "Webflow",
-      "HTML",
       "JavaScript",
-      "CSS",
       "GA4",
       "Google Tag Manager",
       "HubSpot",
