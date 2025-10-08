@@ -24,13 +24,15 @@ export default function Projects() {
               <p>/</p>
               <p className="text-gray-400">All Projects</p>
             </div>
-            <div className="grid lg:grid-cols-12 gap:12 lg:gap-4 2xl:gap-24">
+            <div className="grid lg:grid-cols-12 gap:12 lg:gap-8 2xl:gap-24">
               <div className="col-span-3 lg:flex flex-col gap-8 hidden lg:sticky self-start top-36">
                 <h1 className="text-4xl font-semibold">All Projects</h1>
 
                 <div className="hidden lg:flex lg:flex-col lg:gap-4">
-                  <SideMenuItem name="Web Apps" sectionId="web-apps" />
-                  <SideMenuItem name="Websites" sectionId="websites" />
+                  <SideMenuItem
+                    name="Web Design & Development"
+                    sectionId="web-apps"
+                  />
                   <SideMenuItem
                     name="Creative Coding"
                     sectionId="creative-coding"
@@ -44,27 +46,15 @@ export default function Projects() {
                 className="flex flex-col gap-12 lg:gap-20 col-span-9"
               >
                 <div id="web-apps" className="flex flex-col gap-8">
-                  <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
-                    Web Apps
+                  <h2 className="text-2xl font-semibold -mb-4 lg:mb-0">
+                    Web Design & Development
                   </h2>
                   {apps.map((app) => (
                     <P_Card key={app.id} data={app} chipsVisible={true} />
                   ))}
                 </div>
-                <div id="websites" className="flex flex-col gap-8">
-                  <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
-                    Websites
-                  </h2>
-                  {websites.map((website) => (
-                    <P_Card
-                      key={website.id}
-                      data={website}
-                      chipsVisible={true}
-                    />
-                  ))}
-                </div>
                 <div id="creative-coding" className="flex flex-col gap-8">
-                  <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
+                  <h2 className="text-2xl font-semibold -mb-4 lg:mb-0">
                     Creative Coding
                   </h2>
                   {cc.map((c) => (
@@ -72,7 +62,7 @@ export default function Projects() {
                   ))}
                 </div>
                 <div id="research" className="flex flex-col gap-8">
-                  <h2 className="text-2xl font-semibold -mb-8 lg:mb-0">
+                  <h2 className="text-2xl font-semibold -mb-4 lg:mb-0">
                     Research
                   </h2>
                   {research.map((r) => (

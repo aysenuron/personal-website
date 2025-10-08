@@ -8,7 +8,7 @@ export default function ProjectFeatures({ features }) {
         <div
           key={idx}
           className={`${
-            (feature.img || feature.video) && feature.heading
+            (feature.img || feature.video) && feature.items
               ? "lg:grid lg:grid-cols-2 flex flex-col gap-8"
               : ""
           }`}
@@ -31,7 +31,7 @@ export default function ProjectFeatures({ features }) {
               className={`mx-auto my-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${feature.vidClassName}`}
             />
           ) : null}
-          {feature.heading && feature.items ? (
+          {feature.items ? (
             <div className="space-y-4 flex flex-col justify-center">
               <h2 className="text-3xl text-gray-400 font-bold">
                 {feature.heading}

@@ -66,41 +66,6 @@ const cc = [
     ],
     type: "creative-coding",
   },
-  {
-    id: 3,
-    slug: "cc-3",
-    githubLink: "https://github.com/aysenuron/employment-leaders-website",
-    webLink: "https://employmentleaders.com/",
-    img: "/websites/employmentLeaders-screen.png",
-    title: "Creative Coding 3",
-    description:
-      "A static website for a recruitment agency, built with vanilla HTML, CSS, and JavaScript. The design focuses on clear messaging and easy navigation, using structured sections and contrasting accents to highlight key services.",
-    longDescription:
-      "Employment Leaders is a professional recruitment agency website built with vanilla web technologies. The project emphasizes clean, professional design that builds trust with both job seekers and employers. The site features clear service descriptions, easy navigation, and strategic calls-to-action.",
-    toolNames: ["HTML", "CSS", "JavaScript", "Netlify"],
-    features: [
-      {
-        heading: "Scalable Architecture",
-        img: "/websites/employmentLeaders-screen.png",
-        items: ["Microservices", "Cloud native", "Auto-scaling"],
-      },
-      {
-        heading: "User Experience",
-        img: "/websites/employmentLeaders-screen.png",
-        items: ["Clean UI", "Accessibility", "Mobile first"],
-      },
-    ],
-    goal: "Improve workflow efficiency, highlight software value, and test which design drives more engagement and revenue awareness",
-    challenges: [
-      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
-      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
-    ],
-    notes: [
-      `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
-      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
-    ],
-    type: "creative-coding",
-  },
 ];
 
 export default cc;

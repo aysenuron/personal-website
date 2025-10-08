@@ -235,6 +235,9 @@ export default function ProjectPage({ params }) {
                   }
                 </a>
               )}
+              {project.extraInfo && (
+                <p>{project.extraInfo ? project.extraInfo : null}</p>
+              )}
               <ChipsContainer selectedTools={projectTools} color={"gray-100"} />
             </div>
           </div>

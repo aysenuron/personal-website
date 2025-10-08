@@ -2,20 +2,24 @@ export const paragraphs = [
   {
     content: (
       <>
-        I'm a designer and developer based in İzmir, Turkey, currently working
-        in marketing at Elevate Health Technologies, a healthcare technology
-        company. I build websites and web applications, create marketing
-        materials for infusion therapy and specialty medication systems, and
-        handle technical integrations.
+        I'm a designer and developer based in İzmir, Turkey, working at at
+        Elevate Health Technologies, where I build websites and digital design
+        projects for healthcare platforms. My work includes Webflow development,
+        HubSpot integrations, A/B testing implementation, and creating marketing
+        materials for infusion therapy workflows and specialty medication
+        programs.
       </>
     ),
   },
   {
     content: (
       <>
-        My background is in architecture with a focus on social space. That
-        training taught me to think about how environments shape behavior -
-        questions I now apply to digital design and information architecture.
+        My background is in architecture with a Master's focused on social space
+        - training that taught me to think about how environments shape behavior
+        and power dynamics. I now apply those questions to digital design,
+        particularly in healthcare information systems where interface decisions
+        directly impact how providers and patients navigate complex medical
+        processes.
       </>
     ),
   },
@@ -32,9 +36,9 @@ export const paragraphs = [
   {
     content: (
       <>
-        I'm currently learning creative coding with p5.js and Processing,
-        exploring the intersection between computational design and interactive
-        experiences. I also cycle, cook, hike, and photograph pelicans around
+        I'm also exploring creative coding with p5.js and Processing, building
+        audio-reactive visualizations and computational design experiments.
+        Outside of work, I cycle, cook, hike, and photograph pelicans around
         İzmir.
       </>
     ),

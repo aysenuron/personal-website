@@ -80,51 +80,36 @@ export default function Test() {
               </div>
               <div
                 id="selected_projects"
-                className="flex flex-col gap-8 lg:gap-16"
+                className="flex flex-col gap-8 lg:gap-18"
               >
-                <div id="projects_webapps" className="flex flex-col gap-4">
+                <div id="projects_webapps" className="flex flex-col gap-8">
                   <Link
                     href="/projects#web-apps"
-                    className="group font-bold text-sm hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Web Apps (4){" "}
+                    Web Design & Development Projects (6){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {apps
-                    .filter((app) => app.id == 1 || app.id == 3)
+                    .filter((app) => app.id == 1 || app.id == 2 || app.id == 4)
                     .map((app) => (
                       <P_Card
                         key={app.id}
                         data={app}
                         chipsVisible={true}
-                        className={`${app.id == 1 ? "mb-4" : ""}`}
+                        className={`${
+                          app.id == 1 || app.id == 2 ? "mb-7" : ""
+                        }`}
                       />
                     ))}
                 </div>
-                <div id="projects_websites" className="flex flex-col gap-4">
-                  <Link
-                    href="/projects#websites"
-                    className="group text-sm font-bold hover:text-red-600 transition-all duration-200"
-                  >
-                    Websites (3){" "}
-                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
-                  </Link>
-                  {websites
-                    .filter((website) => website.id == 1)
-                    .map((website) => (
-                      <P_Card
-                        key={website.id}
-                        data={website}
-                        chipsVisible={true}
-                      />
-                    ))}
-                </div>
+                <div className="w-full h-[1px] bg-gray-300"></div>
                 <div id="projects_cc" className="flex flex-col gap-4">
                   <Link
                     href="/projects#creative-coding"
-                    className="group font-bold text-sm hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Creative Coding (2){" "}
+                    Creative Coding Projects (2){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {cc
@@ -133,26 +118,22 @@ export default function Test() {
                       <P_Card key={c.id} data={c} chipsVisible={true} />
                     ))}
                 </div>
-
+                <div className="w-full h-[1px] bg-gray-300"></div>
                 <div id="projects_research" className="flex flex-col gap-4">
                   <Link
                     href="/projects#research"
-                    className="group font-bold text-sm hover:text-red-600 transition-all duration-200"
+                    className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Research (3){" "}
+                    Research Projects (3){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {research
-                    .filter((r) => r.id == 1 || r.id == 2)
+                    .filter((r) => r.id == 1)
                     .map((r) => (
-                      <P_Card
-                        key={r.id}
-                        data={r}
-                        chipsVisible={true}
-                        className={`${r.id == 1 ? "mb-4" : ""}`}
-                      />
+                      <P_Card key={r.id} data={r} chipsVisible={false} />
                     ))}
                 </div>
+                <div className="w-full h-[1px] bg-gray-300"></div>
                 <Link
                   href={`/projects`}
                   passHref
