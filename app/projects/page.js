@@ -33,11 +33,11 @@ export default function Projects() {
                     name="Web Design & Development"
                     sectionId="web-apps"
                   />
+                  <SideMenuItem name="Research" sectionId="research" />
                   <SideMenuItem
                     name="Creative Coding"
                     sectionId="creative-coding"
                   />
-                  <SideMenuItem name="Research" sectionId="research" />
                 </div>
               </div>
 
@@ -53,20 +53,20 @@ export default function Projects() {
                     <P_Card key={app.id} data={app} chipsVisible={true} />
                   ))}
                 </div>
-                <div id="creative-coding" className="flex flex-col gap-8">
-                  <h2 className="text-2xl font-semibold -mb-4 lg:mb-0">
-                    Creative Coding
-                  </h2>
-                  {cc.map((c) => (
-                    <P_Card key={c.id} data={c} chipsVisible={true} />
-                  ))}
-                </div>
                 <div id="research" className="flex flex-col gap-8">
                   <h2 className="text-2xl font-semibold -mb-4 lg:mb-0">
                     Research
                   </h2>
                   {research.map((r) => (
                     <P_Card key={r.id} data={r} chipsVisible={true} />
+                  ))}
+                </div>
+                <div id="creative-coding" className="flex flex-col gap-8">
+                  <h2 className="text-2xl font-semibold -mb-4 lg:mb-0">
+                    Creative Coding
+                  </h2>
+                  {cc.map((c) => (
+                    <P_Card key={c.id} data={c} chipsVisible={true} />
                   ))}
                 </div>
               </div>

@@ -135,7 +135,7 @@ const apps = [
     video:
       "/websites/buy-and-bill-landing-page/buy-and-bill-landing-page-video.mp4",
     className: "w-full",
-    title: "Buy & Bill Landing Page",
+    title: "Buy & Bill Landing Page - A/B Testing",
     role: "Web Designer & Developer",
     time: "January - February 2025",
     description:

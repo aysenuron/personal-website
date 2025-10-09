@@ -17,7 +17,7 @@ export default function P_Card({
   return (
     <Link href={`/projects/${data.type}/${data.slug}`} passHref>
       <div
-        className={`${className} lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-8 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all`}
+        className={`${className} lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-6 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all`}
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -28,7 +28,7 @@ export default function P_Card({
             duration: 0.5,
             ease: "easeOut",
           }}
-          className="lg:col-span-2 flex items-center justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
+          className="lg:col-span-2 max-h-36 flex items-center justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
         >
           <img src={data.thumbnail} alt={data.title} />
         </motion.div>

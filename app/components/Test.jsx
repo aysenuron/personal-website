@@ -80,7 +80,7 @@ export default function Test() {
               </div>
               <div
                 id="selected_projects"
-                className="flex flex-col gap-8 lg:gap-18"
+                className="flex flex-col gap-8 lg:gap-12"
               >
                 <div id="projects_webapps" className="flex flex-col gap-8">
                   <Link
@@ -91,31 +91,14 @@ export default function Test() {
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {apps
-                    .filter((app) => app.id == 1 || app.id == 2 || app.id == 4)
+                    .filter((app) => app.id == 1 || app.id == 2)
                     .map((app) => (
                       <P_Card
                         key={app.id}
                         data={app}
                         chipsVisible={true}
-                        className={`${
-                          app.id == 1 || app.id == 2 ? "mb-7" : ""
-                        }`}
+                        className={`${app.id == 1 ? "mb-4" : ""}`}
                       />
-                    ))}
-                </div>
-                <div className="w-full h-[1px] bg-gray-300"></div>
-                <div id="projects_cc" className="flex flex-col gap-4">
-                  <Link
-                    href="/projects#creative-coding"
-                    className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
-                  >
-                    Creative Coding Projects (2){" "}
-                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
-                  </Link>
-                  {cc
-                    .filter((c) => c.id == 1)
-                    .map((c) => (
-                      <P_Card key={c.id} data={c} chipsVisible={true} />
                     ))}
                 </div>
                 <div className="w-full h-[1px] bg-gray-300"></div>
@@ -134,12 +117,27 @@ export default function Test() {
                     ))}
                 </div>
                 <div className="w-full h-[1px] bg-gray-300"></div>
+                <div id="projects_cc" className="flex flex-col gap-4">
+                  <Link
+                    href="/projects#creative-coding"
+                    className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
+                  >
+                    Creative Coding Projects (2){" "}
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  </Link>
+                  {cc
+                    .filter((c) => c.id == 1)
+                    .map((c) => (
+                      <P_Card key={c.id} data={c} chipsVisible={true} />
+                    ))}
+                </div>
+                <div className="w-full h-[1px] bg-gray-300"></div>
                 <Link
                   href={`/projects`}
                   passHref
                   className="group text-[#192de4] hover:text-red-600 underline underline-offset-6 text-sm font-bold transition-all duration-200"
                 >
-                  See All Projects{" "}
+                  See All Projects (11){" "}
                   <i className="fa-solid fa-arrow-right text-xs pl-1 group-hover:pl-2 transition-all duration-200"></i>
                 </Link>
               </div>
