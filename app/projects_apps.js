@@ -423,6 +423,75 @@ const apps = [
     ],
     type: "web",
   },
+  {
+    id: 5,
+    slug: "rast",
+    thumbnail: "/web-apps/rast/thumbnail.png",
+    img: "/web-apps/rast/provider-dashboard.jpg",
+    className: "w-full",
+    title: "Rast: Service Marketplace Platform",
+    role: "UX/UI Designer",
+    time: "January - March 2023 (Project discontinued due to funding)",
+    description:
+      "Two-sided marketplace platform connecting customers with service providers. Designed provider dashboards, customer job posting flows, bidding systems, and trust features.",
+    extraInfo:
+      "The prototypes are in Turkish since the app was planned to launch in Turkey.",
+    longDescription:
+      "Designed desktop interfaces for a service marketplace connecting customers with local handymen and service providers—similar to platforms like Armut in Turkey. While the project was ultimately discontinued when investors dropped out, I designed comprehensive flows for both service providers and customers.",
+    toolNames: ["Figma"],
+    features: [
+      {
+        heading: "Scope & Approach",
+        items: [
+          "Working alongside a UX researcher who analyzed competitor platforms and created user flows, I developed wireframes and designed the desktop interface with plans to develop mobile versions next. The researcher provided content structure and insights from competitive analysis, which informed the information architecture and feature prioritization.",
+        ],
+      },
+      {
+        video: "/web-apps/rast/handyman-dashboard-video.mp4",
+        vidClassName: "h-fit my-auto",
+        items: [
+          "**Service Provider Dashboard:**",
+          "**•** Earnings analytics and job statistics",
+          "**•** Job management across multiple states (active, completed, canceled)",
+          "**•** Bidding system for open job postings",
+          "**•** Client messaging",
+          "**•** Portfolio photo galleries",
+          "**•** Payment and auto-payment settings",
+          "**•** Profile management with verification system",
+        ],
+      },
+      {
+        video: "/web-apps/rast/rast-client-compressed.mp4",
+        vidClassName: "h-fit my-auto",
+        items: [
+          "**Customer Interface:**",
+          "**•** Job posting workflow",
+          "**•** Browse and accept service provider bids",
+          "**•** Track job status (pending, active, completed)",
+          "**•** Rate and review completed work",
+          "**•** Payment settings and transaction history",
+          "**•** Direct messaging with providers",
+          "**•** Browse popular service providers",
+        ],
+      },
+      {
+        img: "/web-apps/rast/offers-list.jpg",
+        imgClassName: "h-fit my-auto",
+      },
+      {
+        heading: "Design Decisions",
+        items: [
+          "**Information Hierarchy for Multiple States:** One of the key challenges was organizing jobs across different states—service providers needed to quickly distinguish between opportunities to bid on, active jobs, and completed work. I used color coding (purple for actionable items, red for canceled, blue for completed) and clear status labels to create scannable card layouts.",
+          "**Trust & Safety Features:** Incorporated rating systems, detailed reviews, and service provider portfolios to build trust between both sides of the marketplace.",
+        ],
+      },
+    ],
+    notes: [
+      "This was an early project for me—before I learned to code and while I was still developing my Figma skills. Working with a UX researcher taught me how research insights translate into design decisions, particularly around competitive analysis and user flow development. The project's cancellation was disappointing but valuable—it taught me that good design work doesn't always see launch, and that's part of the reality of working in startups.",
+      "Looking back, I'd approach the component organization differently (my Figma components were scattered rather than systematically organized), but the core flows and interaction patterns hold up as solid foundational work.",
+    ],
+    type: "web",
+  },
 ];
 
 export default apps;
