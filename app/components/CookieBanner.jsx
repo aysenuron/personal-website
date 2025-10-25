@@ -2,27 +2,36 @@
 
 import { useEffect, useState } from "react";
 
-export default function CookieBanner() {
+export default function CookieBanner({ forceShow = false }) {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (forceShow) {
+      setVisible(true);
+      return;
+    }
+
     const consent = localStorage.getItem("cookieConsent");
     if (!consent) {
       setVisible(true);
     } else if (consent === "accepted") {
       loadAnalytics();
     }
-  }, []);
+  }, [forceShow]);
 
   const acceptCookies = () => {
     localStorage.setItem("cookieConsent", "accepted");
     loadAnalytics();
     setVisible(false);
+    // Trigger custom event
+    window.dispatchEvent(new Event("cookieConsentChanged"));
   };
 
   const rejectCookies = () => {
     localStorage.setItem("cookieConsent", "rejected");
     setVisible(false);
+    // Trigger custom event
+    window.dispatchEvent(new Event("cookieConsentChanged"));
   };
 
   const loadAnalytics = () => {
