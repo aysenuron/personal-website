@@ -13,14 +13,18 @@ import WavyText from "./WavyText";
 import Experience from "./Experience";
 import Footer from "./Footer";
 
+import { useCookieConsent } from "../hooks/useCookieConsent";
+
 export default function Test() {
+  const hasConsent = useCookieConsent();
+
   return (
     <>
       <Header backBtn={false} />
       <section>
         <div className="container px-4 md:px-0 mx-auto">
           <div className="grid lg:grid-cols-12 gap:12 lg:gap-4 2xl:gap-24">
-            <div className="lg:col-span-3 flex flex-col gap-6 lg:z-20 lg:gap-12 lg:-mt-16 lg:sticky self-start lg:top-8 box-border">
+            <div className="lg:col-span-3 flex flex-col gap-8 lg:z-20 lg:gap-12 lg:-mt-16 lg:sticky self-start lg:top-8 box-border">
               <div>
                 <div className="w-40 h-40 rounded-full overflow-hidden">
                   <img
@@ -29,11 +33,22 @@ export default function Test() {
                     className="w-full h-full object-cover object-left-top scale-250 origin-[45%_55%]"
                   />
                 </div>
-                <div className="mt-4 flex flex-col gap-2">
+                <div className="mt-4 flex flex-col gap-4">
                   <h1 className="font-semibold text-4xl">Ayşenur Onaran</h1>
                   <p className="text-[16px] 2xl:text-md text-[#192de4] font-medium">
                     Designer / Developer
                   </p>
+                  <div className="flex gap-2 text-lg items-center text-gray-500 cursor-pointer transition-all duration-200">
+                    <Link
+                      href={"https://www.linkedin.com/in/onaranaysenur/"}
+                      target="blank"
+                    >
+                      <i className="fab fa-linkedin-in hover:text-[#192de4]"></i>
+                    </Link>
+                    <Link href={"https://github.com/aysenuron"} target="blank">
+                      <i className="fab fa-github hover:text-[#192de4]"></i>
+                    </Link>
+                  </div>
                   <p className="text-[14px] 2xl:text-md text-gray-500">
                     This website is built with Next.js and Tailwind CSS,
                     deployed with Vercel. By moi.
@@ -49,17 +64,20 @@ export default function Test() {
                 <SideMenuItem name="Experience" sectionId="experience" />
               </div>
               <div>
-                <div className="flex gap-2 text-lg items-center text-gray-500 cursor-pointer lg:fixed bottom-12">
-                  <Link
-                    href={"https://www.linkedin.com/in/onaranaysenur/"}
-                    target="blank"
-                  >
-                    <i className="fab fa-linkedin-in hover:text-[#192de4]"></i>
-                  </Link>
-                  <Link href={"https://github.com/aysenuron"} target="blank">
-                    <i className="fab fa-github hover:text-[#192de4]"></i>
-                  </Link>
-                </div>
+                {hasConsent && (
+                  <div className="lg:fixed bottom-6">
+                    <button
+                      onClick={() => {
+                        localStorage.removeItem("cookieConsent");
+                        window.location.reload();
+                      }}
+                      className="hover:bg-[#192de4] mt-2 text-white py-1 px-2 rounded-full cursor-pointer text-xs bg-gray-400 transition-all duration-200"
+                    >
+                      <i className="fa-solid fa-cookie-bite pr-4"></i>
+                      Cookie Settings
+                    </button>
+                  </div>
+                )}
               </div>
             </div>
             <div className="lg:col-start-5 lg:col-end-13 flex flex-col gap-16 lg:gap-28 2xl:gap-40 pt-4 -pb-40">
