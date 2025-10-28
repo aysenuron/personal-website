@@ -1,5 +1,4 @@
 import ReactMarkdown from "react-markdown";
-import Image from "next/image";
 
 export default function ProjectFeatures({ features }) {
   return (
@@ -8,7 +7,7 @@ export default function ProjectFeatures({ features }) {
         <div
           key={idx}
           className={`${
-            (feature.img || feature.video) && feature.items
+            (feature.img || feature.videos) && feature.items
               ? "lg:grid lg:grid-cols-2 flex flex-col gap-8"
               : ""
           }`}
@@ -20,16 +19,27 @@ export default function ProjectFeatures({ features }) {
               <img src={feature.img} alt={feature.heading} />
             </div>
           ) : null}
-          {feature.video ? (
-            <video
-              src={feature.video}
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls={false}
-              className={`mx-auto my-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${feature.vidClassName}`}
-            />
+          {feature.videos?.length > 0 ? (
+            <div
+              className={`${
+                feature.videos.length === 2
+                  ? `lg:grid lg:grid-cols-2 flex flex-col gap-4`
+                  : ``
+              }`}
+            >
+              {feature.videos.map((video, i) => (
+                <video
+                  key={i}
+                  src={video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  controls={false}
+                  className={`mx-auto my-auto rounded-2xl ${feature.vidClassName}`}
+                />
+              ))}
+            </div>
           ) : null}
           {feature.items ? (
             <div className="space-y-4 flex flex-col justify-center">

@@ -359,7 +359,7 @@ const apps = [
       },
       {
         heading: "Real-Time Search",
-        video: "/web-apps/notes/notes-search.mp4",
+        videos: ["/web-apps/notes/notes-search.mp4"],
         vidClassName: "w-full",
         img: "",
         imgClassName: "",
@@ -370,10 +370,6 @@ const apps = [
       },
       {
         heading: "Persistent Filter State",
-        video: "",
-        vidClassName: "",
-        img: "",
-        imgClassName: "",
         items: [
           "The most significant UX challenge addressed filter state management across navigation. When users:",
           "1- Apply tag filters to the note list",
@@ -385,7 +381,7 @@ const apps = [
       },
       {
         heading: "Tag Management",
-        video: "/web-apps/notes/notes-tags.mp4",
+        videos: ["/web-apps/notes/notes-tags.mp4"],
         vidClassName: "w-full",
         items: [
           '**Autocomplete Prevention:** When adding tags, the input displays a filtered dropdown of existing tags as users type. This prevents tag proliferation through minor variations (e.g., "work" vs "Work" vs "work-related"), maintaining a clean taxonomy without requiring manual curation.',
@@ -404,7 +400,7 @@ const apps = [
         ],
       },
       {
-        video: "/web-apps/notes/notes-video-mobile.mp4",
+        videos: ["/web-apps/notes/notes-video-mobile.mp4"],
         vidClassName: "w-1/2 lg:w-1/4",
       },
     ],
@@ -447,7 +443,7 @@ const apps = [
         ],
       },
       {
-        video: "/web-apps/rast/handyman-dashboard-video.mp4",
+        videos: ["/web-apps/rast/handyman-dashboard-video.mp4"],
         vidClassName: "h-fit my-auto",
         items: [
           "**Service Provider Dashboard:**",
@@ -461,7 +457,7 @@ const apps = [
         ],
       },
       {
-        video: "/web-apps/rast/rast-client-compressed.mp4",
+        videos: ["/web-apps/rast/rast-client-compressed.mp4"],
         vidClassName: "h-fit my-auto",
         items: [
           "**Customer Interface:**",

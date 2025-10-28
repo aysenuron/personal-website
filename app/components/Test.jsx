@@ -108,7 +108,7 @@ export default function Test() {
                     href="/projects#web-apps"
                     className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Web Design & Development Projects (6){" "}
+                    Web Design & Development (6){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {apps
@@ -128,7 +128,7 @@ export default function Test() {
                     href="/projects#research"
                     className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Research Projects (3){" "}
+                    Research (3){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {research
@@ -143,7 +143,7 @@ export default function Test() {
                     href="/projects#creative-coding"
                     className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Creative Coding Projects (2){" "}
+                    Creative Coding (1){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {cc
@@ -158,7 +158,7 @@ export default function Test() {
                   passHref
                   className="group text-[#192de4] hover:text-red-600 underline underline-offset-6 text-sm font-bold transition-all duration-200"
                 >
-                  See All Projects (11){" "}
+                  See All Projects (10){" "}
                   <i className="fa-solid fa-arrow-right text-xs pl-1 group-hover:pl-2 transition-all duration-200"></i>
                 </Link>
               </div>
