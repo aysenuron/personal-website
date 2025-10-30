@@ -16,7 +16,7 @@ export default function Experience() {
           </h3>
           <div className="flex flex-col gap-4 mt-4">
             <p>
-              I work remotely as the primary designer and developer for
+              I work remotely as the digital designer and web developer for
               Elevate's digital presence, building and maintaining the company
               website in Webflow with custom JavaScript. I create marketing
               materials including landing pages, email campaigns, and corporate

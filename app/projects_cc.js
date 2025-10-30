@@ -64,7 +64,7 @@ const cc = [
       },
       {
         videos: ["/creative-coding/cc/pelican-1.mp4"],
-        vidClassName: "w-2/3",
+        vidClassName: "lg:w-2/3",
       },
       {
         items: [
@@ -73,7 +73,7 @@ const cc = [
       },
       {
         videos: ["/creative-coding/cc/pelican-2.mp4"],
-        vidClassName: "w-2/3",
+        vidClassName: "lg:w-2/3",
       },
       {
         items: [
@@ -82,7 +82,7 @@ const cc = [
       },
       {
         videos: ["/creative-coding/cc/pelican-3.mp4"],
-        vidClassName: "w-2/3",
+        vidClassName: "lg:w-2/3",
       },
       {
         items: [
@@ -91,8 +91,10 @@ const cc = [
       },
     ],
     notes: [
-      "This project was my very first time coding. Looking back at this code now, I can see approaches I'd change—perhaps using a framework for state management, more sophisticated validation, or more systematic CSS architecture. But that perspective only exists because of what this project taught me.",
-      "One of the hardest parts came at the very end: collecting user emails. I didn’t know anything about setting up a backend or storing form submissions. After a lot of trial and error, I discovered that HubSpot could track non-HubSpot forms, and I hacked together a solution using their tracking code. What feels obvious to me now was a big breakthrough back then.",
+      "These projects live alongside my professional work because they represent a different kind of problem-solving. In healthcare web development, I optimize for clarity and usability. In creative coding, I optimize for surprise and aesthetic discovery.",
+      "One of my favorite discoveries was the random() function. There's something magical about introducing controlled chaos into your code—you write the rules, but you don't entirely know what you'll get. Each refresh brings a new variation.",
+      "The design process here is completely different from my UX work. In creative coding, you design while coding. You change a parameter, run it, see what happens, adjust. It's immediate, iterative, and playful. The code is both the tool and the canvas.",
+      "Making sketches interactive adds another dimension. When the visualization responds to your cursor or clicks, it stops being just something you look at and becomes something you play with. That shift from passive to active viewing changes the entire experience.",
     ],
     type: "creative-coding",
   },
