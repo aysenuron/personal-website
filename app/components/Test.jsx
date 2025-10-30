@@ -108,11 +108,11 @@ export default function Test() {
                     href="/projects#web-apps"
                     className="group font-bold text-sm text-gray-500 hover:text-red-600 transition-all duration-200"
                   >
-                    Web Design & Development (6){" "}
+                    Web Design & Development (5){" "}
                     <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
                   </Link>
                   {apps
-                    .filter((app) => app.id == 1 || app.id == 2)
+                    .filter((app) => app.id == 1 || app.id == 4)
                     .map((app) => (
                       <P_Card
                         key={app.id}
@@ -158,7 +158,7 @@ export default function Test() {
                   passHref
                   className="group text-[#192de4] hover:text-red-600 underline underline-offset-6 text-sm font-bold transition-all duration-200"
                 >
-                  See All Projects (10){" "}
+                  See All Projects (9){" "}
                   <i className="fa-solid fa-arrow-right text-xs pl-1 group-hover:pl-2 transition-all duration-200"></i>
                 </Link>
               </div>

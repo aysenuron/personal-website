@@ -2,12 +2,13 @@ export const paragraphs = [
   {
     content: (
       <>
-        <span className="text-[#192de4] font-medium">About me. </span>I'm a
-        designer and developer based in İzmir, Turkey, working at at Elevate
-        Health Technologies, where I build websites and digital design projects
-        for healthcare platforms. My work includes Webflow development, Google
-        and HubSpot integrations, and creating marketing materials for infusion
-        therapy workflows and specialty medication programs.
+        <span className="text-[#192de4] font-medium">About me. </span>I'm a user
+        expereince designer and web developer based in İzmir, Turkey, working at
+        at Elevate Health Technologies, where I build websites and digital
+        design projects for healthcare platforms. My work includes Webflow
+        development, Google and HubSpot integrations, and creating marketing
+        materials for infusion therapy workflows and specialty medication
+        programs.
       </>
     ),
   },
@@ -43,10 +44,9 @@ export const paragraphs = [
     content: (
       <>
         <span className="text-[#192de4] font-medium">About this website. </span>
-        I've gathered 11 different projects here, organized into 3
-        categories—web design & development, research, and creative coding.
-        Below, you'll see 4 hand-picked ones. Click on the category names to see
-        all of them.
+        I've gathered 9 different projects here, organized into 3 categories—web
+        design & development, research, and creative coding. Below, you'll see 4
+        hand-picked ones. Click on the category names to see all of them.
       </>
     ),
   },
