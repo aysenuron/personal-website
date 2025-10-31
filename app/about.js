@@ -3,21 +3,20 @@ export const paragraphs = [
     content: (
       <>
         <span className="text-[#192de4] font-medium">About me. </span>I'm a user
-        expereince designer and web developer based in İzmir, Turkey, working at
-        at Elevate Health Technologies, where I build websites and digital
-        design projects for healthcare platforms. My work includes Webflow
-        development, Google and HubSpot integrations, and creating marketing
-        materials for infusion therapy workflows and specialty medication
-        programs.
+        experience designer and web developer based in İzmir, Turkey, working at
+        Elevate Health Technologies, where I build websites and digital design
+        projects for healthcare platforms. My work includes Webflow development,
+        Google and HubSpot integrations, and creating marketing materials for
+        infusion therapy workflows and specialty medication programs.
       </>
     ),
   },
   {
     content: (
       <>
-        My background is in architecture with a Master's focused on social space
-        - studying that taught me to think about how space relates to behavior
-        and power dynamics.
+        My background is in architecture, with a Master's degree focused on
+        social space. Studying this field taught me to think about how space
+        relates to behavior and power dynamics.
       </>
     ),
   },
@@ -25,7 +24,7 @@ export const paragraphs = [
     content: (
       <>
         I also maintain a freelance practice in UX design and frontend
-        development, which lets me work across different industries. In
+        development, which allows me to work across various industries. In
         parallel, I'm teaching myself creative coding through p5.js—building
         interactive visualizations and audio-reactive design experiments for
         fun.
