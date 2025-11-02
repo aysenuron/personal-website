@@ -1,10 +1,16 @@
 import Link from "next/link";
 
-export default function Button({ children, handleClick }) {
+export default function Button({ children, handleClick, primary }) {
   return (
-    <Link href={handleClick} target="_blank">
+    <Link href={handleClick} target={primary && "_blank"}>
       {" "}
-      <button className="cursor-pointer bg-[#192de4] hover:bg-white hover:shadow-[inset_0_0_8px_rgba(0,0,0,0.1)] border-none forma hover:text-[#192de4] duration-200 ease-in-out transition w-fit px-4 py-2 text-white rounded-full drop-shadow-xl hover:drop-shadow-none">
+      <button
+        className={`cursor-pointer ${
+          primary
+            ? "bg-[#192de4] text-white drop-shadow-md"
+            : "bg-gray-200 text-gray-900"
+        } hover:bg-white hover:shadow-[inset_0_0_8px_rgba(0,0,0,0.1)] border-none hover:text-[#192de4] duration-200 ease-in-out transition w-fit px-5 py-1 rounded-full hover:drop-shadow-none`}
+      >
         {children}
       </button>
     </Link>

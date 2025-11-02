@@ -12,7 +12,7 @@ export default function SideMenuItem({ name, sectionId }) {
         setIsActive(entry.isIntersecting);
       },
       {
-        threshold: 0.5,
+        threshold: 0.9,
       }
     );
 
@@ -50,16 +50,16 @@ export default function SideMenuItem({ name, sectionId }) {
       <div
         className={`mt-0.5 h-[1px] transition-all duration-200 ${
           isActive
-            ? "bg-red-500 w-20"
-            : "bg-black w-10 group-hover:w-20 group-hover:bg-red-500"
+            ? "bg-red-600 w-16"
+            : "bg-black w-10 group-hover:w-16 group-hover:bg-red-600"
         }`}
       ></div>
       <p
         className={`transition-all duration-200 text-md ${
           isActive
             ? "font-semibold text-red-500"
-            : "text-gray-500 group-hover:font-semibold group-hover:text-red-500"
-        } active:text-red-500`}
+            : "text-gray-500 group-hover:font-semibold group-hover:text-red-600"
+        } active:text-red-600`}
       >
         {name}
       </p>

@@ -1,8 +1,10 @@
 "use client";
 
-export default function Footer() {
+export default function Footer({ className }) {
   return (
-    <div className="flex items-center justify-between mt-20 mb-12">
+    <div
+      className={`${className} flex items-center justify-between lg:fixed bottom-8`}
+    >
       <div className="text-sm text-gray-500">
         © 2025 Ayşenur Onaran |{" "}
         <a

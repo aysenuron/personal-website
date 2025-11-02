@@ -7,7 +7,7 @@ const websites = [
     video:
       "/websites/buy-and-bill-landing-page/buy-and-bill-landing-page-video.mp4",
     className: "w-full",
-    title: "Buy & Bill Landing Page",
+    title: "Buy & Bill Landing Page - A/B Testing",
     role: "Web Designer & Developer",
     time: "January - February 2025",
     description:
@@ -121,6 +121,70 @@ const websites = [
       "That’s what worked better about Version B. It opened with savings data and a breakdown, which gave people trust that the numbers were real. Then we added a secondary button linking to the ROI calculator, so people could check the math themselves.",
       "This project taught me that a hero section doesn’t just introduce a product — it has to give people a reason to keep reading.",
       "PS This page isn’t live anymore. A few months later, the company rebranded with a new logo and site, so the old design isn’t there now.",
+    ],
+    type: "websites",
+  },
+  {
+    id: 2,
+    slug: "cubtale",
+    thumbnail: "/websites/cubtale/thumbnail.png",
+    video: "/websites/cubtale/cubtale.mp4",
+    className: "w-full",
+    title: "Cubtale Landing Page",
+    role: "Web Designer & Developer",
+    time: "April 2025",
+    webLink: "https://cubtale.netlify.app/",
+    githubLink: "https://github.com/aysenuron/cubtale",
+    description:
+      "A sponsor-focused landing page for Cubtale, a baby care tracking app.",
+    toolNames: ["React", "Framer Motion", "Netlify"],
+    features: [
+      {
+        heading: "Overview",
+        items: [
+          "Cubtale is a baby care tracking app that helps parents across the US navigate the everyday rhythms of infant care—feeding schedules, sleep patterns, diaper changes, and all the small but significant moments that make up early parenthood. Cubtale approached me to create a landing page targeting potential brand sponsors. The page needed to communicate the app's reach and value proposition while reflecting its warm, parent-friendly brand identity.",
+          "The Cubtale team reached out to me to design and develop a landing page—not for parents, but **for potential sponsors and brand partners.** They wanted to showcase the app's reach and demonstrate how brands could integrate meaningfully into these daily caregiving touchpoints where parents are already paying attention.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        items: [
+          "Working with content and brand guidelines provided by Cubtale, I built a focused landing page using **React and Framer Motion.** The challenge was to create something sponsor-facing while maintaining the **warmth and approachability** that defines Cubtale's existing brand identity. I incorporated **LottieFiles animations to add personality and movement** without overwhelming the message, keeping the page light and engaging.",
+          "My focus was ensuring the landing page felt like a natural extension of the app's established visual language—soft color palette, gentle micro-animations, and an overall sense of cuteness and care. The result is a **conversion-focused page** that speaks to brands while staying true to Cubtale's core aesthetic.",
+        ],
+      },
+    ],
+    type: "websites",
+  },
+  {
+    id: 3,
+    slug: "employment-leaders",
+    thumbnail: "/websites/employment-leaders/thumbnail.png",
+    video: "/websites/employment-leaders/employment-leaders.mp4",
+    className: "w-full",
+    title: "Employment Leaders Website",
+    role: "Web Designer & Developer",
+    time: "February 2025",
+    webLink: "https://employmentleaders.com/",
+    githubLink: "https://github.com/aysenuron/employment-leaders-website",
+    description:
+      "A single-page website for a US-based recruitment firm with over 35 years of industry experience.",
+    toolNames: ["HTML", "CSS", "JavaScript", "Netlify"],
+    features: [
+      {
+        heading: "Overview",
+        items: [
+          "Employment Leaders is a strategic recruitment firm based in the United States, founded by Steve Hutton in 1989.",
+          "The owner reached out to me requesting a simple, single-page website for the company. He wanted something straightforward that could effectively communicate their services, expertise, and long-standing reputation without unnecessary complexity.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        items: [
+          "This project came to me when I was first learning to code, so I built it using **basic HTML, CSS, and JavaScript**—keeping things simple and focused on fundamentals. I focused on a minimal, clean design that reflects the company's established presence and professional approach. Given that Employment Leaders was founded in 1989 and maintains a more traditional, relationship-driven business model, I selected a **serif typeface** that feels both old-school and classy—honoring their decades of experience while keeping the overall aesthetic modern and refined.",
+          "The single-page layout presents their areas of expertise, notable achievements, client testimonials, and company history in a digestible, scrollable format. The design prioritizes **readability and credibility,** letting their impressive track record and client relationships speak for themselves. I deployed the site using Netlify.",
+        ],
+      },
     ],
     type: "websites",
   },

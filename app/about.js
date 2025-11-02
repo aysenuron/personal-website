@@ -2,50 +2,52 @@ export const paragraphs = [
   {
     content: (
       <>
-        <span className="text-[#192de4] font-medium">About me. </span>I'm a user
-        experience designer and web developer based in İzmir, Turkey, working at
-        Elevate Health Technologies, where I build websites and digital design
-        projects for healthcare platforms. My work includes Webflow development,
-        Google and HubSpot integrations, and creating marketing materials for
-        infusion therapy workflows and specialty medication programs.
+        <span className="text-red-600 font-medium">About me. </span>I'm a user
+        experience designer and web developer based in İzmir, Turkey, working
+        remotely for Elevate Health Technologies, TX, USA. I build and maintain
+        the company’s websites using Webflow, manage Google and HubSpot
+        integrations, and create digital marketing materials for web platforms
+        that feature specialty medication programs.
       </>
     ),
   },
   {
     content: (
       <>
-        My background is in architecture, with a Master's degree focused on
-        social space. Studying this field taught me to think about how space
-        relates to behavior and power dynamics.
+        I have a BA and MSc in Architecture. My master's thesis examined how
+        Turkish earthquake survivors modified their standardized government
+        housing, simultaneously conforming to and resisting state-imposed ideals
+        of the "model villager."
       </>
     ),
   },
   {
     content: (
       <>
-        I also maintain a freelance practice in UX design and frontend
-        development, which allows me to work across various industries. In
-        parallel, I'm teaching myself creative coding through p5.js—building
-        interactive visualizations and audio-reactive design experiments for
-        fun.
+        I also maintain a freelance UX design and frontend development practice
+        serving diverse clients. In parallel, I pursue creative coding through
+        p5.js, building interactive visualizations and audio-reactive design
+        experiments.
       </>
     ),
   },
   {
     content: (
       <>
-        Outside of work, I cycle, cook, hike, and photograph pelicans around
-        İzmir.
+        Outside of work, I cycle, cook, hike, and photograph pelicans in the
+        Izmir Bay.
       </>
     ),
   },
   {
     content: (
       <>
-        <span className="text-[#192de4] font-medium">About this website. </span>
-        I've gathered 9 different projects here, organized into 3 categories—web
-        design & development, research, and creative coding. Below, you'll see 4
-        hand-picked ones. Click on the category names to see all of them.
+        <span className="text-red-600 font-medium">On this website, </span>
+        you can see a selection of projects I have completed. They are organized
+        into four categories: website design & development, web applications,
+        and creative coding. I have also included information about my two
+        research-based exhibition projects I co-created, and my MSc thesis
+        research.
       </>
     ),
   },

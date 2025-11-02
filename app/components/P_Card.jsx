@@ -28,7 +28,7 @@ export default function P_Card({
             duration: 0.5,
             ease: "easeOut",
           }}
-          className="lg:col-span-2 max-h-36 flex items-center justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
+          className="lg:col-span-2 md:max-h-48 lg:max-h-32 md:max-w-1/3 max-w-1/2 lg:max-w-full flex items-center object-fill justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
         >
           <img src={data.thumbnail} alt={data.title} />
         </motion.div>

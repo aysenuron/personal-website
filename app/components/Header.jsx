@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Button from "./Button";
 
-export default function Header({ backBtn = true }) {
+export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
 
@@ -18,7 +18,7 @@ export default function Header({ backBtn = true }) {
     return (
       <>
         <Link
-          className={`hover:text-[#192de4] text-gray-500 duration-200 ease-in-out transition `}
+          className={`hover:text-[#192de4] text-md text-gray-500 duration-200 ease-in-out transition `}
           href="/aysenurOnaran-CV.pdf"
           target="_blank"
         >
@@ -33,29 +33,8 @@ export default function Header({ backBtn = true }) {
   }
 
   return (
-    <header className="px-4 md:px-0 sticky top-0 py-4 lg:py-6 bg-white z-10">
-      <div
-        className={`container h-fit mx-auto flex items-center ${
-          backBtn && !menuOpen ? "justify-between" : "justify-end"
-        }`}
-      >
-        {/* Back button */}
-        <div className={`${backBtn && !menuOpen ? "block" : "hidden"}`}>
-          <button
-            onClick={() => {
-              if (window.history.length > 1) {
-                router.back();
-              } else {
-                router.push("/projects");
-              }
-            }}
-            className="text-[#192de4] hover:text-red-600 flex items-center gap-2 cursor-pointer"
-          >
-            <i className="fas fa-arrow-left"></i>
-            Go Back
-          </button>
-        </div>
-
+    <header className="px-4 md:px-0 sticky top-0 py-4 bg-white z-10">
+      <div className={`container h-fit mx-auto flex items-center justify-end`}>
         <div className="hidden md:flex md:items-center md:gap-6">
           <Links />
         </div>

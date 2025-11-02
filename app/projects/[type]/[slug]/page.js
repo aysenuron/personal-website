@@ -55,8 +55,7 @@ export default function ProjectPage({ params }) {
 
   return (
     <>
-      <Header backBtn={true} />
-      <div className="container mx-auto pt-2 pb-20 px-4 md:px-0">
+      <div className="container mx-auto pt-10 pb-20 px-4 md:px-0">
         <div className="mx-auto">
           {/* Breadcrumbs */}
           <div className="text-sm text-gray-700 flex gap-2 items-center mb-8">
@@ -85,38 +84,45 @@ export default function ProjectPage({ params }) {
                 <h1 className="lg:text-5xl text-3xl text-gray-800 font-bold mb-4">
                   {project.title}
                 </h1>
-                <div className="text-md text-gray-700 mb-4">
+                <div className="text-lg text-gray-500 mb-4">
                   <ReactMarkdown>{project.description}</ReactMarkdown>
                 </div>
                 {/* Project image */}
-                <div className="my-8">
-                  {project.img ? (
-                    <img
-                      src={project.img}
-                      alt={project.title}
-                      className="w-full rounded-lg shadow-lg"
-                    />
-                  ) : (
-                    <video
-                      src={project.video}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      controls={false}
-                      className={`mx-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${project.className}`}
-                    />
-                  )}
-                </div>
+                {project.img || project.video ? (
+                  <div className="my-8">
+                    {project.img ? (
+                      <img
+                        src={project.img}
+                        alt={project.title}
+                        className="w-full rounded-lg shadow-lg"
+                      />
+                    ) : (
+                      <video
+                        src={project.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        controls={false}
+                        className={`mx-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg ${project.className}`}
+                      />
+                    )}
+                  </div>
+                ) : (
+                  <p>Loading...</p>
+                )}
               </div>
 
               {/* Project overview */}
-              <div className="space-y-4 max-w-none">
-                <h2 className="text-3xl text-gray-400 font-bold">Overview</h2>
-                <div className="text-gray-700 text-md">
-                  <ReactMarkdown>{project.longDescription}</ReactMarkdown>
+              {project.longDescription ? (
+                <div className="space-y-4 max-w-none">
+                  <h2 className="text-3xl text-gray-400 font-bold">Overview</h2>
+                  <div className="text-gray-700 text-md">
+                    <ReactMarkdown>{project.longDescription}</ReactMarkdown>
+                  </div>
                 </div>
-              </div>
+              ) : null}
+
               {/* Project goal */}
               {project.goal ? (
                 <div className="space-y-4 max-w-none">
