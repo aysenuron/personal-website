@@ -59,7 +59,7 @@ export default function ProjectPage({ params }) {
       <div className="container mx-auto pt-10 2xl:pt-14 pb-20 px-4 md:px-0">
         <div className="mx-auto">
           {/* Breadcrumbs */}
-          <div className="text-sm 2xl:text-[16px] text-gray-700 flex gap-2 items-center mb-8">
+          <div className="text-sm 2xl:text-[16px] text-gray-700 flex flex-wrap gap-2 items-center mb-8">
             <Link href="/" className="hover:text-red-600">
               <p>Home</p>
             </Link>

@@ -145,7 +145,8 @@ const apps = [
       },
       {
         videos: ["/web-apps/rast/rast-client-compressed.mp4"],
-        vidClassName: "h-fit my-auto",
+        vidClassName:
+          "lg:h-fit lg:my-auto border-gray-200 border-4 rounded-2xl drop-shadow-lg",
         heading: "Customer Experience",
         items: [
           "**Posting flow:** quick initial capture → progressive detail → photos → scheduling → budget.",
