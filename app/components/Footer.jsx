@@ -2,9 +2,7 @@
 
 export default function Footer({ className }) {
   return (
-    <div
-      className={`${className} flex items-center justify-between lg:fixed bottom-8`}
-    >
+    <div className={`${className} flex items-center justify-between`}>
       <div className="text-sm text-gray-500">
         © 2025 Ayşenur Onaran |{" "}
         <a

@@ -89,16 +89,15 @@ export default function Test() {
                 </p>
               </div>
               <div className="flex gap-4 flex-wrap">
-                <Button handleClick={"/projects"}>Projects</Button>
+                <Button handleClick={"/projects"} primary={true}>
+                  Projects
+                </Button>
                 <Button handleClick={"/aysenurOnaran-CV.pdf"}>Resume</Button>
-                <Button
-                  handleClick={"mailto:onaranays@gmail.com"}
-                  primary={true}
-                >
+                <Button handleClick={"mailto:onaranays@gmail.com"}>
                   Send me an email
                 </Button>
               </div>
-              <Footer className={"hidden lg:block"} />
+              <Footer className={"hidden lg:fixed bottom-8"} />
             </div>
           </div>
         </div>

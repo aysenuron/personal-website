@@ -6,6 +6,7 @@ import apps from "@/app/projects_apps";
 import websites from "@/app/projects_websites";
 import cc from "@/app/projects_cc";
 import research from "@/app/projects_research";
+import master from "@/app/projects_master";
 
 import Header from "@/app/components/Header";
 import ChipsContainer from "@/app/components/ChipsContainer";
@@ -14,7 +15,7 @@ import ProjectFeatures from "@/app/components/ProjectFeatures";
 
 import { formatType } from "@/app/utils/formatType";
 
-const allProjects = [...apps, ...websites, ...cc, ...research];
+const allProjects = [...apps, ...websites, ...cc, ...research, ...master];
 
 // This generates static paths for all your projects
 export async function generateStaticParams() {

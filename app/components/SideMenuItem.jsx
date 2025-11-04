@@ -1,36 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-export default function SideMenuItem({ name, sectionId }) {
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        console.log(
-          `${sectionId}: ${entry.isIntersecting ? "ACTIVE" : "inactive"}`
-        );
-        setIsActive(entry.isIntersecting);
-      },
-      {
-        threshold: 0.9,
-      }
-    );
-
-    const element = document.getElementById(sectionId);
-    if (element) {
-      console.log(`Observing element: ${sectionId}`, element);
-      observer.observe(element);
-    } else {
-      console.log(`Element not found: ${sectionId}`);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, [sectionId]);
-
+export default function SideMenuItem({ name, sectionId, isActive }) {
   const scrollToSection = (e) => {
     e.preventDefault();
     const element = document.getElementById(sectionId);

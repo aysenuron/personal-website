@@ -44,7 +44,7 @@ export const paragraphs = [
       <>
         <span className="text-red-600 font-medium">On this website, </span>
         you can see a selection of projects I have completed. They are organized
-        into four categories: website design & development, web applications,
+        into four categories: web applications, website design & development,
         and creative coding. I have also included information about my two
         research-based exhibition projects I co-created, and my MSc thesis
         research.

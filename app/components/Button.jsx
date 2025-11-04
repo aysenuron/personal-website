@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Button({ children, handleClick, primary }) {
   return (
-    <Link href={handleClick} target={primary && "_blank"}>
+    <Link href={handleClick} target={primary ? "" : "_blank"}>
       {" "}
       <button
         className={`cursor-pointer ${
