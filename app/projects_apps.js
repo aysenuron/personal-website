@@ -13,53 +13,24 @@ const apps = [
     description:
       "Transforming a complex Excel spreadsheet into an interactive 6-step web calculator for healthcare providers.",
     longDescription:
-      "At Elevate Health Technologies, the marketing team needed an interactive ROI calculator for healthcare providers. The goal was to let prospects enter their operational data across multiple steps and instantly see how much time and cost they could save using our solutions. This project was my first real step into coding. I started with no prior experience in JavaScript, but through trial, error, and lots of learning, I designed and built a fully functional, six-step ROI calculator that became a key part of our lead generation strategy.",
-    toolNames: [
-      "Webflow",
-      "JavaScript",
-      "GA4",
-      "Google Tag Manager",
-      "HubSpot",
-    ],
+      "At Elevate Health Technologies, I designed and built an interactive ROI calculator to help healthcare providers understand potential cost savings from our inventory management system. This was my first real coding project—I started with no JavaScript experience and created a functional six-step calculator that became a key lead generation tool.",
+    toolNames: ["JavaScript", "GA4", "Google Tag Manager", "HubSpot"],
     features: [
       {
-        heading: "Challenge",
+        heading: "Challenges",
         img: "",
         imgClassName: "w-1/2 lg:w-1/3",
         items: [
-          "My manager approached me with an Excel spreadsheet containing sophisticated financial calculations for healthcare providers considering PULSE, our inventory management system. The task: build an **interactive ROI calculator** that could guide doctors and healthcare facilities through a **multi-step process**, performing calculations at each stage and **accumulating results** across six steps.",
-          "**Complex Calculations:** The calculator wasn’t a simple form. Each step included multiple inputs, specific calculations, and dependencies across later steps. Standard form builders (Typeform, HubSpot, etc.) couldn't handle the mathematical complexity or state management",
-          "**User Experience for a Healthcare Audience:** The inputs (like shipment volume, staff costs, or time saved per unit) weren’t always obvious to a doctor or clinic manager. Without guidance, the tool risked losing credibility or confusing users.",
-          "**Engagement & Conversion:** The team debated how much to show upfront. Should users see their step-by-step results or only the final ROI after submitting an email? Balancing transparency with lead capture was critical.",
-        ],
-      },
-      {
-        heading: "Technical Constraints",
-        img: "",
-        imgClassName: "w-1/2 lg:w-1/3",
-        items: [
-          "**•** Six sequential steps, each with unique calculations",
-          "**•** Steps 1-4 required **individual calculations** that would accumulate in Step 5",
-          "**•** Step 6 needed to **incorporate all previous results** plus new inputs about training staff",
-          "**•** Must **maintain calculation state across the entire flow,** even when users skip viewing intermediate results",
-          "**•** Final step required **email collection** and external results page integration",
-        ],
-      },
-      {
-        heading: "User Considerations",
-        img: "/web-apps/roi/1.png",
-        imgClassName: "w-full py-6",
-        items: [
-          "**•** Primary audience: **healthcare providers** unfamiliar with complex financial terminology",
-          "**•** **High risk of user drop-off** across six sequential steps",
+          "**•** **Six sequential steps** with interdependent calculations",
+          "**•** State management across all steps",
+          "**•** **Email collection** integrated with HubSpot",
+          "**•** User-friendly interface for healthcare providers **unfamiliar with financial terminology**",
+          "**•**  **High risk of user drop-off** across six sequential steps",
           "**•** Need for **transparency in calculations** to build trust in the software ROI claims",
-          "**•** Balancing information disclosure with **lead generation goals**",
         ],
       },
       {
         heading: "Key UX Decisions",
-        img: "",
-        imgClassName: "",
         items: [
           "**Progressive Visual Feedback:** I designed a 6-step progress indicator with numbered circles and connecting lines. Active steps highlight in blue, completed steps turn green, and lines fill in to show advancement. This constant visual feedback addresses abandonment anxiety by showing users exactly where they are and how much remains.",
           "**Contextual Information Architecture:** Each step includes an orange info button that reveals explanatory text",
@@ -67,17 +38,18 @@ const apps = [
         ],
       },
       {
+        videos: ["/web-apps/roi/roi-detail.mp4"],
+        vidClassName:
+          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
+      },
+      {
         heading: "Calculate vs. Next: Dual Pathway Navigation",
-        img: "",
-        imgClassName: "w-1/2 lg:w-1/3",
         items: [
           "This was our most debated design decision. Each step offers two progression options:",
           "**• Calculate button:** Displays the result immediately",
           "**• Next button:** Advances without showing the result",
           "Behind the scenes, both actions perform the calculation—the difference is purely presentational. This design:",
-          "**•** Gives users control over their pacing",
           "**•** Allows validation-seekers to see incremental progress",
-          "**•** Lets efficiency-focused users move quickly",
           "**•** Maintains engagement by showing value building step-by-step",
         ],
       },
@@ -86,22 +58,10 @@ const apps = [
         img: "/web-apps/roi/2.png",
         imgClassName: "w-1/2 mx-auto",
         items: [
-          "I implemented tracking on all Next buttons at each step, pushing events to Google Analytics. This allowed us to:",
-          "**•** Identify exact drop-off points",
-          "**•** Understand whether showing results affected completion rates",
-          "**•** Measure the full funnel from Step 1 through email submission",
-        ],
-      },
-      {
-        heading: "Key Features",
-        img: "",
-        imgClassName: "w-1/2 lg:w-1/3",
-        items: [
-          "**Auto-formatting inputs:** Numbers display with thousand separators as users type",
-          "**Field validation:** Required inputs checked before step progression",
-          "**Smart recalculation:** Step 5 automatically populates even if users skipped Calculate buttons",
-          "**Responsive design:** Media queries adapt layout for mobile/tablet healthcare providers",
-          "**Integration:** HubSpot tracking and external results page",
+          "I implemented **tracking on all Next buttons at each step,** pushing events to Google Analytics. This allowed us to:",
+          "**•** Identify **exact drop-off points**",
+          "**•** Understand whether **showing results affected completion rates**",
+          "**•** Measure the **full funnel** from Step 1 through email submission",
         ],
       },
       {
@@ -115,7 +75,6 @@ const apps = [
       },
     ],
     learned: [
-      "**Problem decomposition:** Breaking <build a calculator> into manageable pieces—navigation system, calculation logic, input handling, visual feedback—made an overwhelming task achievable.",
       "**Data-informed design:** Implementing tracking wasn't about vanity metrics. It was designing with humility, acknowledging I didn't know how users would behave, and building systems to learn from them.",
       "**Trust through transparency:** Our decision to show full results before requesting emails exemplifies a principle I've carried forward: prioritizing user value over aggressive conversion often yields better long-term outcomes.",
     ],
@@ -131,67 +90,80 @@ const apps = [
     id: 2,
     slug: "rast",
     thumbnail: "/web-apps/rast/thumbnail.png",
-    img: "/web-apps/rast/provider-dashboard.jpg",
+    video: "/web-apps/rast/handyman-dashboard-video.mp4",
     className: "w-full",
     title: "Rast: Service Marketplace Platform",
     role: "UX/UI Designer",
     time: "January - March 2023 (Project discontinued due to funding)",
     description:
-      "Two-sided marketplace platform connecting customers with service providers. Designed provider dashboards, customer job posting flows, bidding systems, and trust features.",
+      "Two-sided marketplace connecting handymen with urban customers seeking home services.",
     extraInfo:
       "The prototypes are in Turkish since the app was planned to launch in Turkey.",
     longDescription:
-      "Designed desktop interfaces for a service marketplace connecting customers with local handymen and service providers—similar to platforms like Armut in Turkey. While the project was ultimately discontinued when investors dropped out, I designed comprehensive flows for both service providers and customers.",
+      "Designed a **two-sided marketplace platform connecting handymen and customers** in urban Turkish areas. Working alongside a UX researcher who conducted competitive analysis, I designed desktop interfaces for both sides of the platform—with primary focus on the provider dashboard as a business management tool.",
     toolNames: ["Figma"],
     features: [
       {
-        heading: "Scope & Approach",
+        heading: "Challenge",
         items: [
-          "Working alongside a UX researcher who analyzed competitor platforms and created user flows, I developed wireframes and designed the desktop interface with plans to develop mobile versions next. The researcher provided content structure and insights from competitive analysis, which informed the information architecture and feature prioritization.",
+          "Urban handymen struggle to reach new customers at scale.",
+          "Newcomers in cities struggle to find trustworthy providers.",
+          "**Core problem:** Two groups who need each other can’t discover each other.",
         ],
       },
       {
-        videos: ["/web-apps/rast/handyman-dashboard-video.mp4"],
-        vidClassName: "h-fit my-auto",
+        heading: "Solution: Platform Flow",
         items: [
-          "**Service Provider Dashboard:**",
-          "**•** Earnings analytics and job statistics",
-          "**•** Job management across multiple states (active, completed, canceled)",
-          "**•** Bidding system for open job postings",
-          "**•** Client messaging",
-          "**•** Portfolio photo galleries",
-          "**•** Payment and auto-payment settings",
-          "**•** Profile management with verification system",
+          "**Customer path:** describe issue → get offers → compare profiles, portfolios, ratings → message → choose → pay → rate.",
+          "**Provider path:** see jobs → bid → if accepted → complete → get paid → rating added to profile.",
+          "All payments run in-app — no external cash.",
+        ],
+      },
+      {
+        img: "/web-apps/rast/provider-dashboard.jpg",
+        items: [
+          "**Provider Dashboard Design**",
+          "New jobs to bid on",
+          "Pending offers",
+          "Active jobs",
+          "Past jobs",
+          "Earnings & analytics",
+          "Public profile management",
+        ],
+      },
+      {
+        img: "/web-apps/rast/offers-list.jpg",
+        imgClassName: "h-fit 2xl:my-8 lg:w-3/4",
+      },
+      {
+        items: [
+          "**Interactive job states chart:** A donut chart shows all job states (opportunity / active / complete / canceled). Clicking a segment filters the job list.",
+          "**Dual view of jobs:** Grid for quick scanning. Table for data-dense comparison. Both share color-coded states.",
+          "**Earnings analytics:** Line charts + see detail on hover.",
+          "**Profile management** Image, description, portfolio, reviews — same view customers see.",
         ],
       },
       {
         videos: ["/web-apps/rast/rast-client-compressed.mp4"],
         vidClassName: "h-fit my-auto",
+        heading: "Customer Experience",
         items: [
-          "**Customer Interface:**",
-          "**•** Job posting workflow",
-          "**•** Browse and accept service provider bids",
-          "**•** Track job status (pending, active, completed)",
-          "**•** Rate and review completed work",
-          "**•** Payment settings and transaction history",
-          "**•** Direct messaging with providers",
-          "**•** Browse popular service providers",
+          "**Posting flow:** quick initial capture → progressive detail → photos → scheduling → budget.",
+          "**Bid comparison:** offers displayed as cards with trust signals (rating, portfolio, completion rate, response time).",
+          "**Job tracking:** pending / active / completed — all paid in-app.",
         ],
       },
       {
-        img: "/web-apps/rast/offers-list.jpg",
-        imgClassName: "h-fit my-auto",
-      },
-      {
-        heading: "Design Decisions",
+        heading: "Core Features",
         items: [
-          "**Information Hierarchy for Multiple States:** One of the key challenges was organizing jobs across different states—service providers needed to quickly distinguish between opportunities to bid on, active jobs, and completed work. I used color coding (purple for actionable items, red for canceled, blue for completed) and clear status labels to create scannable card layouts.",
-          "**Trust & Safety Features:** Incorporated rating systems, detailed reviews, and service provider portfolios to build trust between both sides of the marketplace.",
+          "**Provider:** dashboard, state visualization, grid/table toggle, analytics, portfolio, inline bid & messaging.",
+          "**Customer:** guided posting, comparison UI, trust signals, messaging, ratings, payments.",
         ],
       },
     ],
     notes: [
-      "This was an early project for me—before I learned to code and while I was still developing my Figma skills. Working with a UX researcher taught me how research insights translate into design decisions, particularly around competitive analysis and user flow development. The project's cancellation was disappointing but valuable—it taught me that good design work doesn't always see launch, and that's part of the reality of working in startups.",
+      "The project was ultimately discontinued when investors dropped out. It taught me that good design work doesn't always see launch, and that's part of the reality of working in startups.",
+      "Working with a UX researcher taught me how research insights translate into design decisions, particularly around competitive analysis and user flow development.",
       "Looking back, I'd approach the component organization differently (my Figma components were scattered rather than systematically organized), but the core flows and interaction patterns hold up as solid foundational work.",
     ],
     type: "web-apps",
@@ -205,7 +177,7 @@ const apps = [
     video: "/web-apps/yess-chef/yess-chef-video.mp4",
     className: "lg:w-1/4 w-1/2",
     title: "Yess, chef!",
-    role: "Front-end Developer / Designer",
+    role: "Front-end Developer / UX Designer",
     time: "March - April 2025",
     description:
       "An AI-powered recipe app that suggests meals based on ingredients you already have, built with Anthropic's Claude API.",
@@ -214,49 +186,52 @@ const apps = [
     toolNames: ["React", "Netlify", "JavaScript", "Anthropic API"],
     features: [
       {
-        heading: "Response Handling",
-        img: "/web-apps/yess-chef/2.png",
-        imgClassName: "w-1/2",
+        heading: "How it Works",
         items: [
-          "Claude's responses are conversational, not structured data. I had to parse the text response and handle various formatting inconsistencies with React Markdown.",
+          "**•** user types ingredients",
+          "**•** Netlify serverless function calls Claude",
+          "**•** Claude returns a recipe suggestion",
+          "**•** UI renders formatted output via react-markdown",
         ],
       },
       {
-        heading: "Loading States",
+        img: "/web-apps/yess-chef/3.png",
+        imgClassName: "lg:w-1/4 w-1/2",
+      },
+      {
+        heading: "Key Design & Engineering Decisions",
+        items: [
+          "**Handling AI unpredictability:** Claude responses aren’t guaranteed to be structured. Displaying them as markdown was more robust than forcing JSON/arrays.",
+          "**Clear async states:** AI takes ~3–8s to respond → loading states are essential for perceived reliability.",
+          "**Real deployment:** Production keys stored in Netlify env vars — proving a solo developer can ship API-driven apps securely and quickly.",
+        ],
+      },
+      {
+        heading: "Challenges",
+        items: [
+          "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
+          "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
+        ],
+      },
+      {
         img: "/web-apps/yess-chef/1.png",
         imgClassName: "w-1/2",
+        heading: "What I Learned",
         items: [
-          'AI responses take 3-8 seconds, so I added a simple loading state to prevent the "is this working?" confusion.',
+          "**AI Integration:** Working with AI APIs is more about handling unpredictability than complex prompt engineering. Most of the challenge is in parsing and displaying variable response formats.",
+          "**React State for Async Operations:** Managing loading, success, and error states for API calls. Used a simple pattern with useState rather than over-engineering with reducers.",
+          "**Practical vs. Perfect:** Initially tried to parse recipes into structured data (ingredients array, steps array, etc.) but Claude's conversational responses work better displayed as-is. Sometimes simple text rendering beats complex parsing.",
         ],
       },
-      {
-        heading: "Real-world deployment",
-        img: "/web-apps/yess-chef/3.png",
-        imgClassName: "w-1/2",
-        items: [
-          `The app is live on Netlify, with environment variables securely handled in production. It’s **lightweight but fully functional,** showing how small projects can scale into polished portfolio pieces.`,
-        ],
-      },
-    ],
-    goal: "Create a responsive web app that generates recipes from user-provided ingredients using Anthropic API, with a simple frontend and working serverless backend on Netlify. The focus was on making the app functional, reliable, and enjoyable to use.",
-    challenges: [
-      "Since I'm more focused on frontend work, setting up a backend flow with serverless functions and API integrations was new territory for me. Getting the app to communicate with Anthropic API, manage environment variables securely, and handle deployment on Netlify required a lot of trial, error, and debugging.",
-      "Another challenge was making the responses render cleanly in the UI — I integrated react-markdown to properly display Claude's formatted recipes. Each roadblock pushed me to explore concepts I hadn't worked with before, and solving them gave me more confidence working beyond the frontend.",
-    ],
-    learned: [
-      "**AI Integration:** Working with AI APIs is more about handling unpredictability than complex prompt engineering. Most of the challenge is in parsing and displaying variable response formats.",
-      "**React State for Async Operations:** Managing loading, success, and error states for API calls. Used a simple pattern with useState rather than over-engineering with reducers.",
-      "**Practical vs. Perfect:** Initially tried to parse recipes into structured data (ingredients array, steps array, etc.) but Claude's conversational responses work better displayed as-is. Sometimes simple text rendering beats complex parsing.",
     ],
     limitations: [
-      '**•** No ingredient validation (you can type "random access memories")',
+      "**•** No ingredient validation",
       "**•** No recipe saving or history",
       "**•** Single recipe per request (no alternatives)",
       "**•** No dietary restrictions or preferences",
     ],
     notes: [
       `I love building apps that me and my friends actually use in everyday life. Yess, Chef! is one of those. The name, of course, comes from the infamous show **The Bear.** I’m a foodie at heart: I love cooking, eating, and experimenting with new flavors. The real reason I worked so hard to make this app actually function was simple — I wanted it for myself.`,
-      "I’m not much of a backend person, but with enough persistence (and some AI assistance), I figured it out. Now, it’s a tool I use and a project that makes me smile.",
     ],
     type: "web-apps",
   },
@@ -274,27 +249,21 @@ const apps = [
     description:
       "A notes application with real-time filtering, tag management, and persistent state—built to practice CRUD operations and modern React patterns.",
     longDescription:
-      "A note-taking application featuring real-time search, multi-tag filtering, and persistent filter state across navigation. Built to practice full CRUD operations with API integration while solving a common UX challenge: maintaining user context when navigating between filtered lists and individual items.",
+      "A note-taking app with real-time search, multi-tag filtering, and persistent filter state across navigation. I built this to practice full CRUD with a real API while solving a UX friction pattern most note apps ignore: keeping your context when jumping between filtered lists and single note views.",
     toolNames: ["React", "shadcn/ui", "Tailwind CSS", "React Router"],
     features: [
       {
         heading: "Challenge",
-        img: "",
-        imgClassName: "w-1/2 lg:w-1/3",
         items: [
-          "Following foundational work in frontend development, I sought to build an application demonstrating complete CRUD (Create, Read, Update, Delete) operations with external API integration. The core technical challenge centered on state management: preserving filter selections when users navigate from a filtered list view into individual note details and back.",
-          "Standard implementations typically reset filters on navigation, forcing users to reselect their criteria each time. This creates unnecessary friction in the user experience and breaks the mental model of maintaining working context.",
-          "**Technical objectives:**",
-          "**•** Implement full CRUD operations with asynchronous API calls",
-          "**•** Integrate a component library for production-ready UI elements",
-          "**•** Solve filter persistence across route changes",
-          "**•** Handle loading states, error conditions, and data validation",
+          "Following foundational work in frontend development, I sought to build an application demonstrating complete **CRUD (Create, Read, Update, Delete)** operations with external API integration.",
+          " The core technical challenge centered on state management: preserving filter selections when users navigate from a filtered list view into individual note details and back.",
+          "**The main UX problem:**",
+          "**•** most apps reset filters when you open/read a note → breaking mental context.",
+          "I designed filter state to survive route changes so users stay in their current subset instead of starting over.",
         ],
       },
       {
         heading: "Design Approach",
-        img: "",
-        imgClassName: "w-1/2 lg:w-1/3",
         items: [
           "**Visual Design:** The interface draws from Bear Notes' minimalist aesthetic, prioritizing content legibility over decorative elements. A card-based grid layout presents note previews, while the editor view maintains focus on writing with minimal chrome. The color palette remains neutral, allowing user content to command attention. Typography choices emphasize readability across different note lengths and content types.",
           "**Component Architecture:** Implementation utilized shadcn/ui, a component library providing accessible, customizable base elements.",
@@ -304,31 +273,28 @@ const apps = [
       {
         heading: "Real-Time Search",
         videos: ["/web-apps/notes/notes-search.mp4"],
-        vidClassName: "w-full",
-        img: "",
         imgClassName: "",
         items: [
-          "Search filtering occurs on every keystroke without requiring form submission. As users type, the note list updates immediately to show matching results. The URL reflects the current search query (?search=query), enabling shareable search states and proper browser history integration.",
-          "This pattern reduces interaction friction by eliminating the commit required with traditional search forms. Users can refine queries incrementally and course-correct immediately upon seeing results.",
+          "Search filters on every keystroke — no submit flow.",
+          "Search query syncs to URL (?search=query) → shareable + browser history friendly.",
         ],
       },
       {
         heading: "Persistent Filter State",
         items: [
-          "The most significant UX challenge addressed filter state management across navigation. When users:",
-          "1- Apply tag filters to the note list",
-          "2- Open a specific note",
-          "3- Return to the list view",
-          "...the previously selected filters remain active, preserving their working context.",
+          "If the user applies tag filters → open a note → go back — ...the previously selected filters remain active.",
           "This decision allows users maintain their mental model of working within a filtered subset rather than repeatedly reorienting to the full collection.",
         ],
       },
       {
-        heading: "Tag Management",
         videos: ["/web-apps/notes/notes-tags.mp4"],
-        vidClassName: "w-full",
+        vidClassName:
+          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
+      },
+      {
+        heading: "Tag Management",
         items: [
-          '**Autocomplete Prevention:** When adding tags, the input displays a filtered dropdown of existing tags as users type. This prevents tag proliferation through minor variations (e.g., "work" vs "Work" vs "work-related"), maintaining a clean taxonomy without requiring manual curation.',
+          '**Autocomplete Prevention:** When adding tags, the input displays a filtered dropdown of existing tags as users type, preventing tag proliferation through minor variations (e.g., "work" vs "Work" vs "work-related").',
           "**Implicit Tag Lifecycle:** Rather than implementing a separate tag management interface, tags exist only while notes reference them. This reduces cognitive overhead—users manage notes, and tags manage themselves.",
         ],
       },
@@ -349,17 +315,14 @@ const apps = [
       },
     ],
     learned: [
-      "**Component Libraries in Production Development:** Working with shadcn/ui demonstrated how professional development leverages existing solutions. Rather than building every UI element from scratch, effective development involves selecting appropriate libraries, understanding their APIs, and customizing them for specific needs. This mirrors real-world development practices more accurately than building everything from first principles.",
-      "**URL as State Container:** Query parameters proved surprisingly capable for managing application state. For features like filtering, search, and view preferences, URL-based state often provides simpler implementation than state management libraries while offering additional benefits (shareability, browser history integration).",
+      "**Component Libraries in Production Development:** Working with shadcn/ui demonstrated how professional development leverages existing solutions. Rather than building every UI element from scratch, effective development involves selecting appropriate libraries, understanding their APIs, and customizing them for specific needs.",
+      "**URL as State Container:** Query parameters proved surprisingly capable for managing application state. For features like filtering, search, and view preferences, URL-based state often provides simpler implementation than state management libraries.",
     ],
     limitations: [
       "**•** User authentication for private note collections",
       "**•** Rich text editing capabilities",
       "**•** Color theme customization beyond light/dark modes",
       "**•** Note linking for connected thought documentation",
-    ],
-    notes: [
-      "This was one of the first apps I built entirely on my own (front end + logic + design). It taught me how to connect state, UI, and persistence in a coherent, maintainable way. It also reminded me that even simple apps require care in design and error handling.",
     ],
     type: "web-apps",
   },

@@ -34,8 +34,8 @@ export default function Projects() {
               <p className="text-gray-400">All Projects</p>
             </div>
             <div className="grid lg:grid-cols-12 gap:12 lg:gap-2 2xl:gap-24">
-              <div className="col-span-3 lg:flex flex-col gap-8 hidden lg:sticky self-start top-26">
-                <h1 className="text-4xl pt-6 font-semibold">All Projects</h1>
+              <div className="col-span-3 lg:flex flex-col gap-8 hidden lg:sticky self-start top-24">
+                <h1 className="text-4xl font-semibold">All Projects</h1>
 
                 <div className="hidden lg:flex lg:flex-col lg:gap-4">
                   <SideMenu items={menuItems} />

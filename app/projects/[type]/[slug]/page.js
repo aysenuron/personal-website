@@ -8,7 +8,7 @@ import cc from "@/app/projects_cc";
 import research from "@/app/projects_research";
 import master from "@/app/projects_master";
 
-import Header from "@/app/components/Header";
+import Footer from "@/app/components/Footer";
 import ChipsContainer from "@/app/components/ChipsContainer";
 import tools from "@/app/tools";
 import ProjectFeatures from "@/app/components/ProjectFeatures";
@@ -56,10 +56,10 @@ export default function ProjectPage({ params }) {
 
   return (
     <>
-      <div className="container mx-auto pt-10 pb-20 px-4 md:px-0">
+      <div className="container mx-auto pt-10 2xl:pt-14 pb-20 px-4 md:px-0">
         <div className="mx-auto">
           {/* Breadcrumbs */}
-          <div className="text-sm text-gray-700 flex gap-2 items-center mb-8">
+          <div className="text-sm 2xl:text-[16px] text-gray-700 flex gap-2 items-center mb-8">
             <Link href="/" className="hover:text-red-600">
               <p>Home</p>
             </Link>
@@ -79,7 +79,7 @@ export default function ProjectPage({ params }) {
           </div>
 
           <div className="lg:grid lg:grid-cols-12 gap-12 2xl:gap-24 flex flex-col-reverse">
-            <div className="col-span-9 space-y-16">
+            <div className="col-span-9 space-y-20 mb-12">
               {/* Project header */}
               <div>
                 <h1 className="lg:text-5xl text-3xl text-gray-800 font-bold mb-4">
@@ -117,8 +117,10 @@ export default function ProjectPage({ params }) {
               {/* Project overview */}
               {project.longDescription ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-bold">Overview</h2>
-                  <div className="text-gray-700 text-md">
+                  <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
+                    Overview
+                  </h2>
+                  <div className="text-gray-700 text-md 2xl:text-lg">
                     <ReactMarkdown>{project.longDescription}</ReactMarkdown>
                   </div>
                 </div>
@@ -127,8 +129,10 @@ export default function ProjectPage({ params }) {
               {/* Project goal */}
               {project.goal ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-bold">Goal</h2>
-                  <div className="text-gray-700 text-md">
+                  <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
+                    Goal
+                  </h2>
+                  <div className="text-gray-700 text-md 2xl:text-lg">
                     <ReactMarkdown>{project.goal}</ReactMarkdown>
                   </div>
                 </div>
@@ -139,10 +143,10 @@ export default function ProjectPage({ params }) {
               {/* Project challenges */}
               {project.challenges ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-bold">
+                  <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
                     Challenges
                   </h2>
-                  <div className="text-gray-700 text-md space-y-4">
+                  <div className="text-gray-700 text-md 2xl:text-lg space-y-4">
                     {project.challenges.map((paragraph, index) => (
                       <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
                     ))}
@@ -153,10 +157,10 @@ export default function ProjectPage({ params }) {
               {/* What I Learned */}
               {project.learned ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-bold">
+                  <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
                     What I Learned
                   </h2>
-                  <div className="text-gray-700 text-md space-y-4">
+                  <div className="text-gray-700 text-md 2xl:text-lg space-y-4">
                     {project.learned.map((paragraph, index) => (
                       <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
                     ))}
@@ -166,10 +170,10 @@ export default function ProjectPage({ params }) {
               {/* Current Limitations */}
               {project.limitations ? (
                 <div className="space-y-4 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-bold">
+                  <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
                     Current Limitations
                   </h2>
-                  <div className="text-gray-700 text-md space-y-4">
+                  <div className="text-gray-700 text-md 2xl:text-lg space-y-4">
                     {project.limitations.map((paragraph, index) => (
                       <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
                     ))}
@@ -180,10 +184,10 @@ export default function ProjectPage({ params }) {
               {/* Personal Notes */}
               {project.notes ? (
                 <div className="space-y-2 max-w-none">
-                  <h2 className="text-3xl text-gray-400 font-bold">
+                  <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
                     👋🏻 Personal Notes
                   </h2>
-                  <div className="text-gray-700 text-md space-y-4">
+                  <div className="text-gray-700 text-md 2xl:text-lg space-y-4">
                     {project.notes.map((paragraph, index) => (
                       <ReactMarkdown key={index}>{paragraph}</ReactMarkdown>
                     ))}
@@ -193,7 +197,7 @@ export default function ProjectPage({ params }) {
             </div>
 
             {/* Quick Facts */}
-            <div className="col-span-3 text-gray-500 text-md flex flex-col gap-6 pl-3 py-2 border-gray-300 border-l-1 lg:sticky top-38 self-start">
+            <div className="col-span-3 text-gray-500 text-md 2xl:text-lg flex flex-col gap-6 pl-3 py-2 border-gray-300 border-l-1 lg:sticky top-38 self-start">
               <p>
                 <span className="text-gray-700 font-semibold">Role: </span>
                 {project.role ? project.role : "Web Designer / Developer"}
@@ -249,6 +253,7 @@ export default function ProjectPage({ params }) {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

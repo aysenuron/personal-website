@@ -20,10 +20,10 @@ export default function Test() {
     <>
       <section>
         <div className="container pt-16 px-4 md:px-0 mx-auto">
-          <div className="grid lg:grid-cols-12 gap:12 lg:gap-4 2xl:gap-24">
+          <div className="grid lg:grid-cols-12 gap:12 lg:gap-4 2xl:gap-10">
             <div className="lg:col-span-3 flex flex-col gap-8 lg:z-20 lg:gap-12 lg:-mt-8 box-border">
               <div>
-                <div className="w-40 h-40 rounded-full overflow-hidden">
+                <div className="w-40 2xl:w-48 h-40 2xl:h-48 rounded-full overflow-hidden">
                   <img
                     src="/profile.png"
                     alt="Aysenur Onaran profile img"
@@ -31,11 +31,13 @@ export default function Test() {
                   />
                 </div>
                 <div className="mt-4 flex flex-col gap-4">
-                  <h1 className="font-semibold text-4xl">Ayşenur Onaran</h1>
-                  <p className="text-[16px] 2xl:text-md text-[#192de4] font-medium">
+                  <h1 className="font-semibold text-4xl 2xl:text-5xl">
+                    Ayşenur Onaran
+                  </h1>
+                  <p className="text-[16px] 2xl:text-lg text-[#192de4] font-medium">
                     UX Designer / Web Developer
                   </p>
-                  <div className="flex gap-2 text-lg items-center text-gray-500 cursor-pointer transition-all duration-200">
+                  <div className="flex gap-2 text-lg 2xl:text-xl items-center text-gray-500 cursor-pointer transition-all duration-200">
                     <Link
                       href={"https://www.linkedin.com/in/onaranaysenur/"}
                       target="blank"
@@ -46,7 +48,7 @@ export default function Test() {
                       <i className="fab fa-github hover:text-[#192de4]"></i>
                     </Link>
                   </div>
-                  <p className="text-[14px] 2xl:text-md text-gray-700">
+                  <p className="text-[14px] 2xl:text-[16px] text-gray-700">
                     This website is built with Next.js and Tailwind CSS,
                     deployed with Vercel. By moi.
                   </p>
@@ -72,7 +74,7 @@ export default function Test() {
             <div className="lg:col-start-5 lg:col-end-13 flex lg:flex-col flex-col-reverse gap-10 mt-12 lg:mt-6">
               <Footer className={"lg:hidden mb-6"} />
               <div id="about" className="flex flex-col gap-16 lg:pr-24">
-                <p className="text-gray-700 text-md/relaxed">
+                <p className="text-gray-700 text-md/relaxed 2xl:text-lg">
                   {paragraphs.map((paragraph, index) => (
                     <React.Fragment key={index}>
                       {index > 0 && (

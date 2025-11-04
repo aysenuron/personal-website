@@ -46,19 +46,6 @@ const master = [
         ],
       },
       {
-        img: "/research/master/2.png",
-        imgClassName: "w-full",
-      },
-      {
-        heading: "Connecting This Research to My Design Practice",
-        items: [
-          "**Users as Active Producers:** Yukarıköy demonstrates that people don't simply accept designed systems—they adapt, modify, and work around them. Digital designers face similar realities: users develop workarounds, repurpose features, and create use cases designers never imagined.",
-          "**Power and Equity in Design:** Who decides how systems should work? My research examined how institutional power shapes environments, but also how inhabitants push back. Understanding these dynamics is essential for creating more equitable digital systems.",
-          "**Context Over Standardization:** TOKİ applied standardized approaches used since Ottoman-era village projects, ignoring local practices. The result required costly adaptation by both state and citizens. In UX, understanding specific contexts and community needs must drive design decisions rather than one-size-fits-all solutions.",
-          "**Ethnography as Design Tool:** Observing how villagers transformed their spaces revealed needs that surveys would miss. Ethnographic methods—watching behavior in context, understanding workarounds, documenting adaptations—uncover actual user needs rather than assumed ones.",
-        ],
-      },
-      {
         img: "/research/master/3.png",
         imgClassName: "w-full",
       },

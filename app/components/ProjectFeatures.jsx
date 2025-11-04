@@ -43,10 +43,10 @@ export default function ProjectFeatures({ features }) {
           ) : null}
           {feature.items ? (
             <div className="space-y-4 flex flex-col justify-center">
-              <h2 className="text-3xl text-gray-400 font-bold">
+              <h2 className="text-3xl 2xl:text-4xl text-gray-400 font-bold">
                 {feature.heading}
               </h2>
-              <ul className="text-gray-700 space-y-4">
+              <ul className="text-gray-700 space-y-4 text-md 2xl:text-lg">
                 {feature.items?.length > 0
                   ? feature.items.map((item, i) => (
                       <li key={i}>

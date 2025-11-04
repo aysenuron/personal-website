@@ -17,7 +17,7 @@ export default function SideMenu({ items }) {
         root: null,
         // invisible horizontal line 40% down the viewport
         // when a section's top crosses this → becomes active
-        rootMargin: "-60% 0px 0px 0px",
+        rootMargin: "-40% 0px 0px 0px",
         threshold: 0,
       }
     );

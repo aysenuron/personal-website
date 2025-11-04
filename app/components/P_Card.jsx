@@ -28,7 +28,7 @@ export default function P_Card({
             duration: 0.5,
             ease: "easeOut",
           }}
-          className="lg:col-span-2 md:max-h-48 lg:max-h-32 md:max-w-1/3 max-w-1/2 lg:max-w-full flex items-center object-fill justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
+          className="lg:col-span-2 md:max-h-48 lg:max-h-32 2xl:max-h-40 md:max-w-1/3 lg:max-w-full flex items-center object-fill justify-center border-1 border-gray-200 rounded-xl overflow-hidden"
         >
           <img src={data.thumbnail} alt={data.title} />
         </motion.div>
@@ -43,7 +43,7 @@ export default function P_Card({
               ease: "easeOut",
             }}
             className="
-           text-xl lg:text-lg font-medium text-gray-900 group-hover:text-[#192de4]"
+           text-xl lg:text-lg 2xl:text-[19px] font-medium text-gray-900 group-hover:text-[#192de4]"
           >
             {data.title}
             <span>
@@ -59,7 +59,7 @@ export default function P_Card({
               duration: 0.5,
               ease: "easeOut",
             }}
-            className="text-[15px] 2xl:text-md text-gray-500 font-normal"
+            className="text-[15px] 2xl:text-[16px] text-gray-500 font-normal"
           >
             {data.description}
           </motion.p>
