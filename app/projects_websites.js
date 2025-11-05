@@ -111,8 +111,8 @@ const websites = [
     ],
     learned: [
       "Quantified outcomes outperform dashboard-first messaging in cost-sensitive B2B healthcare",
-      "isolating a single variable makes test results interpretable",
-      "hero framing sets expectation — people want reason → then product",
+      "Isolating a single variable makes test results interpretable",
+      "Hero framing sets expectation — people want reason → then product",
     ],
     notes: [
       "Getting demos is always tough, especially for a startup. Version A of the page didn’t bring in a single demo after two months. Version B got a few — not huge numbers, but still an important difference. (I cannot display the real numbers due to company confidentiality.)",

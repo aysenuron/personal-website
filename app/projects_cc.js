@@ -5,6 +5,7 @@ const cc = [
     thumbnail: "/creative-coding/cc/cc1-thumbnail.png",
     video: "/creative-coding/cc/bike.mp4",
     className: "w-full",
+    p5Link: "https://editor.p5js.org/aysenuron/sketches",
     title: "Creative Coding Experiments",
     role: "Creative Programmer",
     time: "September - October 2025",

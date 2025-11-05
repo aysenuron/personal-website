@@ -1,4 +1,4 @@
-import Test from './components/Test';
+import Test from "./components/Home";
 
 export default function Home() {
   return (

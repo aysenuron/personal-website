@@ -2,13 +2,8 @@
 import React from "react";
 import Link from "next/link";
 
-import apps from "../projects_apps";
-import cc from "../projects_cc";
-import research from "../projects_research";
-import P_Card from "./P_Card";
 import Button from "./Button";
 import { paragraphs } from "../about.js";
-import Experience from "./Experience";
 import Footer from "./Footer";
 
 import { useCookieConsent } from "../hooks/useCookieConsent";
@@ -99,7 +94,7 @@ export default function Test() {
                   Send me an email
                 </Button>
               </div>
-              <Footer className={"hidden lg:fixed bottom-8"} />
+              <Footer className={"hidden lg:block lg:fixed bottom-8"} />
             </div>
           </div>
         </div>

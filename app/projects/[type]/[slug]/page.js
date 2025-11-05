@@ -246,6 +246,19 @@ export default function ProjectPage({ params }) {
                   }
                 </a>
               )}
+              {project.p5Link && (
+                <a
+                  href={project.p5Link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-[#192de4] group"
+                >
+                  <i className="fa-solid fa-code text-sm"></i> View Sketchbook{" "}
+                  {
+                    <i className="fa-solid fa-arrow-right text-sm pl-1 group-hover:pl-2 transition-all duration-300"></i>
+                  }
+                </a>
+              )}
               {project.extraInfo && (
                 <p>{project.extraInfo ? project.extraInfo : null}</p>
               )}

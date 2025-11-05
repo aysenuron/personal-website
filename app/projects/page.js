@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import P_Card from "../components/P_Card";
-import Header from "../components/Header";
 import SideMenu from "../components/SideMenu";
 
 import apps from "../projects_apps";

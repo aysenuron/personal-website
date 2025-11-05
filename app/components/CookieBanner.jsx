@@ -53,7 +53,8 @@ export default function CookieBanner({ forceShow = false }) {
   if (!visible) return null;
 
   return (
-    <div className="fixed bottom-2 left-2 right-2 rounded-2xl lg:rounded-full bg-neutral-200 text-black text-center lg:text-left px-2 lg:px-4 py-2 flex flex-col md:flex-row items-center justify-between text-xs z-50">
+    <div className="container fixed bottom-2 lg:bottom-4 left-1/2 -translate-x-1/2 rounded-2xl lg:rounded-full bg-neutral-200 text-black text-center lg:text-left px-2 lg:px-4 py-2 flex flex-col md:flex-row items-center justify-between text-xs z-50">
+      {" "}
       <p className="mb-2 md:mb-0">
         This site uses Google Analytics 4 for statistics. You can accept or
         reject cookies.{" "}

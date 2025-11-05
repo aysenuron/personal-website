@@ -23,7 +23,7 @@ const interTight = Inter_Tight({
 
 export const metadata = {
   title: "Ayşenur Onaran",
-  description: "Web Developer & Designer",
+  description: "UX Designer / Web Developer",
 };
 
 export default function RootLayout({ children }) {
