@@ -33,10 +33,9 @@ export default function Projects() {
               <p className="text-gray-400">All Projects</p>
             </div>
             <div className="grid lg:grid-cols-12 gap:12 lg:gap-2 2xl:gap-24">
-              <div className="col-span-3 lg:flex flex-col gap-8 hidden lg:sticky self-start top-24">
-                <h1 className="text-4xl font-semibold">All Projects</h1>
-
-                <div className="hidden lg:flex lg:flex-col lg:gap-4">
+              <div className="col-span-3 lg:flex flex-col gap-8 hidden">
+                <h1 className="text-2xl font-semibold">All Projects</h1>
+                <div className="hidden lg:flex lg:flex-col lg:gap-4 lg:sticky self-start top-20">
                   <SideMenu items={menuItems} />
                 </div>
               </div>
@@ -45,16 +44,16 @@ export default function Projects() {
                 id="selected_projects"
                 className="flex flex-col gap-12 lg:gap-20 col-span-9"
               >
-                <div id="web-apps" className="flex flex-col gap-10">
-                  <h2 className="text-2xl font-semibold pt-6 -mb-4 lg:mb-0">
+                <div id="web-apps" className="flex flex-col gap-16 lg:mt-15">
+                  <h2 className="text-gray-400 -mb-8 text-3xl font-semibold">
                     Web Apps
                   </h2>
                   {apps.map((app) => (
                     <P_Card key={app.id} data={app} chipsVisible={true} />
                   ))}
                 </div>
-                <div id="websites" className="flex flex-col gap-10">
-                  <h2 className="text-2xl pt-6 font-semibold -mb-4 lg:mb-0">
+                <div id="websites" className="flex flex-col gap-16">
+                  <h2 className="text-gray-400 -mb-8 text-3xl pt-6 font-semibold">
                     Web Design & Development
                   </h2>
                   {websites.map((website) => (
@@ -65,16 +64,16 @@ export default function Projects() {
                     />
                   ))}
                 </div>
-                <div id="creative-coding" className="flex flex-col gap-10">
-                  <h2 className="text-2xl pt-6 font-semibold -mb-4 lg:mb-0">
+                <div id="creative-coding" className="flex flex-col gap-16">
+                  <h2 className="text-gray-400 -mb-8 text-3xl pt-6 font-semibold">
                     Creative Coding
                   </h2>
                   {cc.map((c) => (
                     <P_Card key={c.id} data={c} chipsVisible={true} />
                   ))}
                 </div>
-                <div id="research" className="flex flex-col gap-8">
-                  <h2 className="text-2xl pt-6 font-semibold -mb-4 lg:mb-0">
+                <div id="research" className="flex flex-col gap-16">
+                  <h2 className="text-gray-400 -mb-8 text-3xl pt-6 font-semibold">
                     Research-Based Exhibitions
                   </h2>
                   {research.map((r) => (
@@ -83,9 +82,9 @@ export default function Projects() {
                 </div>
                 <div
                   id="master-thesis"
-                  className="flex flex-col gap-8 lg:mb-8 mb-4"
+                  className="flex flex-col gap-16 lg:mb-8 mb-4"
                 >
-                  <h2 className="text-2xl pt-6 font-semibold -mb-4 lg:mb-0">
+                  <h2 className="text-gray-400 -mb-8 text-3xl pt-6 font-semibold">
                     Master's Thesis
                   </h2>
                   {master.map((m) => (

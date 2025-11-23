@@ -17,7 +17,7 @@ export default function P_Card({
   return (
     <Link href={`/projects/${data.type}/${data.slug}`} passHref>
       <div
-        className={`${className} lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-6 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all`}
+        className={`${className} pl-4 pb-4 pt-2 border-l-1 hover:pl-5 hover:border-gray-300 border-b-2 rounded-bl-3xl hover:rounded-bl-xl border-gray-200 lg:grid relative lg:grid-cols-7 flex flex-col gap-2 lg:gap-6 justify-center group cursor-pointer transform duration-200 ease-in-out transition-all`}
       >
         <motion.div
           initial={{ opacity: 0, y: 30 }}

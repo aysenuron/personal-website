@@ -1,14 +1,77 @@
 const apps = [
   {
     id: 1,
+    slug: "patient-resources",
+    thumbnail: "/web-apps/patient-resources/thumbnail.png",
+    video: "/web-apps/patient-resources/patient-resources.mp4",
+    className: "w-full",
+    title: "Patient Resources Portal",
+    role: "UX Designer / Web Developer",
+    time: "November 2025",
+    extraInfo: "In Progress",
+    description:
+      "A bilingual, searchable patient resources system designed to help people with chronic illnesses find trusted information about their conditions.",
+    toolNames: ["Webflow", "GA4", "Google Tag Manager"],
+    features: [
+      {
+        heading: "The Problem",
+        items: [
+          "Elevate Health Technologies partners with specialty clinics across the US—neurology, rheumatology, and other practices treating chronic conditions. When patients are diagnosed with a chronic illness, they turn to the internet for information. However, the internet is full of unreliable sources, and conflicting advice.",
+        ],
+      },
+      {
+        heading: "The Solution",
+        items: [
+          "I designed and developed a patient resources portal that solves this by curating **trustworthy educational resources vetted by our nurses and patient engagement specialists.** Instead of patients sorting through endless search results, they find reliable information from established disease foundations, and verified pharmaceutical guides—all organized in one easy-to-navigate system.",
+        ],
+      },
+      {
+        img: "/web-apps/patient-resources/1.png",
+        imgClassName:
+          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
+      },
+      {
+        heading: "Design Approach",
+        items: [
+          "**•** **Category filtering** and **real-time search** help patients quickly narrow down to what matters.",
+          "**•** The design uses healthcare-appropriate colors (soft blues, professional but warm), and clear typography with the Barlow font family.",
+          "**•** The system is fully **bilingual (English/Spanish)** with a language toggle.",
+        ],
+      },
+      {
+        videos: ["/web-apps/patient-resources/patient-cms.mp4"],
+        vidClassName:
+          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
+      },
+      {
+        heading: "Technical Implementation",
+        items: [
+          "The key requirement was scalability—we needed one centralized database that could hold hundreds of links and diseases without duplicating content or maintenance work",
+          "**•** I built the system using Webflow CMS as the database layer, structuring disease entries with **bilingual fields, category tags, and curated resource links.**",
+          "**•** Using **Webflow's AppGen beta feature,** I generated React components that connect directly to the CMS via API.",
+          "The portal fetches disease data dynamically, filtering and grouping content based on medical categories. This architecture means when our team adds a new disease or updates resources in the CMS, all deployed portals automatically reflect those changes—no need to manually update.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        img: "",
+        items: [
+          "**Currently in development,** launching soon as a centralized resource hub for Elevate's clinical partners and their patients.",
+        ],
+      },
+    ],
+    type: "web-apps",
+  },
+  {
+    id: 2,
     slug: "roi-calculator",
     webLink: "",
     githubLink: "https://github.com/aysenuron/ROI-Calculator",
     thumbnail: "/web-apps/roi/1.png",
     video: "/web-apps/roi/roi-video.mp4",
     className: "w-full",
-    title: "Healthcare ROI Calculator",
-    role: "Web Developer & Designer",
+    title: "ROI Calculator for Healthcare Providers",
+    role: "UX Designer / Web Developer",
     time: "September - December 2024",
     description:
       "Transforming a complex Excel spreadsheet into an interactive 6-step web calculator for healthcare providers.",
@@ -83,69 +146,6 @@ const apps = [
       "One of the hardest parts came at the very end: collecting user emails. I didn’t know anything about setting up a backend or storing form submissions. After a lot of trial and error, I discovered that HubSpot could track non-HubSpot forms, and I hacked together a solution using their tracking code. What feels obvious to me now was a big breakthrough back then.",
       "In the end, I managed to capture both the step-by-step results and the user’s email, which let us send them a personalized PDF with their ROI breakdown and an explanation of how the calculations were made.",
       "This calculator marked my transformation from designer to developer, proving that the best learning happens when building something slightly beyond your current capabilities. It showed me that technical implementation and user experience design aren't separate disciplines—they're two aspects of the same problem-solving process.",
-    ],
-    type: "web-apps",
-  },
-  {
-    id: 2,
-    slug: "patient-resources",
-    thumbnail: "/web-apps/patient-resources/thumbnail.png",
-    video: "/web-apps/patient-resources/patient-resources.mp4",
-    className: "w-full",
-    title: "Patient Resources Portal",
-    role: "Web Developer & Designer",
-    time: "November 2025",
-    extraInfo: "In Progress",
-    description:
-      "A bilingual, searchable patient resources system designed to help people with chronic illnesses find trusted information about their conditions.",
-    toolNames: ["Webflow", "GA4", "Google Tag Manager"],
-    features: [
-      {
-        heading: "The Problem",
-        items: [
-          "Elevate Health Technologies partners with specialty clinics across the US—neurology, rheumatology, and other practices treating chronic conditions. When patients are diagnosed with a chronic illness, they turn to the internet for information. However, the internet is full of unreliable sources, and conflicting advice.",
-        ],
-      },
-      {
-        heading: "The Solution",
-        items: [
-          "I designed and developed a patient resources portal that solves this by curating **trustworthy educational resources vetted by our nurses and patient engagement specialists.** Instead of patients sorting through endless search results, they find reliable information from established disease foundations, and verified pharmaceutical guides—all organized in one easy-to-navigate system.",
-        ],
-      },
-      {
-        img: "/web-apps/patient-resources/1.png",
-        imgClassName:
-          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
-      },
-      {
-        heading: "Design Approach",
-        items: [
-          "**•** **Category filtering** and **real-time search** help patients quickly narrow down to what matters.",
-          "**•** The design uses healthcare-appropriate colors (soft blues, professional but warm), and clear typography with the Barlow font family.",
-          "**•** The system is fully **bilingual (English/Spanish)** with a language toggle.",
-        ],
-      },
-      {
-        videos: ["/web-apps/patient-resources/patient-cms.mp4"],
-        vidClassName:
-          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
-      },
-      {
-        heading: "Technical Implementation",
-        items: [
-          "The key requirement was scalability—we needed one centralized database that could hold hundreds of links and diseases without duplicating content or maintenance work",
-          "**•** I built the system using Webflow CMS as the database layer, structuring disease entries with **bilingual fields, category tags, and curated resource links.**",
-          "**•** Using **Webflow's AppGen beta feature,** I generated React components that connect directly to the CMS via API.",
-          "The portal fetches disease data dynamically, filtering and grouping content based on medical categories. This architecture means when our team adds a new disease or updates resources in the CMS, all deployed portals automatically reflect those changes—no need to manually update.",
-        ],
-      },
-      {
-        heading: "Outcome",
-        img: "",
-        items: [
-          "**Currently in development,** launching soon as a centralized resource hub for Elevate's clinical partners and their patients.",
-        ],
-      },
     ],
     type: "web-apps",
   },
@@ -241,7 +241,7 @@ const apps = [
     video: "/web-apps/yess-chef/yess-chef-video.mp4",
     className: "lg:w-1/4 w-1/2",
     title: "Yess, chef!",
-    role: "Front-end Developer / UX Designer",
+    role: "UX Designer / React Developer",
     time: "March - April 2025",
     description:
       "An AI-powered recipe app that suggests meals based on ingredients you already have, built with Anthropic's Claude API.",
@@ -308,7 +308,7 @@ const apps = [
     video: "/web-apps/notes/notes-video-desktop.mp4",
     className: "w-full",
     title: "Notes App",
-    role: "Developer & Designer",
+    role: "UX Designer / React Developer",
     time: "April - May 2025",
     description:
       "A notes application with real-time filtering, tag management, and persistent state—built to practice CRUD operations and modern React patterns.",
