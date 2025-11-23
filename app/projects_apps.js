@@ -88,6 +88,69 @@ const apps = [
   },
   {
     id: 2,
+    slug: "patient-resources",
+    thumbnail: "/web-apps/patient-resources/thumbnail.png",
+    video: "/web-apps/patient-resources/patient-resources.mp4",
+    className: "w-full",
+    title: "Patient Resources Portal",
+    role: "Web Developer & Designer",
+    time: "November 2025",
+    extraInfo: "In Progress",
+    description:
+      "A bilingual, searchable patient resources system designed to help people with chronic illnesses find trusted information about their conditions.",
+    toolNames: ["Webflow", "GA4", "Google Tag Manager"],
+    features: [
+      {
+        heading: "The Problem",
+        items: [
+          "Elevate Health Technologies partners with specialty clinics across the US—neurology, rheumatology, and other practices treating chronic conditions. When patients are diagnosed with a chronic illness, they turn to the internet for information. However, the internet is full of unreliable sources, and conflicting advice.",
+        ],
+      },
+      {
+        heading: "The Solution",
+        items: [
+          "I designed and developed a patient resources portal that solves this by curating **trustworthy educational resources vetted by our nurses and patient engagement specialists.** Instead of patients sorting through endless search results, they find reliable information from established disease foundations, and verified pharmaceutical guides—all organized in one easy-to-navigate system.",
+        ],
+      },
+      {
+        img: "/web-apps/patient-resources/1.png",
+        imgClassName:
+          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
+      },
+      {
+        heading: "Design Approach",
+        items: [
+          "**•** **Category filtering** and **real-time search** help patients quickly narrow down to what matters.",
+          "**•** The design uses healthcare-appropriate colors (soft blues, professional but warm), and clear typography with the Barlow font family.",
+          "**•** The system is fully **bilingual (English/Spanish)** with a language toggle.",
+        ],
+      },
+      {
+        videos: ["/web-apps/patient-resources/patient-cms.mp4"],
+        vidClassName:
+          "lg:w-2/3 border-gray-200 border-4 rounded-2xl drop-shadow-lg",
+      },
+      {
+        heading: "Technical Implementation",
+        items: [
+          "The key requirement was scalability—we needed one centralized database that could hold hundreds of links and diseases without duplicating content or maintenance work",
+          "**•** I built the system using Webflow CMS as the database layer, structuring disease entries with **bilingual fields, category tags, and curated resource links.**",
+          "**•** Using **Webflow's AppGen beta feature,** I generated React components that connect directly to the CMS via API.",
+          "The portal fetches disease data dynamically, filtering and grouping content based on medical categories. This architecture means when our team adds a new disease or updates resources in the CMS, all deployed portals automatically reflect those changes—no need to manually update.",
+        ],
+      },
+      {
+        heading: "Outcome",
+        img: "",
+        items: [
+          "**Currently in development,** launching soon as a centralized resource hub for Elevate's clinical partners and their patients.",
+        ],
+      },
+    ],
+    type: "web-apps",
+  },
+  {
+    id: 3,
     slug: "rast",
     thumbnail: "/web-apps/rast/thumbnail.png",
     video: "/web-apps/rast/handyman-dashboard-video.mp4",
@@ -170,7 +233,7 @@ const apps = [
     type: "web-apps",
   },
   {
-    id: 3,
+    id: 4,
     slug: "yess-chef",
     webLink: "https://yess-chef.netlify.app/",
     githubLink: "https://github.com/aysenuron/yes-chef",
@@ -237,7 +300,7 @@ const apps = [
     type: "web-apps",
   },
   {
-    id: 4,
+    id: 5,
     slug: "notes",
     webLink: "https://notes-app-seven-psi.vercel.app/",
     githubLink: "https://github.com/aysenuron/notes-app",
