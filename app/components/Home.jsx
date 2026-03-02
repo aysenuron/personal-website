@@ -30,7 +30,7 @@ export default function Test() {
                     Ayşenur Onaran
                   </h1>
                   <p className="text-[16px] 2xl:text-lg text-[#192de4] font-medium">
-                    UX Designer / Web Developer
+                    Digital Designer / Web Developer
                   </p>
                   <div className="flex gap-2 text-lg 2xl:text-xl items-center text-gray-500 cursor-pointer transition-all duration-200">
                     <Link

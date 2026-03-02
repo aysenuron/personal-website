@@ -2,8 +2,8 @@ export const paragraphs = [
   {
     content: (
       <>
-        <span className="text-red-600 font-medium">About me. </span>I'm a user
-        experience designer and web developer based in İzmir, Turkey, working
+        <span className="text-red-600 font-medium">About me. </span>I'm a
+        digital designer and web developer based in İzmir, Turkey, working
         remotely for Elevate Health Technologies, TX, USA. I build and maintain
         the company’s websites using Webflow, manage Google and HubSpot
         integrations, and create digital marketing materials for web platforms
@@ -24,9 +24,9 @@ export const paragraphs = [
   {
     content: (
       <>
-        I also maintain a freelance UX design and frontend development practice
-        serving diverse clients. In parallel, I pursue creative coding through
-        p5.js, building interactive visualizations and audio-reactive design
+        I also maintain a freelance design and development practice serving
+        diverse clients. In parallel, I pursue creative coding through p5.js,
+        building interactive visualizations and audio-reactive design
         experiments.
       </>
     ),
